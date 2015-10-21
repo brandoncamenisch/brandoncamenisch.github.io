@@ -34,7 +34,7 @@
 
 
 
-  <meta name="keywords" content="DNS,Kali,dnsenum," />
+  <meta name="keywords" content="Hexo,WordPress," />
 
 
 
@@ -43,16 +43,16 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="dnsenum is a multithreaded perl script that can enumerate DNS information for a domain and discover non-contiguous ip blocks. We want to use dnsenum to gather even more information about the target do">
+<meta name="description" content="WTF is Hexo?Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Wh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Enumerate DNS with dnsenum in Kali Linux">
-<meta property="og:url" content="http://www.brandoncamenisch.com/2015/07/23/enumerate-dns-with-dnsenum-in-kali-linux/index.html">
+<meta property="og:title" content="Why I moved from WordPress to Hexo">
+<meta property="og:url" content="http://www.brandoncamenisch.com/2015/10/21/Why-I-moved-from-WordPress-to-Hexo/index.html">
 <meta property="og:site_name" content="Brandon Camenisch">
-<meta property="og:description" content="dnsenum is a multithreaded perl script that can enumerate DNS information for a domain and discover non-contiguous ip blocks. We want to use dnsenum to gather even more information about the target do">
-<meta property="og:updated_time" content="2015-10-20T20:23:55.000Z">
+<meta property="og:description" content="WTF is Hexo?Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Wh">
+<meta property="og:updated_time" content="2015-10-21T16:28:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Enumerate DNS with dnsenum in Kali Linux">
-<meta name="twitter:description" content="dnsenum is a multithreaded perl script that can enumerate DNS information for a domain and discover non-contiguous ip blocks. We want to use dnsenum to gather even more information about the target do">
+<meta name="twitter:title" content="Why I moved from WordPress to Hexo">
+<meta name="twitter:description" content="WTF is Hexo?Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Wh">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -64,7 +64,7 @@
 
 
 
-  <title> Enumerate DNS with dnsenum in Kali Linux | Brandon Camenisch </title>
+  <title> Why I moved from WordPress to Hexo | Brandon Camenisch </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -169,7 +169,7 @@
             
             
               
-                Enumerate DNS with dnsenum in Kali Linux
+                Why I moved from WordPress to Hexo
               
             
           </h1>
@@ -178,8 +178,8 @@
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-07-23T18:07:04+02:00" content="2015-07-23">
-              2015-07-23
+            <time itemprop="dateCreated" datetime="2015-10-20T22:17:42-06:00" content="2015-10-20">
+              2015-10-20
             </time>
           </span>
 
@@ -217,11 +217,9 @@
       
 
       
-        <span itemprop="articleBody"><p>dnsenum is a multithreaded perl script that can enumerate DNS information for a domain and discover non-contiguous ip blocks. We want to use dnsenum to gather even more information about the target domain. What we are mainly after with this tool is the private IP addresses. How do we get those sometimes takes some creative process but not much. We aren’t going to go through all of the option variations because it’s dependent upon what type of results your looking for and how thorough you want to be in your search. It collects basic information like host addresses, name servers, and mail hosts but also extracts useful information like bind versions and unlisted sub-domains. It also has reverse DNS lookup utilities that can be used  for C class network ranges. If your using this tool without a dictionary then you aren’t using it to it’s potential.</p>
-<script id="asciicast-15179" src="https://asciinema.org/a/15179.js" async type="text/javascript"></script>
-
-<p>You can see in the example above that we are performing a search on google.com using a dict as well as a few other options. In the end we check the xml file that we save the info to which can be saved to our information bank and/or used later with another application such as magictree. This tool takes some time to run if your using a lot of options so be weary of that in your information gathering.</p>
-<p>This tool isn’t to be ran around on every site on the internet and actually violates the terms of service for google which is why the scrape option doesn’t always work. Google has become rather intelligent in blocking automated tools so you will most likely get blocked if other countermeasures aren’t taken. If you do become blocked it can last for days sometimes.</p>
+        <span itemprop="articleBody"><h2 id="WTF_is_Hexo?">WTF is Hexo?</h2><p>Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Which was a static site generator with a cli interface written in node which I could port wherever I wanted for free hosting.</p>
+<h2 id="No_cost_and_less_headaches">No cost and less headaches</h2><p>Though I’m not cheap I don’t really like dishing out even $5 a month for hosting when I can get it for free. GitHub offers GitHub pages which serve up static sites and <a href="https://hexo.io" target="_blank" rel="external">Hexo</a> fits well into that very well. Of course there’s jekyll but I wanted something different and new so I went looking for something built on top of node. That yielded a few results like <a href="http://jsantell.github.io/poet/" target="_blank" rel="external">poet</a> which looks pretty hip and all but it didn’t seem to statically generate the site. There’s really no good reason for me to want to dick around with any type of hosting whether its VPS, shared, WPEngine, or hosted on WordPress.com. Why should I bother and waste the time when all I need is a simple blog? It’s not like I write that much anyways. There’s simply too much overhead to run a simple WordPress blog and it’s super annoying to mess around with updates, spammers, caching issues, downtime, etc. It’s a pain in the ass! If GitHub goes down I’m pretty confident that my site isn’t going to suffer much in the end and I don’t have to worry about any other logistics other than deploying my site.</p>
+<h2 id="It’s_fresh">It’s fresh</h2><p>I’m excited to work with node and all things built on node so any chance I get to move towards using it is a step towards progress IMO. In a world where what you learned last week may no longer be in fashion WordPress is like a dude wearing socks with sandals. Hexo is pretty new still with it’s very first release being in October of 2012 it offers a pretty powerful API and a nice cli out of the box. But duh, it’s not a CMS replacement for Wordpress but definitely a competitor to jekyll and other static site generators out there.</p>
 </span>
       
     </div>
@@ -230,11 +228,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/DNS/" rel="tag">#DNS</a>
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
           
-            <a href="/tags/Kali/" rel="tag">#Kali</a>
-          
-            <a href="/tags/dnsenum/" rel="tag">#dnsenum</a>
+            <a href="/tags/WordPress/" rel="tag">#WordPress</a>
           
         </div>
       
@@ -243,16 +239,12 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/25/no-more-guis/" rel="prev">
-                <i class="fa fa-chevron-left"></i> No more GUI's
-              </a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/22/what-is-kali-linux/" rel="next">
-                What is Kali Linux <i class="fa fa-chevron-right"></i>
+              <a href="/2015/07/29/vvv-multiple-projects-with-vagrant-share/" rel="next">
+                VVV multiple projects with vagrant share <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -366,7 +358,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WTF_is_Hexo?"><span class="nav-number">1.</span> <span class="nav-text">WTF is Hexo?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No_cost_and_less_headaches"><span class="nav-number">2.</span> <span class="nav-text">No cost and less headaches</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#It’s_fresh"><span class="nav-number">3.</span> <span class="nav-text">It’s fresh</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
