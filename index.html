@@ -369,7 +369,7 @@
             
               
                 <a class="post-title-link" href="/2015/07/25/down-with-the-gui/" itemprop="url">
-                  No more GUIs
+                  Down with the GUI
                 </a>
               
             
@@ -556,8 +556,8 @@
             
             
               
-                <a class="post-title-link" href="/2015/07/22/kali-linux-use-dnsdict6-to-scan-ipv6ipv4/" itemprop="url">
-                  Kali Linux use dnsdict6 to scan IPv6/IPv4
+                <a class="post-title-link" href="/2015/07/22/update-kali-linux/" itemprop="url">
+                  Update Kali Linux
                 </a>
               
             
@@ -609,21 +609,214 @@
         
           <span itemprop="articleBody">
             
-              <p>In Kali Linux there comes a tool called dnsdict6 that is used for DNS enumeration for a domain. It will use a dictionary file if supplied otherwise it uses a built in list. You can use this tool to gather information from a website seeing otherwise hidden or hard to find sub-domains. Sometimes you can find legacy domains that are no longer actively being used but could be a potential attack vector.</p>
-<p>Do a quick scan to see what sort of tool this is and what results we can expect. <code>dnsdict6 google.com</code></p>
-<script id="asciicast-15151" src="https://asciinema.org/a/15151.js" async type="text/javascript"></script>
+              <p>Kali Linux is by far one of the most awesome and battle tested penetration testing OS’s out there. But sometimes it needs a little love to keep things operating smoothly and just like any OS when you update your getting new features as well as security updates that will keep your system safe from recent security breaches. <code>apt-get update &amp;&amp; apt-get upgrade</code></p>
+<p>Alternatively you can add the following flag to that command and it will fix any packages that are broken or partially installed on the system. <code>apt-get update &amp;&amp; apt-get upgrade --fix-missing</code></p>
+<p>Kali will ping the Kali web server checking for new packages listed on their servers now check it’s webservers for updates. If it finds any that need updated then it should ask if you want to install them.</p>
+<p>Patiently wait for all of the packages to update, go make a coffee or whatever floats your boat.</p>
 
-<p>By running that command above your should see something similar so now we know sort of how this works. Let’s dig into it a bit deeper and learn about what options we can use with dnsdict6. Type in either <code>dnsdict6</code> or <code>dnsdict6 --help</code> and the flags for this command will show up.</p>
-<script id="asciicast-15152" src="https://asciinema.org/a/15152.js" async type="text/javascript"></script>
+            
+          </span>
+        
+      
+    </div>
 
-<h2 id="But_what_do_those_flags_mean_really_and_how_can_we_use_them?">But what do those flags mean really and how can we use them?</h2><p><strong>-4</strong>: Will also yield IPv4 addresses which are reserved for private networks and multicast addresses.</p>
-<p><strong>-t</strong>: # Will determine how many threads your willing to use for the search. It can add some speed to the process but the task will get done nonetheless. Threading does make a difference if your using a larger list usually around 20 is a good number.</p>
-<p><strong>-D</strong>: Doesn’t do any scanning and will dump the current built in wordlist that the utility uses by default.</p>
-<p><strong>-d</strong>: Will display the IPv6 information on NS records which are basically which nameservers the domain points to and the MX records are mail servers that belong to the attached domain.</p>
-<p><strong>-S</strong>: Will list services that are used by the domain such as jabber and xmpp.</p>
-<p><strong>-[smlxu]</strong>: Will change the size of the dictionary that you’ll use for the scan. You will get more results sometimes but it will also take more time to dig through all of these dictionary terms.</p>
-<p><strong>How is this useful?</strong></p>
-<p>Planning is key to a successful attack and without information planning is all theoretical. We need to limit the amount of theoretical approaches to our attack therefore we rule them out by gathering information. The domains collected using this utility could be used later as attack vectors or further investigation of exploits in those domains. For instance you can find strictly <strong>ftp</strong> designated domains or a dedicated domain for a database such as <strong>mssql.google.com</strong>. If a domain has a wildcard configured you may get a warning such as <strong>Warning: wildcard domain configured (2nd test)</strong> Which is usually not a big deal but can sometimes take a very long time to complete or it will get hung up altogether.</p>
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/07/22/what-is-kali-linux/" itemprop="url">
+                  What is Kali Linux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
+              2015-07-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="What_is_Kali_Linux?">What is Kali Linux?</h2><p>Kali Linux previously known as Backtrack is a custom Linux distro maintained by Offensive Security Ltd. It’s main purpose is for digital forensics and penetration testing. It comes with all the tools you need to start hacking and takes some getting to know before you can actually do anything with it. It’s designed as out of the box OS solution that will quickly get you up and hacking from nearly any type of device quickly.</p>
+<h2 id="What_Kali_Linux_is_not-">What Kali Linux is not.</h2><p>It is not a push button solution that will hack anything at the push of a button. It is not for beginners that don’t understand how computers work. You should have a decent understanding of computers and the internet before you can even dream of doing anything with Kali. It’s not for what you might call a “Script Kiddy”. It’s also not for people that don’t understand the basic fundamentals of computer programming, Linux, once again the internet and how it works. If you don’t have those skills locked down then move along until you do because the truth is there isn’t much you can do besides play around with the OS until you do understand those things. However playing is how you learn so why not try it? Just don’t get frustrated when you can’t push the “Hack Google” button because there isn’t one.</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/07/22/git-hooks/" itemprop="url">
+                  Git Hooks
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
+              2015-07-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="What_is_a_git_hook?">What is a git hook?</h2><p>Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your git workflow. If utilized they will take out some of those redundant tasks that you just hate doing or completely forget about. They can also improve code quality across projects with specific needs. I can’t stress enough how happy you will be by learning how to us git hooks and integrating them into your project.</p>
+<p>A git hook is a bash script that is ran at certain periods in the execution process when you are working with git. For instance if you are about to push there is the hook <code>pre-push</code> which can be used to execute a script before a push occurs. The script can do anything you want really. You can check your codebase for certain flaws, send out a tweet, or anything to your liking really.</p>
+<h2 id="Configure_your_first_hook">Configure your first hook</h2><p>By default git has it’s own hooks and init dir which is dependent on your system. These hooks are included in every repo that you create on your system by default and you can check them out by having a look at your <code>.git</code> dir in one of your projects. There are also sample hooks in the <code>.git/hooks</code> dir by default so you can have a look at those for more insight.</p>
+<p>To start we’ll need to create a custom directory where we want to store our git templates. I keep any custom code on my machine in my home directory under <code>~/.code/</code> so I have mine configured like so.</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init<span class="class">.templatedir</span> <span class="string">'~/.code/.git_template'</span></span><br></pre></td></tr></table></figure>
+<p>If we check our globals for git we should see something like</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="operator">-l</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">init.templatedir</span>=~/<span class="preprocessor">.code</span>/.git_template</span><br></pre></td></tr></table></figure>
+<p>The directory can be named anything you want really and doesn’t have to be named the same as mine. After you set your global template directory you will need to add a <strong>hooks</strong> directory under that.</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.code/.git_template &amp;amp;&amp;amp; <span class="built_in">mkdir</span> hooks</span><br></pre></td></tr></table></figure>
+<p>Now you should see a hooks directory and we will need to set the proper permissions to make the scripts executable.</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod ug+x ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>*</span><br></pre></td></tr></table></figure>
+<p>Next we will want to create a hook inside that hooks dir and we are going to keep is simple. What we are going to do is write a simple bash script that will prepend the current branch name to our commit message. This is useful if your working with multiple branches and want to have a hard reference to that branch name after it has been merged into other branches. I use if for feature branch on occasion and it has proven useful.</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>prepare-commit-msg</span><br></pre></td></tr></table></figure>
+<p>If you like here is a sample of that code. What it does is simply get the branch name and checks if we are on master or develop. If we aren’t on either of those branches then it will prepend the current branch wrapped in square brackets to our commit message.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># This way you can customize which branches should be skipped when prepending the commit message.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$BRANCHES_TO_SKIP</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line"> <span class="comment"># Define the branches to skip if your on an of these branches</span></span><br><span class="line"> BRANCHES_TO_SKIP=(master develop)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">BRANCH_NAME=$(git symbolic-ref --short HEAD)</span><br><span class="line">BRANCH_NAME=<span class="string">"<span class="variable">$&#123;BRANCH_NAME##*/&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">BRANCH_EXCLUDED=$(<span class="built_in">printf</span> <span class="string">"%s\n"</span> <span class="string">"<span class="variable">$&#123;BRANCHES_TO_SKIP[@]&#125;</span>"</span> | grep -c <span class="string">"^<span class="variable">$BRANCH_NAME</span>$"</span>)</span><br><span class="line">BRANCH_IN_COMMIT=$(grep -c <span class="string">"\[<span class="variable">$BRANCH_NAME</span>\]"</span> <span class="variable">$1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BRANCH_NAME</span>"</span> ] &amp;amp;&amp;amp; ! [[ <span class="variable">$BRANCH_EXCLUDED</span> <span class="operator">-eq</span> <span class="number">1</span> ]] &amp;amp;&amp;amp; ! [[ <span class="variable">$BRANCH_IN_COMMIT</span> -ge <span class="number">1</span> ]]; <span class="keyword">then</span></span><br><span class="line"> sed -i.bak <span class="operator">-e</span> <span class="string">"1s/^/[<span class="variable">$BRANCH_NAME</span>] /"</span> <span class="variable">$1</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<h2 id="Adding_your_hooks_to_your_project">Adding your hooks to your project</h2><p>After you’ve created your git hook navigate to a project that you don’t mind testing out this nifty new script on and type.</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> init</span><br></pre></td></tr></table></figure>
+<p>This should pull in your new hooks configuration into that repo for you to use. If you want to verify that they are there you can navigate to the <code>.git/hooks</code> directory in your project and check if the files are there and current. Sometimes it doesn’t initialize properly so just be weary of that. Create a new branch and name it anything you like as long as it’s not in that list of <code>BRANCHES_TO_SKIP</code>. Once you complete your changes write up your commit message as usual and you should see the branch name appended to the commit message the you just typed up.</p>
+<p>Really that’s it! You can get as creative as you like with these scripts. For instance you can check for debugging chunks of code or keywords such as <code>console.log</code> or  <code>var_dump</code> that should probably be excluded from your production code.</p>
+<p><strong>Go forth and work smarter not harder!</strong></p>
+<p><a href="http://git-scm.com/book/fr/v2/Customizing-Git-Git-Hooks" target="_blank" rel="external">More information on git hooks</a></p>
 
             
           </span>
@@ -763,8 +956,8 @@
             
             
               
-                <a class="post-title-link" href="/2015/07/22/what-is-kali-linux/" itemprop="url">
-                  What is Kali Linux
+                <a class="post-title-link" href="/2015/07/22/kali-linux-use-dnsdict6-to-scan-ipv6ipv4/" itemprop="url">
+                  Kali Linux use dnsdict6 to scan IPv6/IPv4
                 </a>
               
             
@@ -816,214 +1009,21 @@
         
           <span itemprop="articleBody">
             
-              <h2 id="What_is_Kali_Linux?">What is Kali Linux?</h2><p>Kali Linux previously known as Backtrack is a custom Linux distro maintained by Offensive Security Ltd. It’s main purpose is for digital forensics and penetration testing. It comes with all the tools you need to start hacking and takes some getting to know before you can actually do anything with it. It’s designed as out of the box OS solution that will quickly get you up and hacking from nearly any type of device quickly.</p>
-<h2 id="What_Kali_Linux_is_not-">What Kali Linux is not.</h2><p>It is not a push button solution that will hack anything at the push of a button. It is not for beginners that don’t understand how computers work. You should have a decent understanding of computers and the internet before you can even dream of doing anything with Kali. It’s not for what you might call a “Script Kiddy”. It’s also not for people that don’t understand the basic fundamentals of computer programming, Linux, once again the internet and how it works. If you don’t have those skills locked down then move along until you do because the truth is there isn’t much you can do besides play around with the OS until you do understand those things. However playing is how you learn so why not try it? Just don’t get frustrated when you can’t push the “Hack Google” button because there isn’t one.</p>
+              <p>In Kali Linux there comes a tool called dnsdict6 that is used for DNS enumeration for a domain. It will use a dictionary file if supplied otherwise it uses a built in list. You can use this tool to gather information from a website seeing otherwise hidden or hard to find sub-domains. Sometimes you can find legacy domains that are no longer actively being used but could be a potential attack vector.</p>
+<p>Do a quick scan to see what sort of tool this is and what results we can expect. <code>dnsdict6 google.com</code></p>
+<script id="asciicast-15151" src="https://asciinema.org/a/15151.js" async type="text/javascript"></script>
 
-            
-          </span>
-        
-      
-    </div>
+<p>By running that command above your should see something similar so now we know sort of how this works. Let’s dig into it a bit deeper and learn about what options we can use with dnsdict6. Type in either <code>dnsdict6</code> or <code>dnsdict6 --help</code> and the flags for this command will show up.</p>
+<script id="asciicast-15152" src="https://asciinema.org/a/15152.js" async type="text/javascript"></script>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/07/22/update-kali-linux/" itemprop="url">
-                  Update Kali Linux
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
-              2015-07-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; In
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Work/" itemprop="url" rel="index">
-                    <span itemprop="name">Work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Kali Linux is by far one of the most awesome and battle tested penetration testing OS’s out there. But sometimes it needs a little love to keep things operating smoothly and just like any OS when you update your getting new features as well as security updates that will keep your system safe from recent security breaches. <code>apt-get update &amp;&amp; apt-get upgrade</code></p>
-<p>Alternatively you can add the following flag to that command and it will fix any packages that are broken or partially installed on the system. <code>apt-get update &amp;&amp; apt-get upgrade --fix-missing</code></p>
-<p>Kali will ping the Kali web server checking for new packages listed on their servers now check it’s webservers for updates. If it finds any that need updated then it should ask if you want to install them.</p>
-<p>Patiently wait for all of the packages to update, go make a coffee or whatever floats your boat.</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/07/22/git-hooks/" itemprop="url">
-                  Git Hooks
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
-              2015-07-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; In
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Work/" itemprop="url" rel="index">
-                    <span itemprop="name">Work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="What_is_a_git_hook?">What is a git hook?</h2><p>Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your git workflow. If utilized they will take out some of those redundant tasks that you just hate doing or completely forget about. They can also improve code quality across projects with specific needs. I can’t stress enough how happy you will be by learning how to us git hooks and integrating them into your project.</p>
-<p>A git hook is a bash script that is ran at certain periods in the execution process when you are working with git. For instance if you are about to push there is the hook <code>pre-push</code> which can be used to execute a script before a push occurs. The script can do anything you want really. You can check your codebase for certain flaws, send out a tweet, or anything to your liking really.</p>
-<h2 id="Configure_your_first_hook">Configure your first hook</h2><p>By default git has it’s own hooks and init dir which is dependent on your system. These hooks are included in every repo that you create on your system by default and you can check them out by having a look at your <code>.git</code> dir in one of your projects. There are also sample hooks in the <code>.git/hooks</code> dir by default so you can have a look at those for more insight.</p>
-<p>To start we’ll need to create a custom directory where we want to store our git templates. I keep any custom code on my machine in my home directory under <code>~/.code/</code> so I have mine configured like so.</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init<span class="class">.templatedir</span> <span class="string">'~/.code/.git_template'</span></span><br></pre></td></tr></table></figure>
-<p>If we check our globals for git we should see something like</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="operator">-l</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">init.templatedir</span>=~/<span class="preprocessor">.code</span>/.git_template</span><br></pre></td></tr></table></figure>
-<p>The directory can be named anything you want really and doesn’t have to be named the same as mine. After you set your global template directory you will need to add a <strong>hooks</strong> directory under that.</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.code/.git_template &amp;amp;&amp;amp; <span class="built_in">mkdir</span> hooks</span><br></pre></td></tr></table></figure>
-<p>Now you should see a hooks directory and we will need to set the proper permissions to make the scripts executable.</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod ug+x ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>*</span><br></pre></td></tr></table></figure>
-<p>Next we will want to create a hook inside that hooks dir and we are going to keep is simple. What we are going to do is write a simple bash script that will prepend the current branch name to our commit message. This is useful if your working with multiple branches and want to have a hard reference to that branch name after it has been merged into other branches. I use if for feature branch on occasion and it has proven useful.</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>prepare-commit-msg</span><br></pre></td></tr></table></figure>
-<p>If you like here is a sample of that code. What it does is simply get the branch name and checks if we are on master or develop. If we aren’t on either of those branches then it will prepend the current branch wrapped in square brackets to our commit message.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># This way you can customize which branches should be skipped when prepending the commit message.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$BRANCHES_TO_SKIP</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line"> <span class="comment"># Define the branches to skip if your on an of these branches</span></span><br><span class="line"> BRANCHES_TO_SKIP=(master develop)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">BRANCH_NAME=$(git symbolic-ref --short HEAD)</span><br><span class="line">BRANCH_NAME=<span class="string">"<span class="variable">$&#123;BRANCH_NAME##*/&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">BRANCH_EXCLUDED=$(<span class="built_in">printf</span> <span class="string">"%s\n"</span> <span class="string">"<span class="variable">$&#123;BRANCHES_TO_SKIP[@]&#125;</span>"</span> | grep -c <span class="string">"^<span class="variable">$BRANCH_NAME</span>$"</span>)</span><br><span class="line">BRANCH_IN_COMMIT=$(grep -c <span class="string">"\[<span class="variable">$BRANCH_NAME</span>\]"</span> <span class="variable">$1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BRANCH_NAME</span>"</span> ] &amp;amp;&amp;amp; ! [[ <span class="variable">$BRANCH_EXCLUDED</span> <span class="operator">-eq</span> <span class="number">1</span> ]] &amp;amp;&amp;amp; ! [[ <span class="variable">$BRANCH_IN_COMMIT</span> -ge <span class="number">1</span> ]]; <span class="keyword">then</span></span><br><span class="line"> sed -i.bak <span class="operator">-e</span> <span class="string">"1s/^/[<span class="variable">$BRANCH_NAME</span>] /"</span> <span class="variable">$1</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<h2 id="Adding_your_hooks_to_your_project">Adding your hooks to your project</h2><p>After you’ve created your git hook navigate to a project that you don’t mind testing out this nifty new script on and type.</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> init</span><br></pre></td></tr></table></figure>
-<p>This should pull in your new hooks configuration into that repo for you to use. If you want to verify that they are there you can navigate to the <code>.git/hooks</code> directory in your project and check if the files are there and current. Sometimes it doesn’t initialize properly so just be weary of that. Create a new branch and name it anything you like as long as it’s not in that list of <code>BRANCHES_TO_SKIP</code>. Once you complete your changes write up your commit message as usual and you should see the branch name appended to the commit message the you just typed up.</p>
-<p>Really that’s it! You can get as creative as you like with these scripts. For instance you can check for debugging chunks of code or keywords such as <code>console.log</code> or  <code>var_dump</code> that should probably be excluded from your production code.</p>
-<p><strong>Go forth and work smarter not harder!</strong></p>
-<p><a href="http://git-scm.com/book/fr/v2/Customizing-Git-Git-Hooks" target="_blank" rel="external">More information on git hooks</a></p>
+<h2 id="But_what_do_those_flags_mean_really_and_how_can_we_use_them?">But what do those flags mean really and how can we use them?</h2><p><strong>-4</strong>: Will also yield IPv4 addresses which are reserved for private networks and multicast addresses.</p>
+<p><strong>-t</strong>: # Will determine how many threads your willing to use for the search. It can add some speed to the process but the task will get done nonetheless. Threading does make a difference if your using a larger list usually around 20 is a good number.</p>
+<p><strong>-D</strong>: Doesn’t do any scanning and will dump the current built in wordlist that the utility uses by default.</p>
+<p><strong>-d</strong>: Will display the IPv6 information on NS records which are basically which nameservers the domain points to and the MX records are mail servers that belong to the attached domain.</p>
+<p><strong>-S</strong>: Will list services that are used by the domain such as jabber and xmpp.</p>
+<p><strong>-[smlxu]</strong>: Will change the size of the dictionary that you’ll use for the scan. You will get more results sometimes but it will also take more time to dig through all of these dictionary terms.</p>
+<p><strong>How is this useful?</strong></p>
+<p>Planning is key to a successful attack and without information planning is all theoretical. We need to limit the amount of theoretical approaches to our attack therefore we rule them out by gathering information. The domains collected using this utility could be used later as attack vectors or further investigation of exploits in those domains. For instance you can find strictly <strong>ftp</strong> designated domains or a dedicated domain for a database such as <strong>mssql.google.com</strong>. If a domain has a wildcard configured you may get a warning such as <strong>Warning: wildcard domain configured (2nd test)</strong> Which is usually not a big deal but can sometimes take a very long time to complete or it will get hung up altogether.</p>
 
             
           </span>
