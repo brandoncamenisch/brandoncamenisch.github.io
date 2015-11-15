@@ -34,7 +34,7 @@
 
 
 
-  <meta name="keywords" content="VVV,Vagrant," />
+  <meta name="keywords" content="Hexo,WordPress," />
 
 
 
@@ -43,16 +43,16 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="The vagrant share command is totally underused and working in a remote company it’s also totally necessary. Nearly everyday I’m asked to troubleshoot a piece of code or help figure out a bug. Usually">
+<meta name="description" content="WTF is Hexo?Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Wh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VVV multiple projects with vagrant share">
-<meta property="og:url" content="http://www.brandoncamenisch.com/2015/07/29/vvv-multiple-projects-with-vagrant-share/index.html">
+<meta property="og:title" content="Why I moved from WordPress to Hexo">
+<meta property="og:url" content="http://www.brandoncamenisch.com/2015/10/21/why-i-moved-from-wordpress-to-hexo/index.html">
 <meta property="og:site_name" content="Brandon Camenisch">
-<meta property="og:description" content="The vagrant share command is totally underused and working in a remote company it’s also totally necessary. Nearly everyday I’m asked to troubleshoot a piece of code or help figure out a bug. Usually">
-<meta property="og:updated_time" content="2015-10-20T20:24:52.000Z">
+<meta property="og:description" content="WTF is Hexo?Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Wh">
+<meta property="og:updated_time" content="2015-11-06T11:27:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VVV multiple projects with vagrant share">
-<meta name="twitter:description" content="The vagrant share command is totally underused and working in a remote company it’s also totally necessary. Nearly everyday I’m asked to troubleshoot a piece of code or help figure out a bug. Usually">
+<meta name="twitter:title" content="Why I moved from WordPress to Hexo">
+<meta name="twitter:description" content="WTF is Hexo?Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Wh">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -64,7 +64,7 @@
 
 
 
-  <title> VVV multiple projects with vagrant share | Brandon Camenisch </title>
+  <title> Why I moved from WordPress to Hexo | Brandon Camenisch </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -169,7 +169,7 @@
             
             
               
-                VVV multiple projects with vagrant share
+                Why I moved from WordPress to Hexo
               
             
           </h1>
@@ -178,8 +178,8 @@
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-07-29T18:07:04+02:00" content="2015-07-29">
-              2015-07-29
+            <time itemprop="dateCreated" datetime="2015-10-21T06:17:42+02:00" content="2015-10-20">
+              2015-10-20
             </time>
           </span>
 
@@ -217,20 +217,10 @@
       
 
       
-        <span itemprop="articleBody"><p>The vagrant share command is totally underused and working in a remote company it’s also totally necessary. Nearly everyday I’m asked to troubleshoot a piece of code or help figure out a bug. Usually I need some context in order to help so I say “can you share your screen” or “would you mind pushing that up to staging and I’ll have a look at it later”. That’s just no good because it creates a time gap where I can’t help them. And oftentimes by the times I get around to taking a look they’ve already given up or went another route. That just sucks and there has to be a better way right? Well, there is and it’s called <code>vagrant share</code>. But there is one issue and that is by default it shares the default configuration for the VM which working in VVV is the default screen which isn’t very useful in debugging a site. But there is hope yet.</p>
-<p>Luckily with the vagrant share command you can specify a port as one of the flags. So this got me thinking I wonder if… You setup a site with it’s own port you could theoretically access each site like it was it’s own box right? I just blew my own mind in the process. Oh the possibilities.</p>
-<p>So I added this to my Vagrantfile<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">VAGRANTFILE_API_VERSION = <span class="string">"2"</span></span><br><span class="line">    Vagrant.configure(VAGRANTFILE_API_VERSION) <span class="keyword">do</span> |config|</span><br><span class="line">    config.<span class="keyword">vm</span>.network <span class="string">"forwarded_port"</span>, gues<span class="variable">t:</span> <span class="number">85</span>, hos<span class="variable">t:</span> <span class="number">8085</span></span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
-<p>And then I changed my nginx port to listen on port 85 like so</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword"><span class="common">listen</span></span> 85;</span><br></pre></td></tr></table></figure>
-<p>So now I’m thinking cool let’s fire this up and see if it works so I type</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant share <span class="comment">--http 85</span></span><br></pre></td></tr></table></figure>
-<p>And that works just fine if you take WordPress out of the situation but that defeats the purpose here since I work with primarily with WordPress. So, what do I do now? We’re getting passed all of the checkpoints on this except for WordPress and the reason is it’s determining the home and site url either by the DB or the wp-config file. What we need to do here is make the install URL agnostic so that it will work with any domain.</p>
-<p>We we need to either change tht in the DB or update the config. Updating the config is much easier so let’s just do that.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">'WP_HOME'</span>,    <span class="string">"http://&#123;$_SERVER['HTTP_HOST']&#125;/"</span>);</span><br><span class="line">define(<span class="string">'WP_SITEURL'</span>, <span class="string">"http://&#123;$_SERVER['HTTP_HOST']&#125;/"</span>);</span><br></pre></td></tr></table></figure>
-<p>Bam! we are in business you type up <code>vagrant share --http 85</code> and everything runs cool as ice.</p>
-<p>But what about images? And other things? Just throw in a proxy pass like in the example below and everything works wonderfully.</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">server</span> &#123;</span><br><span class="line">    <span class="title">listen</span>       <span class="number">85</span>;</span><br><span class="line">    <span class="title">listen</span>       <span class="number">443</span> ssl;</span><br><span class="line">    <span class="title">server_name</span>  site.dev <span class="regexp">*.site.dev</span>;</span><br><span class="line">    <span class="title">root</span>         /srv/www/site;</span><br><span class="line">    <span class="title">include</span>      /etc/nginx/nginx-wp-common.conf;</span><br><span class="line"></span><br><span class="line">    <span class="title">location</span> <span class="regexp">~* \.(js|css|png|jpg|jpeg|gif|ico|mp3|mov|tif|tiff|swf|txt|html)$</span> &#123;</span><br><span class="line">        <span class="title">expires</span> <span class="number">24h</span>;</span><br><span class="line">        <span class="title">log_not_found</span> <span class="built_in">off</span>;</span><br><span class="line">        <span class="title">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ <span class="variable">@production</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title">location</span> <span class="variable">@production</span> &#123;</span><br><span class="line">        <span class="title">resolver</span> <span class="number">8.8.8.8</span>;</span><br><span class="line">        <span class="title">proxy_pass</span> <span class="url">http://www.site.com/<span class="variable">$uri</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Now anyone you share that with will be able to help checkout your local machine without any trouble they can even login and poke around the admin.</p>
+        <span itemprop="articleBody"><h2 id="WTF_is_Hexo?">WTF is Hexo?</h2><p>Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Which was a static site generator with a cli interface written in node which I could port wherever I wanted for free hosting.</p>
+<h2 id="No_cost_and_less_headaches">No cost and less headaches</h2><p>Though I’m not cheap I don’t really like dishing out even $5 a month for hosting when I can get it for free. GitHub offers GitHub pages which serve up static sites and <a href="https://hexo.io" target="_blank" rel="external">Hexo</a> fits well into that very well. Of course there’s jekyll but I wanted something different and new so I went looking for something built on top of node. That yielded a few results like <a href="http://jsantell.github.io/poet/" target="_blank" rel="external">poet</a> which looks pretty hip and all but it didn’t seem to statically generate the site. There’s really no good reason for me to want to dick around with any type of hosting whether its VPS, shared, WPEngine, or hosted on WordPress.com. Why should I bother and waste the time when all I need is a simple blog? It’s not like I write that much anyways. There’s simply too much overhead to run a simple WordPress blog and it’s super annoying to mess around with updates, spammers, caching issues, downtime, etc. It’s a pain in the ass! If GitHub goes down I’m pretty confident that my site isn’t going to suffer much in the end and I don’t have to worry about any other logistics other than deploying my site. </p>
+<p>It also extremeley portable because everything is written in markdown I can take my posts with me wherever I go. I usually write everything in markdown on WordPress anyways and it likes to fight between using markdown and html. With Hexo I can write my posts in vim and deploy in one simple command.</p>
+<h2 id="It’s_fresh">It’s fresh</h2><p>I’m excited to work with node and all things built on node so any chance I get to move towards using it is a step towards progress IMO. In a world where what you learned last week may no longer be in fashion WordPress is like a dude wearing socks with sandals. Hexo is pretty new still with it’s very first release being in October of 2012 it offers a pretty powerful API and a nice cli out of the box. But duh, it’s not a CMS replacement for Wordpress but definitely a competitor to jekyll and other static site generators out there.</p>
 </span>
       
     </div>
@@ -239,9 +229,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/VVV/" rel="tag">#VVV</a>
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
           
-            <a href="/tags/Vagrant/" rel="tag">#Vagrant</a>
+            <a href="/tags/WordPress/" rel="tag">#WordPress</a>
           
         </div>
       
@@ -250,16 +240,12 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/21/why-i-moved-from-wordpress-to-hexo/" rel="prev">
-                <i class="fa fa-chevron-left"></i> Why I moved from WordPress to Hexo
-              </a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/25/down-with-the-gui/" rel="next">
-                No more GUIs <i class="fa fa-chevron-right"></i>
+              <a href="/2015/07/29/vvv-multiple-projects-with-vagrant-share/" rel="next">
+                VVV multiple projects with vagrant share <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -373,7 +359,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WTF_is_Hexo?"><span class="nav-number">1.</span> <span class="nav-text">WTF is Hexo?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No_cost_and_less_headaches"><span class="nav-number">2.</span> <span class="nav-text">No cost and less headaches</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#It’s_fresh"><span class="nav-number">3.</span> <span class="nav-text">It’s fresh</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
