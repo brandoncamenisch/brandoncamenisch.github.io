@@ -80,6 +80,15 @@
   
 
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-30655050-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 
@@ -462,8 +471,8 @@
             
             
               
-                <a class="post-title-link" href="/2015/07/22/what-is-kali-linux/" itemprop="url">
-                  What is Kali Linux
+                <a class="post-title-link" href="/2015/07/22/git-hooks/" itemprop="url">
+                  Git Hooks
                 </a>
               
             
@@ -515,204 +524,28 @@
         
           <span itemprop="articleBody">
             
-              <h2 id="What_is_Kali_Linux_3F"><a href="#What_is_Kali_Linux_3F" class="headerlink" title="What is Kali Linux?"></a>What is Kali Linux?</h2><p>Kali Linux previously known as Backtrack is a custom Linux distro maintained by Offensive Security Ltd. It’s main purpose is for digital forensics and penetration testing. It comes with all the tools you need to start hacking and takes some getting to know before you can actually do anything with it. It’s designed as out of the box OS solution that will quickly get you up and hacking from nearly any type of device quickly.</p>
-<h2 id="What_Kali_Linux_is_not"><a href="#What_Kali_Linux_is_not" class="headerlink" title="What Kali Linux is not."></a>What Kali Linux is not.</h2><p>It is not a push button solution that will hack anything at the push of a button. It is not for beginners that don’t understand how computers work. You should have a decent understanding of computers and the internet before you can even dream of doing anything with Kali. It’s not for what you might call a “Script Kiddy”. It’s also not for people that don’t understand the basic fundamentals of computer programming, Linux, once again the internet and how it works. If you don’t have those skills locked down then move along until you do because the truth is there isn’t much you can do besides play around with the OS until you do understand those things. However playing is how you learn so why not try it? Just don’t get frustrated when you can’t push the “Hack Google” button because there isn’t one.</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/07/22/vvv-php-code-sniffer-with-wordpress/" itemprop="url">
-                  VVV PHP Code Sniffer with WordPress
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
-              2015-07-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; In
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Work/" itemprop="url" rel="index">
-                    <span itemprop="name">Work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Unbekownst to a lot of people that use VVV even on a daily basis is that there is a built in code sniffer or <strong>CS</strong> integrated into the machine that can be really useful if your committing code and want to maintain a higher standard. If you’ve provisioned the box then sitting inside your <strong>www</strong> directory there should be another directory called <strong>phpcs</strong> which stands for “PHP Code Sniffer”.</p>
-<h2 id="Sniffing_Code_from_the_console"><a href="#Sniffing_Code_from_the_console" class="headerlink" title="Sniffing Code from the console"></a>Sniffing Code from the console</h2><p>After you’ve booted up the vm you’ll want to <code>vagrant ssh</code> into the box and check if phpcs is installed by typing <code>which phpcs</code> which should return the its executable path which is something like <code>/srv/www/phpcs/scripts/phpcs</code>. If nothing is returned then you need to add the executable to your path but it should be there by default when you provision the machine.</p>
-<p>Using the built in php code sniffer with WordPress is easy. Once we’ve verified that phpcs is on the box and it’s executable then we need to test out a file to see if it’s up to coding standard. Let’s check out our <strong>wp-config.php</strong> file by running <code>phpcs /srv/www/wordpress-default/wp-config.php</code> . This should return results similar to those below.</p>
-<p>Keep in mind that this sniffed using the default PEAR standard for the file and since we are working with WordPress we want a standard that is more our ballgame but to see which ones are installed type <code>phpcs -i</code> After that pick a standard listed, I’m going to use WordPress </p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">phpcs</span> /srv/www/wordpress-<span class="default"><span class="keyword">default</span>/wp-config.php <span class="comment">--standard=WordPress`</span></span></span><br></pre></td></tr></table></figure>
-<p>Notice now that the results are slightly different since we are using the WordPress standard to sniff our code. That’s a lot of errors though and I don’t want to manually go through and find them all fixing them on by one. That would be so boring and take way too long so let’s fix them in one go. Notice the message at the bottom of that command output.</p>
-<p><strong>PHPCBF CAN FIX THE MARKED SNIFF VIOLATIONS AUTOMATICALLY</strong></p>
-<h2 id="Fixing_Code"><a href="#Fixing_Code" class="headerlink" title="Fixing Code"></a>Fixing Code</h2><p>Is totally something you don’t want to miss and is just as easy to use as phpcs. If you don’t already have a patch or diff application setup for phpcbf then you’ll probably want to pass the flag <strong>–no-patch</strong> along with this next command otherwise you will most likely get an error. </p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">phpcbf</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">standard=WordPress</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">no</span><span class="literal">-</span><span class="comment">patch</span> <span class="comment">/srv/www/wordpress</span><span class="literal">-</span><span class="comment">default/wp</span><span class="literal">-</span><span class="comment">config</span><span class="string">.</span><span class="comment">php`</span></span><br></pre></td></tr></table></figure>
-<p>Now those errors should be all fixes to that coding standard. If you were to run the <strong>phpcs </strong>command again then the errors in question should no longer show up in the sniff results.</p>
-<p>You can also fix entire directories using these tools but just be warned that though it works pretty well sometimes you just don’t get all of the perfect code that you expected.</p>
-<p>As a note for those that work with <strong>VIP QuickStart</strong> the same packages are installed on the Vagrant box as well and can be used in the same fashion. If your a vim user I’ve found that this <a href="http://vimawesome.com/plugin/phpcs-vim&quot;" target="_blank" rel="external">plugin</a> works well.</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/07/22/update-kali-linux/" itemprop="url">
-                  Update Kali Linux
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
-              2015-07-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; In
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Work/" itemprop="url" rel="index">
-                    <span itemprop="name">Work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Kali Linux is by far one of the most awesome and battle tested penetration testing OS’s out there. But sometimes it needs a little love to keep things operating smoothly and just like any OS when you update your getting new features as well as security updates that will keep your system safe from recent security breaches. <code>apt-get update &amp;&amp; apt-get upgrade</code></p>
-<p>Alternatively you can add the following flag to that command and it will fix any packages that are broken or partially installed on the system. <code>apt-get update &amp;&amp; apt-get upgrade --fix-missing</code></p>
-<p>Kali will ping the Kali web server checking for new packages listed on their servers now check it’s webservers for updates. If it finds any that need updated then it should ask if you want to install them.</p>
-<p>Patiently wait for all of the packages to update, go make a coffee or whatever floats your boat.</p>
+              <h2 id="What_is_a_git_hook_3F"><a href="#What_is_a_git_hook_3F" class="headerlink" title="What is a git hook?"></a>What is a git hook?</h2><p>Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your git workflow. If utilized they will take out some of those redundant tasks that you just hate doing or completely forget about. They can also improve code quality across projects with specific needs. I can’t stress enough how happy you will be by learning how to us git hooks and integrating them into your project.</p>
+<p>A git hook is a bash script that is ran at certain periods in the execution process when you are working with git. For instance if you are about to push there is the hook <code>pre-push</code> which can be used to execute a script before a push occurs. The script can do anything you want really. You can check your codebase for certain flaws, send out a tweet, or anything to your liking really.</p>
+<h2 id="Configure_your_first_hook"><a href="#Configure_your_first_hook" class="headerlink" title="Configure your first hook"></a>Configure your first hook</h2><p>By default git has it’s own hooks and init dir which is dependent on your system. These hooks are included in every repo that you create on your system by default and you can check them out by having a look at your <code>.git</code> dir in one of your projects. There are also sample hooks in the <code>.git/hooks</code> dir by default so you can have a look at those for more insight.</p>
+<p>To start we’ll need to create a custom directory where we want to store our git templates. I keep any custom code on my machine in my home directory under <code>~/.code/</code> so I have mine configured like so.</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init<span class="class">.templatedir</span> <span class="string">'~/.code/.git_template'</span></span><br></pre></td></tr></table></figure>
+<p>If we check our globals for git we should see something like</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="operator">-l</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">init.templatedir</span>=~/<span class="preprocessor">.code</span>/.git_template</span><br></pre></td></tr></table></figure>
+<p>The directory can be named anything you want really and doesn’t have to be named the same as mine. After you set your global template directory you will need to add a <strong>hooks</strong> directory under that.</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.code/.git_template &amp;&amp; <span class="built_in">mkdir</span> hooks</span><br></pre></td></tr></table></figure>
+<p>Now you should see a hooks directory and we will need to set the proper permissions to make the scripts executable.</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod ug+x ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>*</span><br></pre></td></tr></table></figure>
+<p>Next we will want to create a hook inside that hooks dir and we are going to keep is simple. What we are going to do is write a simple bash script that will prepend the current branch name to our commit message. This is useful if your working with multiple branches and want to have a hard reference to that branch name after it has been merged into other branches. I use if for feature branch on occasion and it has proven useful.</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>prepare-commit-msg</span><br></pre></td></tr></table></figure>
+<p>If you like here is a sample of that code. What it does is simply get the branch name and checks if we are on master or develop. If we aren’t on either of those branches then it will prepend the current branch wrapped in square brackets to our commit message.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># This way you can customize which branches should be skipped when prepending the commit message.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$BRANCHES_TO_SKIP</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line"> <span class="comment"># Define the branches to skip if your on an of these branches</span></span><br><span class="line"> BRANCHES_TO_SKIP=(master develop)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">BRANCH_NAME=$(git symbolic-ref --short HEAD)</span><br><span class="line">BRANCH_NAME=<span class="string">"<span class="variable">$&#123;BRANCH_NAME##*/&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">BRANCH_EXCLUDED=$(<span class="built_in">printf</span> <span class="string">"%s\n"</span> <span class="string">"<span class="variable">$&#123;BRANCHES_TO_SKIP[@]&#125;</span>"</span> | grep -c <span class="string">"^<span class="variable">$BRANCH_NAME</span>$"</span>)</span><br><span class="line">BRANCH_IN_COMMIT=$(grep -c <span class="string">"\[<span class="variable">$BRANCH_NAME</span>\]"</span> <span class="variable">$1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BRANCH_NAME</span>"</span> ] &amp;&amp; ! [[ <span class="variable">$BRANCH_EXCLUDED</span> <span class="operator">-eq</span> <span class="number">1</span> ]] &amp;&amp; ! [[ <span class="variable">$BRANCH_IN_COMMIT</span> -ge <span class="number">1</span> ]]; <span class="keyword">then</span></span><br><span class="line"> sed -i.bak <span class="operator">-e</span> <span class="string">"1s/^/[<span class="variable">$BRANCH_NAME</span>] /"</span> <span class="variable">$1</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<h2 id="Adding_your_hooks_to_your_project"><a href="#Adding_your_hooks_to_your_project" class="headerlink" title="Adding your hooks to your project"></a>Adding your hooks to your project</h2><p>After you’ve created your git hook navigate to a project that you don’t mind testing out this nifty new script on and type.</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> init</span><br></pre></td></tr></table></figure>
+<p>This should pull in your new hooks configuration into that repo for you to use. If you want to verify that they are there you can navigate to the <code>.git/hooks</code> directory in your project and check if the files are there and current. Sometimes it doesn’t initialize properly so just be weary of that. Create a new branch and name it anything you like as long as it’s not in that list of <code>BRANCHES_TO_SKIP</code>. Once you complete your changes write up your commit message as usual and you should see the branch name appended to the commit message the you just typed up.</p>
+<p>Really that’s it! You can get as creative as you like with these scripts. For instance you can check for debugging chunks of code or keywords such as <code>console.log</code> or  <code>var_dump</code> that should probably be excluded from your production code.</p>
+<p><strong>Go forth and work smarter not harder!</strong></p>
+<p><a href="http://git-scm.com/book/fr/v2/Customizing-Git-Git-Hooks" target="_blank" rel="external">More information on git hooks</a></p>
 
             
           </span>
@@ -855,8 +688,8 @@
             
             
               
-                <a class="post-title-link" href="/2015/07/22/git-hooks/" itemprop="url">
-                  Git Hooks
+                <a class="post-title-link" href="/2015/07/22/vvv-php-code-sniffer-with-wordpress/" itemprop="url">
+                  VVV PHP Code Sniffer with WordPress
                 </a>
               
             
@@ -908,28 +741,298 @@
         
           <span itemprop="articleBody">
             
-              <h2 id="What_is_a_git_hook_3F"><a href="#What_is_a_git_hook_3F" class="headerlink" title="What is a git hook?"></a>What is a git hook?</h2><p>Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your git workflow. If utilized they will take out some of those redundant tasks that you just hate doing or completely forget about. They can also improve code quality across projects with specific needs. I can’t stress enough how happy you will be by learning how to us git hooks and integrating them into your project.</p>
-<p>A git hook is a bash script that is ran at certain periods in the execution process when you are working with git. For instance if you are about to push there is the hook <code>pre-push</code> which can be used to execute a script before a push occurs. The script can do anything you want really. You can check your codebase for certain flaws, send out a tweet, or anything to your liking really.</p>
-<h2 id="Configure_your_first_hook"><a href="#Configure_your_first_hook" class="headerlink" title="Configure your first hook"></a>Configure your first hook</h2><p>By default git has it’s own hooks and init dir which is dependent on your system. These hooks are included in every repo that you create on your system by default and you can check them out by having a look at your <code>.git</code> dir in one of your projects. There are also sample hooks in the <code>.git/hooks</code> dir by default so you can have a look at those for more insight.</p>
-<p>To start we’ll need to create a custom directory where we want to store our git templates. I keep any custom code on my machine in my home directory under <code>~/.code/</code> so I have mine configured like so.</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init<span class="class">.templatedir</span> <span class="string">'~/.code/.git_template'</span></span><br></pre></td></tr></table></figure>
-<p>If we check our globals for git we should see something like</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="operator">-l</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">init.templatedir</span>=~/<span class="preprocessor">.code</span>/.git_template</span><br></pre></td></tr></table></figure>
-<p>The directory can be named anything you want really and doesn’t have to be named the same as mine. After you set your global template directory you will need to add a <strong>hooks</strong> directory under that.</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.code/.git_template &amp;&amp; <span class="built_in">mkdir</span> hooks</span><br></pre></td></tr></table></figure>
-<p>Now you should see a hooks directory and we will need to set the proper permissions to make the scripts executable.</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod ug+x ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>*</span><br></pre></td></tr></table></figure>
-<p>Next we will want to create a hook inside that hooks dir and we are going to keep is simple. What we are going to do is write a simple bash script that will prepend the current branch name to our commit message. This is useful if your working with multiple branches and want to have a hard reference to that branch name after it has been merged into other branches. I use if for feature branch on occasion and it has proven useful.</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>prepare-commit-msg</span><br></pre></td></tr></table></figure>
-<p>If you like here is a sample of that code. What it does is simply get the branch name and checks if we are on master or develop. If we aren’t on either of those branches then it will prepend the current branch wrapped in square brackets to our commit message.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># This way you can customize which branches should be skipped when prepending the commit message.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$BRANCHES_TO_SKIP</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line"> <span class="comment"># Define the branches to skip if your on an of these branches</span></span><br><span class="line"> BRANCHES_TO_SKIP=(master develop)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">BRANCH_NAME=$(git symbolic-ref --short HEAD)</span><br><span class="line">BRANCH_NAME=<span class="string">"<span class="variable">$&#123;BRANCH_NAME##*/&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">BRANCH_EXCLUDED=$(<span class="built_in">printf</span> <span class="string">"%s\n"</span> <span class="string">"<span class="variable">$&#123;BRANCHES_TO_SKIP[@]&#125;</span>"</span> | grep -c <span class="string">"^<span class="variable">$BRANCH_NAME</span>$"</span>)</span><br><span class="line">BRANCH_IN_COMMIT=$(grep -c <span class="string">"\[<span class="variable">$BRANCH_NAME</span>\]"</span> <span class="variable">$1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BRANCH_NAME</span>"</span> ] &amp;&amp; ! [[ <span class="variable">$BRANCH_EXCLUDED</span> <span class="operator">-eq</span> <span class="number">1</span> ]] &amp;&amp; ! [[ <span class="variable">$BRANCH_IN_COMMIT</span> -ge <span class="number">1</span> ]]; <span class="keyword">then</span></span><br><span class="line"> sed -i.bak <span class="operator">-e</span> <span class="string">"1s/^/[<span class="variable">$BRANCH_NAME</span>] /"</span> <span class="variable">$1</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<h2 id="Adding_your_hooks_to_your_project"><a href="#Adding_your_hooks_to_your_project" class="headerlink" title="Adding your hooks to your project"></a>Adding your hooks to your project</h2><p>After you’ve created your git hook navigate to a project that you don’t mind testing out this nifty new script on and type.</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> init</span><br></pre></td></tr></table></figure>
-<p>This should pull in your new hooks configuration into that repo for you to use. If you want to verify that they are there you can navigate to the <code>.git/hooks</code> directory in your project and check if the files are there and current. Sometimes it doesn’t initialize properly so just be weary of that. Create a new branch and name it anything you like as long as it’s not in that list of <code>BRANCHES_TO_SKIP</code>. Once you complete your changes write up your commit message as usual and you should see the branch name appended to the commit message the you just typed up.</p>
-<p>Really that’s it! You can get as creative as you like with these scripts. For instance you can check for debugging chunks of code or keywords such as <code>console.log</code> or  <code>var_dump</code> that should probably be excluded from your production code.</p>
-<p><strong>Go forth and work smarter not harder!</strong></p>
-<p><a href="http://git-scm.com/book/fr/v2/Customizing-Git-Git-Hooks" target="_blank" rel="external">More information on git hooks</a></p>
+              <p>Unbekownst to a lot of people that use VVV even on a daily basis is that there is a built in code sniffer or <strong>CS</strong> integrated into the machine that can be really useful if your committing code and want to maintain a higher standard. If you’ve provisioned the box then sitting inside your <strong>www</strong> directory there should be another directory called <strong>phpcs</strong> which stands for “PHP Code Sniffer”.</p>
+<h2 id="Sniffing_Code_from_the_console"><a href="#Sniffing_Code_from_the_console" class="headerlink" title="Sniffing Code from the console"></a>Sniffing Code from the console</h2><p>After you’ve booted up the vm you’ll want to <code>vagrant ssh</code> into the box and check if phpcs is installed by typing <code>which phpcs</code> which should return the its executable path which is something like <code>/srv/www/phpcs/scripts/phpcs</code>. If nothing is returned then you need to add the executable to your path but it should be there by default when you provision the machine.</p>
+<p>Using the built in php code sniffer with WordPress is easy. Once we’ve verified that phpcs is on the box and it’s executable then we need to test out a file to see if it’s up to coding standard. Let’s check out our <strong>wp-config.php</strong> file by running <code>phpcs /srv/www/wordpress-default/wp-config.php</code> . This should return results similar to those below.</p>
+<p>Keep in mind that this sniffed using the default PEAR standard for the file and since we are working with WordPress we want a standard that is more our ballgame but to see which ones are installed type <code>phpcs -i</code> After that pick a standard listed, I’m going to use WordPress </p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">phpcs</span> /srv/www/wordpress-<span class="default"><span class="keyword">default</span>/wp-config.php <span class="comment">--standard=WordPress`</span></span></span><br></pre></td></tr></table></figure>
+<p>Notice now that the results are slightly different since we are using the WordPress standard to sniff our code. That’s a lot of errors though and I don’t want to manually go through and find them all fixing them on by one. That would be so boring and take way too long so let’s fix them in one go. Notice the message at the bottom of that command output.</p>
+<p><strong>PHPCBF CAN FIX THE MARKED SNIFF VIOLATIONS AUTOMATICALLY</strong></p>
+<h2 id="Fixing_Code"><a href="#Fixing_Code" class="headerlink" title="Fixing Code"></a>Fixing Code</h2><p>Is totally something you don’t want to miss and is just as easy to use as phpcs. If you don’t already have a patch or diff application setup for phpcbf then you’ll probably want to pass the flag <strong>–no-patch</strong> along with this next command otherwise you will most likely get an error. </p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">phpcbf</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">standard=WordPress</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">no</span><span class="literal">-</span><span class="comment">patch</span> <span class="comment">/srv/www/wordpress</span><span class="literal">-</span><span class="comment">default/wp</span><span class="literal">-</span><span class="comment">config</span><span class="string">.</span><span class="comment">php`</span></span><br></pre></td></tr></table></figure>
+<p>Now those errors should be all fixes to that coding standard. If you were to run the <strong>phpcs </strong>command again then the errors in question should no longer show up in the sniff results.</p>
+<p>You can also fix entire directories using these tools but just be warned that though it works pretty well sometimes you just don’t get all of the perfect code that you expected.</p>
+<p>As a note for those that work with <strong>VIP QuickStart</strong> the same packages are installed on the Vagrant box as well and can be used in the same fashion. If your a vim user I’ve found that this <a href="http://vimawesome.com/plugin/phpcs-vim&quot;" target="_blank" rel="external">plugin</a> works well.</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/07/22/what-is-kali-linux/" itemprop="url">
+                  What is Kali Linux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
+              2015-07-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="What_is_Kali_Linux_3F"><a href="#What_is_Kali_Linux_3F" class="headerlink" title="What is Kali Linux?"></a>What is Kali Linux?</h2><p>Kali Linux previously known as Backtrack is a custom Linux distro maintained by Offensive Security Ltd. It’s main purpose is for digital forensics and penetration testing. It comes with all the tools you need to start hacking and takes some getting to know before you can actually do anything with it. It’s designed as out of the box OS solution that will quickly get you up and hacking from nearly any type of device quickly.</p>
+<h2 id="What_Kali_Linux_is_not"><a href="#What_Kali_Linux_is_not" class="headerlink" title="What Kali Linux is not."></a>What Kali Linux is not.</h2><p>It is not a push button solution that will hack anything at the push of a button. It is not for beginners that don’t understand how computers work. You should have a decent understanding of computers and the internet before you can even dream of doing anything with Kali. It’s not for what you might call a “Script Kiddy”. It’s also not for people that don’t understand the basic fundamentals of computer programming, Linux, once again the internet and how it works. If you don’t have those skills locked down then move along until you do because the truth is there isn’t much you can do besides play around with the OS until you do understand those things. However playing is how you learn so why not try it? Just don’t get frustrated when you can’t push the “Hack Google” button because there isn’t one.</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/07/22/update-kali-linux/" itemprop="url">
+                  Update Kali Linux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
+              2015-07-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>Kali Linux is by far one of the most awesome and battle tested penetration testing OS’s out there. But sometimes it needs a little love to keep things operating smoothly and just like any OS when you update your getting new features as well as security updates that will keep your system safe from recent security breaches. <code>apt-get update &amp;&amp; apt-get upgrade</code></p>
+<p>Alternatively you can add the following flag to that command and it will fix any packages that are broken or partially installed on the system. <code>apt-get update &amp;&amp; apt-get upgrade --fix-missing</code></p>
+<p>Kali will ping the Kali web server checking for new packages listed on their servers now check it’s webservers for updates. If it finds any that need updated then it should ask if you want to install them.</p>
+<p>Patiently wait for all of the packages to update, go make a coffee or whatever floats your boat.</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/06/20/why-i-moved-from-wordpress-to-hexo/" itemprop="url">
+                  Why I moved from WordPress to Hexo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2015-06-20T22:17:42-06:00" content="2015-06-20">
+              2015-06-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="WTF_is_Hexo_3F"><a href="#WTF_is_Hexo_3F" class="headerlink" title="WTF is Hexo?"></a>WTF is Hexo?</h2><p>Hexo is a static site generator built on node.js similar to jekyll, poet, wintersmith, etc. There are a ton of them out there but I liked this one the most and it gave me what I wanted. Which was a static site generator with a cli interface written in node which I could port wherever I wanted for free hosting.</p>
+<h2 id="No_cost_and_less_headaches"><a href="#No_cost_and_less_headaches" class="headerlink" title="No cost and less headaches"></a>No cost and less headaches</h2><p>Though I’m not cheap I don’t really like dishing out even $5 a month for hosting when I can get it for free. GitHub offers GitHub pages which serve up static sites and <a href="https://hexo.io" target="_blank" rel="external">Hexo</a> fits well into that very well. Of course there’s jekyll but I wanted something different and new so I went looking for something built on top of node. That yielded a few results like <a href="http://jsantell.github.io/poet/" target="_blank" rel="external">poet</a> which looks pretty hip and all but it didn’t seem to statically generate the site. There’s really no good reason for me to want to dick around with any type of hosting whether its VPS, shared, WPEngine, or hosted on WordPress.com. Why should I bother and waste the time when all I need is a simple blog? It’s not like I write that much anyways. There’s simply too much overhead to run a simple WordPress blog and it’s super annoying to mess around with updates, spammers, caching issues, downtime, etc. It’s a pain in the ass! If GitHub goes down I’m pretty confident that my site isn’t going to suffer much in the end and I don’t have to worry about any other logistics other than deploying my site. </p>
+<p>It also extremeley portable because everything is written in markdown I can take my posts with me wherever I go. I usually write everything in markdown on WordPress anyways and it likes to fight between using markdown and html. With Hexo I can write my posts in vim and deploy in one simple command.</p>
+<h2 id="It_u2019s_fresh"><a href="#It_u2019s_fresh" class="headerlink" title="It’s fresh"></a>It’s fresh</h2><p>I’m excited to work with node and all things built on node so any chance I get to move towards using it is a step towards progress IMO. In a world where what you learned last week may no longer be in fashion WordPress is like a dude wearing socks with sandals. Hexo is pretty new still with it’s very first release being in October of 2012 it offers a pretty powerful API and a nice cli out of the box. But duh, it’s not a CMS replacement for Wordpress but definitely a competitor to jekyll and other static site generators out there.</p>
 
             
           </span>
@@ -1043,100 +1146,13 @@
 
 
     
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2014/07/22/back-to-vim/" itemprop="url">
-                  Back to Vim
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2014-07-22T10:07:04-06:00" content="2014-07-22">
-              2014-07-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; In
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Work/" itemprop="url" rel="index">
-                    <span itemprop="name">Work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>I’m making the move back to Vim because it blows everything else out of the water. I’ve had about a two year period of time where I’ve been trying other editors as my primary and they all seem to offer promise but in the end they fall short of what you can do with Vim  It wins every time for me because it’s a portable and powerful interface into editing text.</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
  </div>
 
@@ -1170,7 +1186,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
