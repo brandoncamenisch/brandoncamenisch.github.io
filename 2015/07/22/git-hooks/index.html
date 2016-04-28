@@ -1,11 +1,16 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
+
+
+
   
 
-<meta charset="UTF-8"/>
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -18,20 +23,45 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
 
 
 
   
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
-<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
 
 
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Git,GitHooks," />
@@ -40,7 +70,14 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
 
 
 <meta name="description" content="What is a git hook?Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your">
@@ -49,52 +86,49 @@
 <meta property="og:url" content="http://www.brandoncamenisch.com/2015/07/22/git-hooks/index.html">
 <meta property="og:site_name" content="Brandon Camenisch">
 <meta property="og:description" content="What is a git hook?Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your">
-<meta property="og:updated_time" content="2015-11-15T18:09:07.000Z">
+<meta property="og:updated_time" content="2016-04-28T00:15:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Hooks">
 <meta name="twitter:description" content="What is a git hook?Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your">
 
 
+
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post'
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
   };
 </script>
-
-
 
   <title> Git Hooks | Brandon Camenisch </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-30655050-1', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -123,13 +157,11 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive"></i> <br />
             
             Archives
           </a>
@@ -137,16 +169,13 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user"></i> <br />
+          <a href="/about.html" rel="section">
             
             About
           </a>
         </li>
       
 
-      
       
     </ul>
   
@@ -159,11 +188,17 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content"> 
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
 
+  
+  
+
+  
   
   
 
@@ -186,7 +221,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            Posted on
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
               2015-07-22
             </time>
@@ -194,7 +232,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; In
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Work/" itemprop="url" rel="index">
@@ -215,40 +257,56 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><h2 id="What_is_a_git_hook_3F"><a href="#What_is_a_git_hook_3F" class="headerlink" title="What is a git hook?"></a>What is a git hook?</h2><p>Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your git workflow. If utilized they will take out some of those redundant tasks that you just hate doing or completely forget about. They can also improve code quality across projects with specific needs. I can’t stress enough how happy you will be by learning how to us git hooks and integrating them into your project.</p>
+        <h2 id="What-is-a-git-hook"><a href="#What-is-a-git-hook" class="headerlink" title="What is a git hook?"></a>What is a git hook?</h2><p>Git hooks are surprisingly something developers know nothing about or have even heard of.  Which is weird because it’s one of those things that you should no doubt be using in your git workflow. If utilized they will take out some of those redundant tasks that you just hate doing or completely forget about. They can also improve code quality across projects with specific needs. I can’t stress enough how happy you will be by learning how to us git hooks and integrating them into your project.</p>
 <p>A git hook is a bash script that is ran at certain periods in the execution process when you are working with git. For instance if you are about to push there is the hook <code>pre-push</code> which can be used to execute a script before a push occurs. The script can do anything you want really. You can check your codebase for certain flaws, send out a tweet, or anything to your liking really.</p>
-<h2 id="Configure_your_first_hook"><a href="#Configure_your_first_hook" class="headerlink" title="Configure your first hook"></a>Configure your first hook</h2><p>By default git has it’s own hooks and init dir which is dependent on your system. These hooks are included in every repo that you create on your system by default and you can check them out by having a look at your <code>.git</code> dir in one of your projects. There are also sample hooks in the <code>.git/hooks</code> dir by default so you can have a look at those for more insight.</p>
+<h2 id="Configure-your-first-hook"><a href="#Configure-your-first-hook" class="headerlink" title="Configure your first hook"></a>Configure your first hook</h2><p>By default git has it’s own hooks and init dir which is dependent on your system. These hooks are included in every repo that you create on your system by default and you can check them out by having a look at your <code>.git</code> dir in one of your projects. There are also sample hooks in the <code>.git/hooks</code> dir by default so you can have a look at those for more insight.</p>
 <p>To start we’ll need to create a custom directory where we want to store our git templates. I keep any custom code on my machine in my home directory under <code>~/.code/</code> so I have mine configured like so.</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init<span class="class">.templatedir</span> <span class="string">'~/.code/.git_template'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init.templatedir &apos;~/.code/.git_template&apos;</span><br></pre></td></tr></table></figure>
 <p>If we check our globals for git we should see something like</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="operator">-l</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">init.templatedir</span>=~/<span class="preprocessor">.code</span>/.git_template</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init.templatedir=~/.code/.git_template</span><br></pre></td></tr></table></figure>
 <p>The directory can be named anything you want really and doesn’t have to be named the same as mine. After you set your global template directory you will need to add a <strong>hooks</strong> directory under that.</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.code/.git_template &amp;&amp; <span class="built_in">mkdir</span> hooks</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.code/.git_template &amp;&amp; mkdir hooks</span><br></pre></td></tr></table></figure>
 <p>Now you should see a hooks directory and we will need to set the proper permissions to make the scripts executable.</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod ug+x ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>*</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod ug+x ~/.code/.git_template/hooks/*</span><br></pre></td></tr></table></figure>
 <p>Next we will want to create a hook inside that hooks dir and we are going to keep is simple. What we are going to do is write a simple bash script that will prepend the current branch name to our commit message. This is useful if your working with multiple branches and want to have a hard reference to that branch name after it has been merged into other branches. I use if for feature branch on occasion and it has proven useful.</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~<span class="regexp">/.code/</span>.git_template<span class="regexp">/hooks/</span>prepare-commit-msg</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~/.code/.git_template/hooks/prepare-commit-msg</span><br></pre></td></tr></table></figure>
 <p>If you like here is a sample of that code. What it does is simply get the branch name and checks if we are on master or develop. If we aren’t on either of those branches then it will prepend the current branch wrapped in square brackets to our commit message.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># This way you can customize which branches should be skipped when prepending the commit message.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$BRANCHES_TO_SKIP</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line"> <span class="comment"># Define the branches to skip if your on an of these branches</span></span><br><span class="line"> BRANCHES_TO_SKIP=(master develop)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">BRANCH_NAME=$(git symbolic-ref --short HEAD)</span><br><span class="line">BRANCH_NAME=<span class="string">"<span class="variable">$&#123;BRANCH_NAME##*/&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">BRANCH_EXCLUDED=$(<span class="built_in">printf</span> <span class="string">"%s\n"</span> <span class="string">"<span class="variable">$&#123;BRANCHES_TO_SKIP[@]&#125;</span>"</span> | grep -c <span class="string">"^<span class="variable">$BRANCH_NAME</span>$"</span>)</span><br><span class="line">BRANCH_IN_COMMIT=$(grep -c <span class="string">"\[<span class="variable">$BRANCH_NAME</span>\]"</span> <span class="variable">$1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BRANCH_NAME</span>"</span> ] &amp;&amp; ! [[ <span class="variable">$BRANCH_EXCLUDED</span> <span class="operator">-eq</span> <span class="number">1</span> ]] &amp;&amp; ! [[ <span class="variable">$BRANCH_IN_COMMIT</span> -ge <span class="number">1</span> ]]; <span class="keyword">then</span></span><br><span class="line"> sed -i.bak <span class="operator">-e</span> <span class="string">"1s/^/[<span class="variable">$BRANCH_NAME</span>] /"</span> <span class="variable">$1</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<h2 id="Adding_your_hooks_to_your_project"><a href="#Adding_your_hooks_to_your_project" class="headerlink" title="Adding your hooks to your project"></a>Adding your hooks to your project</h2><p>After you’ve created your git hook navigate to a project that you don’t mind testing out this nifty new script on and type.</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> init</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"># This way you can customize which branches should be skipped when prepending the commit message.</span><br><span class="line"></span><br><span class="line">if [ -z &quot;$BRANCHES_TO_SKIP&quot; ]; then</span><br><span class="line"> # Define the branches to skip if your on an of these branches</span><br><span class="line"> BRANCHES_TO_SKIP=(master develop)</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">BRANCH_NAME=$(git symbolic-ref --short HEAD)</span><br><span class="line">BRANCH_NAME=&quot;$&#123;BRANCH_NAME##*/&#125;&quot;</span><br><span class="line"></span><br><span class="line">BRANCH_EXCLUDED=$(printf &quot;%s\n&quot; &quot;$&#123;BRANCHES_TO_SKIP[@]&#125;&quot; | grep -c &quot;^$BRANCH_NAME$&quot;)</span><br><span class="line">BRANCH_IN_COMMIT=$(grep -c &quot;\[$BRANCH_NAME\]&quot; $1)</span><br><span class="line"></span><br><span class="line">if [ -n &quot;$BRANCH_NAME&quot; ] &amp;&amp; ! [[ $BRANCH_EXCLUDED -eq 1 ]] &amp;&amp; ! [[ $BRANCH_IN_COMMIT -ge 1 ]]; then</span><br><span class="line"> sed -i.bak -e &quot;1s/^/[$BRANCH_NAME] /&quot; $1</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h2 id="Adding-your-hooks-to-your-project"><a href="#Adding-your-hooks-to-your-project" class="headerlink" title="Adding your hooks to your project"></a>Adding your hooks to your project</h2><p>After you’ve created your git hook navigate to a project that you don’t mind testing out this nifty new script on and type.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 <p>This should pull in your new hooks configuration into that repo for you to use. If you want to verify that they are there you can navigate to the <code>.git/hooks</code> directory in your project and check if the files are there and current. Sometimes it doesn’t initialize properly so just be weary of that. Create a new branch and name it anything you like as long as it’s not in that list of <code>BRANCHES_TO_SKIP</code>. Once you complete your changes write up your commit message as usual and you should see the branch name appended to the commit message the you just typed up.</p>
 <p>Really that’s it! You can get as creative as you like with these scripts. For instance you can check for debugging chunks of code or keywords such as <code>console.log</code> or  <code>var_dump</code> that should probably be excluded from your production code.</p>
 <p><strong>Go forth and work smarter not harder!</strong></p>
 <p><a href="http://git-scm.com/book/fr/v2/Customizing-Git-Git-Hooks" target="_blank" rel="external">More information on git hooks</a></p>
-</span>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
       
     </div>
 
@@ -265,18 +323,18 @@
 
       
         <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
+          <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/23/enumerate-dns-with-dnsenum-in-kali-linux/" rel="prev">
-                <i class="fa fa-chevron-left"></i> Enumerate DNS with dnsenum in Kali Linux
+              <a href="/2015/07/22/kali-linux-use-dnsdict6-to-scan-ipv6ipv4/" rel="next" title="Kali Linux use dnsdict6 to scan IPv6/IPv4">
+                <i class="fa fa-chevron-left"></i> Kali Linux use dnsdict6 to scan IPv6/IPv4
               </a>
             
           </div>
 
-          <div class="post-nav-next post-nav-item">
+          <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/22/kali-linux-use-dnsdict6-to-scan-ipv6ipv4/" rel="next">
-                Kali Linux use dnsdict6 to scan IPv6/IPv4 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/07/22/update-kali-linux/" rel="prev" title="Update Kali Linux">
+                Update Kali Linux <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -295,19 +353,20 @@
     </div>
   </div>
 
- </div>
 
-        
-
-        
-          <div class="comments" id="comments">
-            
           </div>
-        
-      </div>
+          
 
-      
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -321,9 +380,11 @@
     <div class="sidebar-inner">
 
       
+
+      
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Of Contents
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
             Overview
@@ -331,12 +392,14 @@
         </ul>
       
 
-      <section class="site-overview">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="https://www.dropbox.com/s/hz9556kjhkkg0hq/bio.png?raw=1" alt="Brandon Camenisch" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="https://www.dropbox.com/s/hz9556kjhkkg0hq/bio.png?raw=1"
+               alt="Brandon Camenisch" />
           <p class="site-author-name" itemprop="name">Brandon Camenisch</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -345,19 +408,23 @@
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">categories</span>
+          
+            <div class="site-state-item site-state-categories">
               
-          </div>
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            
-              <span class="site-state-item-count">18</span>
-              <span class="site-state-item-name">tags</span>
+          
+            <div class="site-state-item site-state-tags">
               
-          </div>
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
 
         </nav>
 
@@ -367,8 +434,11 @@
           
             
               <span class="links-of-author-item">
-                <a href="brandoncamenisch" target="_blank">
-                  <i class="fa fa-github"></i> GitHub
+                <a href="https://github.com/brandoncamenisch" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
                 </a>
               </span>
             
@@ -378,22 +448,21 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
 
       </section>
 
       
-        <section class="post-toc-wrap motion-element sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
             
+              
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What_is_a_git_hook_3F"><span class="nav-number">1.</span> <span class="nav-text">What is a git hook?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configure_your_first_hook"><span class="nav-number">2.</span> <span class="nav-text">Configure your first hook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Adding_your_hooks_to_your_project"><span class="nav-number">3.</span> <span class="nav-text">Adding your hooks to your project</span></a></li></ol></div>
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-a-git-hook"><span class="nav-number">1.</span> <span class="nav-text">What is a git hook?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configure-your-first-hook"><span class="nav-number">2.</span> <span class="nav-text">Configure your first hook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Adding-your-hooks-to-your-project"><span class="nav-number">3.</span> <span class="nav-text">Adding your hooks to your project</span></a></li></ol></div>
             
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
         </section>
       
 
@@ -401,16 +470,18 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner">
+        <div class="copyright" >
   
   &copy;  1995 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Brandon Camenisch</span>
 </div>
@@ -426,233 +497,96 @@
   </a>
 </div>
 
+        
 
- </div>
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  
-  
-    
-    
-
-  
-
-
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
-
-
-
-
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
   
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    var $tocContent = $('.post-toc-content');
-    if (isDesktop() && CONFIG.sidebar === 'post') {
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-        displaySidebar();
-      }
-    }
-  });
-</script>
+  
 
 
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-      if (isMobile()) {
-        FastClick.attach(document.body);
-      }
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
 
-      motionIntegrator.bootstrap();
-    });
-  </script>
+
 
   
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-  </script>
+
+  
+
 </body>
 </html>
