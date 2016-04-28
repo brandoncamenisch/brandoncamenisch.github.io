@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://www.brandoncamenisch.com/2015/07/29/vvv-multiple-projects-with-vagrant-share/index.html">
 <meta property="og:site_name" content="Brandon Camenisch">
 <meta property="og:description" content="The vagrant share command is totally underused and working in a remote company it’s also totally necessary. Nearly everyday I’m asked to troubleshoot a piece of code or help figure out a bug. Usually">
-<meta property="og:updated_time" content="2016-04-28T00:15:58.000Z">
+<meta property="og:updated_time" content="2016-04-28T00:28:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VVV multiple projects with vagrant share">
 <meta name="twitter:description" content="The vagrant share command is totally underused and working in a remote company it’s also totally necessary. Nearly everyday I’m asked to troubleshoot a piece of code or help figure out a bug. Usually">
@@ -276,9 +276,9 @@
 <p>Luckily with the vagrant share command you can specify a port as one of the flags. So this got me thinking I wonder if… You setup a site with it’s own port you could theoretically access each site like it was it’s own box right? I just blew my own mind in the process. Oh the possibilities.</p>
 <p>So I added this to my Vagrantfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">VAGRANTFILE_API_VERSION = &quot;2&quot;</span><br><span class="line">    Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|</span><br><span class="line">    config.vm.network &quot;forwarded_port&quot;, guest: 85, host: 8085</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
 <p>And then I changed my nginx port to listen on port 85 like so</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">listen 85;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">listen 85;</span><br></pre></td></tr></table></figure>
 <p>So now I’m thinking cool let’s fire this up and see if it works so I type</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant share --http 85</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant share --http 85</span><br></pre></td></tr></table></figure>
 <p>And that works just fine if you take WordPress out of the situation but that defeats the purpose here since I work with primarily with WordPress. So, what do I do now? We’re getting passed all of the checkpoints on this except for WordPress and the reason is it’s determining the home and site url either by the DB or the wp-config file. What we need to do here is make the install URL agnostic so that it will work with any domain.</p>
 <p>We we need to either change tht in the DB or update the config. Updating the config is much easier so let’s just do that.</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">'WP_HOME'</span>,    <span class="string">"http://&#123;$_SERVER['HTTP_HOST']&#125;/"</span>);</span><br><span class="line">define(<span class="string">'WP_SITEURL'</span>, <span class="string">"http://&#123;$_SERVER['HTTP_HOST']&#125;/"</span>);</span><br></pre></td></tr></table></figure>
