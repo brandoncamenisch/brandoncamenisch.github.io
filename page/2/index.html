@@ -215,6 +215,120 @@
             
               
                 
+                <a class="post-title-link" href="/2014/07/24/composer-and-wpackagist-commercial-plugins/" itemprop="url">
+                  Composer and wpackagist commercial plugins
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2014-07-24T10:07:04-06:00" content="2014-07-24">
+              2014-07-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>With composer and wpackagist sometimes you want to include a package that isn’t listed nor does it have a composer.json file. This could be a commercial plugin or something else that might live in a repo or a zip somewhere on the web. It seems like information for this would be fairly easy to find but from what I could tell there wasn’t anything to connect all the dots for doing this. I’ve noticed that most people will include the publicly available ones in their composer file and leave everything else out leaving other engineers to scramle together finding the dependancies they need and installing them manually. This leaves me to believe that they have given up on finding a solution to the problem otherwise they would just include it in the first place.</p>
+<p>It turns out it’s relatively straightforward but the information is disjointed and difficult to find. The trick is you have to define the package from within your composer file. They will then be included as wpackagist plugins just the same as public ones.<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"the-project-name"</span>,</span><br><span class="line">    <span class="attr">"type"</span>: <span class="string">"wordpress-theme"</span>,</span><br><span class="line">    <span class="attr">"require"</span>: &#123;</span><br><span class="line">        <span class="attr">"wpackagist-plugin/wordpress-importer"</span>: <span class="string">"0.6.1"</span>,</span><br><span class="line">        <span class="attr">"wpackagist-plugin/gravity-forms-custom-add-on"</span>: <span class="string">"1.0"</span>, </span><br><span class="line">        <span class="attr">"wpackagist-plugin/gravity-forms"</span>: <span class="string">"1.0"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"repositories"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"composer"</span>,</span><br><span class="line">            <span class="attr">"url"</span>: <span class="string">"http://wpackagist.org"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"package"</span>,</span><br><span class="line">            <span class="attr">"package"</span>: &#123;</span><br><span class="line">                    <span class="attr">"name"</span>: <span class="string">"wpackagist-plugin/gravity-forms-custom-add-on"</span>,</span><br><span class="line">                    <span class="attr">"version"</span>: <span class="string">"1.0"</span>,</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"wordpress-plugin"</span>,</span><br><span class="line">                    <span class="attr">"source"</span>: &#123;</span><br><span class="line">                            <span class="attr">"url"</span>: <span class="string">"git@github.com:name/gravity-forms-custom-add-on.git"</span>,</span><br><span class="line">                            <span class="attr">"type"</span>: <span class="string">"git"</span>,</span><br><span class="line">                            <span class="attr">"reference"</span>: <span class="string">"origin/master"</span></span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"package"</span>,</span><br><span class="line">            <span class="attr">"package"</span>: &#123;</span><br><span class="line">                    <span class="attr">"name"</span>: <span class="string">"wpackagist-plugin/gravity-forms"</span>,</span><br><span class="line">                    <span class="attr">"version"</span>: <span class="string">"1.0"</span>,</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"wordpress-plugin"</span>,</span><br><span class="line">                    <span class="attr">"dist"</span>: &#123;</span><br><span class="line">                            <span class="attr">"url"</span>: <span class="string">"https://github.com/name/gravity-forms/archive/master.zip"</span>,</span><br><span class="line">                            <span class="attr">"type"</span>: <span class="string">"zip"</span>, </span><br><span class="line">                            <span class="attr">"reference"</span>: <span class="string">"master"</span></span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">        <span class="attr">"extra"</span>: &#123;</span><br><span class="line">        <span class="attr">"installer-paths"</span>: &#123;</span><br><span class="line">            <span class="attr">"plugins/&#123;$name&#125;"</span>: [</span><br><span class="line">                <span class="string">"type:wordpress-plugin"</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/07/22/back-to-vim/" itemprop="url">
                   Back to Vim
                 </a>
@@ -352,7 +466,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
