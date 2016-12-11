@@ -80,15 +80,12 @@
 
 
 
-<meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Brandon Camenisch">
-<meta property="og:url" content="http://www.brandoncamenisch.com/index.html">
+<meta property="og:url" content="https://brandoncamenisch.com/index.html">
 <meta property="og:site_name" content="Brandon Camenisch">
-<meta property="og:description">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Brandon Camenisch">
-<meta name="twitter:description">
 
 
 
@@ -262,12 +259,12 @@
             <p>For some time now I’ve been wanting to move away from using Apple products so that I can make a smoother transition to using another primary OS. Most of my reasoning is security and politics but I particularly find security to be a weak player on how keychain access is stored and managed on OS X. There are more than a few articles explaining how Apple fails at security especially with their iCloud services. There are a few roadblocks that stand in the way and one is the massive password/credentials export that needs to happen to make migration a reality. For me using a service for password management is not an idea I’m not fond of as services come and go oftentimes with their own stipulations and drawbacks. I could also save all of my password data in the browser and use that but thats as bad or worse as Apples security practices and though convenient it’s also not a safe solution either and is frequently prone to browser plugin hacks and lackluster security. I wanted something that I could maintain full control over that was battle tested and open source. But that would also transition seamlessly between multiple machines with ease. Enter <a href="https://www.passwordstore.org/" target="_blank" rel="external">pass</a> a simple management solution that I found that will do everything that I want. Theres just one roadblock I had to get around to make it work. And that was exporting all of my sensitive data from keychain and getting it into pass in a usable format. There are a few useful guides and scripts on migrating to pass but nothing specifically for OS X users moving off of keychain. So, what’s left for me to do other than write my own? It doesn’t have to be great it just has to work.</p>
 <h2 id="Getting-everything-out-of-keychain"><a href="#Getting-everything-out-of-keychain" class="headerlink" title="Getting everything out of keychain"></a>Getting everything out of keychain</h2><p>The first step was to get all of my data off of keychain but the GUI didn’t want to cooperate and wouldn’t let me export even a single item so back to good ol’ cli to make things happen. Luckily there is the <code>security</code> command baked into OS X that could do the job which offers some really nice features to interact with pwds and other items in the keychain.</p>
 <blockquote>
-<p>To start the export I entered this command to dump the keychain items into a plaintext file. Which unfortunately brings up a prompt where you have to allow access to each item in the keychain. There are some apple scripts out there that should do the job but they didn’t work from the start for me so I just used automator to create a quick task and click through the prompts.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">security dump-keychain <span class="_">-d</span> login.keychain &gt; keychain</span><br></pre></td></tr></table></figure></p>
+<p>To start the export I entered this command to dump the keychain items into a plaintext file. Which unfortunately brings up a prompt where you have to allow access to each item in the keychain. There are some apple scripts out there that should do the job but they didn’t work from the start for me so I just used automator to create a quick task and click through the prompts.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">security dump-keychain <span class="_">-d</span> login.keychain &gt; keychain</div></pre></td></tr></table></figure></p>
 </blockquote>
-<p>Now I had all of my passwords out there in plaintext and for each item that was exported I got something like this for each of them.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">keychain: <span class="string">"/Users/you/Library/Keychains/login.keychain"</span></span><br><span class="line">version: 256</span><br><span class="line">class: <span class="string">"genp"</span></span><br><span class="line">attributes:</span><br><span class="line">    0x00000007 &lt;blob&gt;=<span class="string">"somesite.com"</span></span><br><span class="line">    0x00000008 &lt;blob&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"acct"</span>&lt;blob&gt;=<span class="string">"username"</span></span><br><span class="line">    <span class="string">"cdat"</span>&lt;timedate&gt;=0x32303132303130353137323635325A00  <span class="string">"20120105172652Z\000"</span></span><br><span class="line">    <span class="string">"crtr"</span>&lt;uint32&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"cusi"</span>&lt;sint32&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"desc"</span>&lt;blob&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"gena"</span>&lt;blob&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"icmt"</span>&lt;blob&gt;=0x53697465735C2D5369746537  <span class="string">"Sites\134-Site7"</span></span><br><span class="line">    <span class="string">"invi"</span>&lt;sint32&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"mdat"</span>&lt;timedate&gt;=0x32303132303130353137323635325A00  <span class="string">"20120105172652Z\000"</span></span><br><span class="line">    <span class="string">"nega"</span>&lt;sint32&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"prot"</span>&lt;blob&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"scrp"</span>&lt;sint32&gt;=&lt;NULL&gt;</span><br><span class="line">    <span class="string">"svce"</span>&lt;blob&gt;=<span class="string">"some-service-name"</span></span><br><span class="line">    <span class="string">"type"</span>&lt;uint32&gt;=&lt;NULL&gt;</span><br><span class="line">data:</span><br><span class="line"><span class="string">"probablyThePWOrCert"</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="Converting-keychain-items-to-csv"><a href="#Converting-keychain-items-to-csv" class="headerlink" title="Converting keychain items to csv"></a>Converting keychain items to csv</h2><p>Thats cool and all but what a crappy format. I needed to convert this format to something a little more tangible for pass to import. I thought CSV would probably be a good format thats widely used and easy to parse so I tracked down a useful script to do just that written in Ruby.<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env ruby                                                                                                                                                                                                          </span></span><br><span class="line"><span class="comment">#                                                                                                                                                                                                                            </span></span><br><span class="line"><span class="comment"># Usage:                                                                                                                                                                                                                     </span></span><br><span class="line"><span class="comment">#   security dump-keychain -d login.keychain &gt; keychain_logins.txt                                                                                                                                                           </span></span><br><span class="line"><span class="comment">#   # Lots of clicking 'Always Allow', or just 'Allow', until it's done...                                                                                                                                                   </span></span><br><span class="line"><span class="comment">#   curl -O curl -O https://raw.github.com/gist/1224792/06fff24412311714ad6534ab700a7d603c0a56c9/keychain.rb</span></span><br><span class="line"><span class="comment">#   chmod a+x ./keychain.rb                                                                                                                                                                                                  </span></span><br><span class="line"><span class="comment">#   ./keychain.rb keychain_logins.txt | sort &gt; logins.csv                                                                                                                                                                    </span></span><br><span class="line"><span class="comment">#                                                                                                                                                                                                                            </span></span><br><span class="line"><span class="comment"># Then import logins.csv in 1Password using the format:                                                                                                                                                                      </span></span><br><span class="line"><span class="comment"># Title, URL/Location, Username, Password                                                                                                                                                                                    </span></span><br><span class="line"><span class="comment"># Remember to check 'Fields are quoted', and the Delimiter character of 'Comma'.                                                                                                                                             </span></span><br><span class="line"><span class="keyword">require</span> <span class="string">'date'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KeychainEntry</span></span></span><br><span class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:fields</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(keychain)</span></span></span><br><span class="line">    last_key = <span class="literal">nil</span></span><br><span class="line">    @fields = &#123;&#125;</span><br><span class="line">    data = <span class="literal">nil</span></span><br><span class="line">    aggregate = <span class="literal">nil</span></span><br><span class="line">    lines = keychain.split(<span class="string">"\n"</span>)</span><br><span class="line">    lines.each <span class="keyword">do</span> <span class="params">|line|</span></span><br><span class="line">      <span class="comment"># Everything after the 'data:' statement is data.</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> data != <span class="literal">nil</span></span><br><span class="line">        data &lt;&lt; line</span><br><span class="line">      <span class="keyword">elsif</span> aggregate != <span class="literal">nil</span></span><br><span class="line">        <span class="keyword">if</span> ( line[<span class="number">0</span>] == <span class="number">32</span> <span class="params">||</span> line[<span class="number">0</span>] == <span class="string">" "</span> )</span><br><span class="line">          keyvalue = line.split(<span class="string">'='</span>, <span class="number">2</span>).collect &#123; <span class="params">|kv|</span> kv.strip &#125;</span><br><span class="line">          aggregate[keyvalue.first] = keyvalue.last</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          @fields[last_key] = aggregate</span><br><span class="line">          aggregate = <span class="literal">nil</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> aggregate == <span class="literal">nil</span></span><br><span class="line">        parts = line.split(<span class="string">':'</span>).collect &#123; <span class="params">|piece|</span> piece.strip &#125;</span><br><span class="line">        <span class="keyword">if</span> parts.length &gt; <span class="number">1</span></span><br><span class="line">          @fields[parts.first] = parts.last</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          last_key = parts.first</span><br><span class="line">          data = [] <span class="keyword">if</span> parts.first == <span class="string">"data"</span></span><br><span class="line">          aggregate = &#123;&#125;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    @fields[<span class="string">"data"</span>] = data.join(<span class="string">" "</span>) <span class="keyword">if</span> data</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">q</span><span class="params">(string)</span></span></span><br><span class="line">  <span class="string">"\"<span class="subst">#&#123;string&#125;</span>\""</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">process_entry</span><span class="params">(entry_string)</span></span></span><br><span class="line">  entry = KeychainEntry.new(entry_string)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> entry.fields[<span class="string">'class'</span>] == <span class="string">'"inet"'</span> &amp;&amp; [<span class="string">'"form"'</span>, <span class="string">'"dflt"'</span>].<span class="keyword">include</span>?(entry.fields[<span class="string">'attributes'</span>][<span class="string">'"atyp"&lt;blob&gt;'</span>])</span><br><span class="line">    site = entry.fields[<span class="string">'attributes'</span>][<span class="string">'"srvr"&lt;blob&gt;'</span>].to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</span><br><span class="line">    path = entry.fields[<span class="string">'attributes'</span>][<span class="string">'"path"&lt;blob&gt;'</span>].to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</span><br><span class="line">    proto= entry.fields[<span class="string">'attributes'</span>][<span class="string">'"ptcl"&lt;uint32&gt;'</span>].to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</span><br><span class="line">    proto.to_s.gsub!(<span class="string">'htps'</span>, <span class="string">'https'</span>);</span><br><span class="line">    user = entry.fields[<span class="string">'attributes'</span>][<span class="string">'"acct"&lt;blob&gt;'</span>].to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</span><br><span class="line">    <span class="comment">#user = entry.fields['attributes']['0x00000007 &lt;blob&gt;'].gsub!('"', '')</span></span><br><span class="line">    date_string = entry.fields[<span class="string">'attributes'</span>][<span class="string">'"mdat"&lt;timedate&gt;'</span>].to_s.gsub(<span class="regexp">/0x[^ ]+[ ]+/</span>, <span class="string">''</span>).to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</span><br><span class="line">    date = DateTime.parse(date_string)</span><br><span class="line">    pass = entry.fields[<span class="string">'data'</span>][<span class="number">1</span>..-<span class="number">2</span>]</span><br><span class="line">    path = <span class="string">''</span> <span class="keyword">if</span> path == <span class="string">'&lt;NULL&gt;'</span></span><br><span class="line">    url = <span class="string">"<span class="subst">#&#123;proto&#125;</span>://<span class="subst">#&#123;site&#125;</span><span class="subst">#&#123;path&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#puts "\"#&#123;site&#125;\",\"#&#123;url&#125;\",\"#&#123;user&#125;\",\"#&#123;pass&#125;\",\"#&#123;date&#125;\""</span></span><br><span class="line">    puts <span class="string">"<span class="subst">#&#123;site&#125;</span>,<span class="subst">#&#123;url&#125;</span>,<span class="subst">#&#123;user&#125;</span>,<span class="subst">#&#123;pass&#125;</span>,<span class="subst">#&#123;date&#125;</span>"</span></span><br><span class="line">    <span class="comment">#puts "#&#123;user&#125;, #&#123;pass&#125;, #&#123;date&#125;"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">accum = <span class="string">''</span></span><br><span class="line">ARGF.each_line <span class="keyword">do</span> <span class="params">|line|</span></span><br><span class="line">  <span class="keyword">if</span> line =~ <span class="regexp">/^keychain: /</span></span><br><span class="line">    <span class="keyword">unless</span> accum.empty?</span><br><span class="line">      process_entry(accum)</span><br><span class="line">      accum = <span class="string">''</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  accum += line</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
-<p>This beautiful thing goes through the keychain items exported from the security dump command and converts that to a new file in csv format. I ran it something like<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby keychain.rb keychain.txt | sort &gt; keychain.csv</span><br></pre></td></tr></table></figure></p>
-<h2 id="Importing-items-into-pass"><a href="#Importing-items-into-pass" class="headerlink" title="Importing items into pass"></a>Importing items into pass</h2><p>Finally the moment of truth where we get to import things into pass and shutdown keychain for good. So far I haven’t invested much time into this and thats good because I don’t have time to write a whole library to export/import this stuff. Assuming that the last script was successful in converting these items its time to import them with a simple bash script to parse the csv.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">INPUT=keychain.csv</span><br><span class="line">OLDIFS=<span class="variable">$IFS</span></span><br><span class="line">IFS=,</span><br><span class="line">[ ! <span class="_">-f</span> <span class="variable">$INPUT</span> ] &amp;&amp; &#123; <span class="built_in">echo</span> <span class="string">"<span class="variable">$INPUT</span> file not found"</span>; <span class="built_in">exit</span> 99; &#125;</span><br><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> flname url uname pass time</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">	<span class="built_in">printf</span> <span class="string">"<span class="variable">$pass</span>\n<span class="variable">$username</span>\n<span class="variable">$url</span>"</span> | pass insert -m Imported-final/<span class="variable">$flname</span>-<span class="variable">$uname</span></span><br><span class="line"><span class="keyword">done</span> &lt; <span class="variable">$INPUT</span></span><br><span class="line">IFS=<span class="variable">$OLDIFS</span></span><br></pre></td></tr></table></figure></p>
+<p>Now I had all of my passwords out there in plaintext and for each item that was exported I got something like this for each of them.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">keychain: <span class="string">"/Users/you/Library/Keychains/login.keychain"</span></div><div class="line">version: 256</div><div class="line">class: <span class="string">"genp"</span></div><div class="line">attributes:</div><div class="line">    0x00000007 &lt;blob&gt;=<span class="string">"somesite.com"</span></div><div class="line">    0x00000008 &lt;blob&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"acct"</span>&lt;blob&gt;=<span class="string">"username"</span></div><div class="line">    <span class="string">"cdat"</span>&lt;timedate&gt;=0x32303132303130353137323635325A00  <span class="string">"20120105172652Z\000"</span></div><div class="line">    <span class="string">"crtr"</span>&lt;uint32&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"cusi"</span>&lt;sint32&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"desc"</span>&lt;blob&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"gena"</span>&lt;blob&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"icmt"</span>&lt;blob&gt;=0x53697465735C2D5369746537  <span class="string">"Sites\134-Site7"</span></div><div class="line">    <span class="string">"invi"</span>&lt;sint32&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"mdat"</span>&lt;timedate&gt;=0x32303132303130353137323635325A00  <span class="string">"20120105172652Z\000"</span></div><div class="line">    <span class="string">"nega"</span>&lt;sint32&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"prot"</span>&lt;blob&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"scrp"</span>&lt;sint32&gt;=&lt;NULL&gt;</div><div class="line">    <span class="string">"svce"</span>&lt;blob&gt;=<span class="string">"some-service-name"</span></div><div class="line">    <span class="string">"type"</span>&lt;uint32&gt;=&lt;NULL&gt;</div><div class="line">data:</div><div class="line"><span class="string">"probablyThePWOrCert"</span></div></pre></td></tr></table></figure></p>
+<h2 id="Converting-keychain-items-to-csv"><a href="#Converting-keychain-items-to-csv" class="headerlink" title="Converting keychain items to csv"></a>Converting keychain items to csv</h2><p>Thats cool and all but what a crappy format. I needed to convert this format to something a little more tangible for pass to import. I thought CSV would probably be a good format thats widely used and easy to parse so I tracked down a useful script to do just that written in Ruby.<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">#!/usr/bin/env ruby                                                                                                                                                                                                          </span></div><div class="line"><span class="comment">#                                                                                                                                                                                                                            </span></div><div class="line"><span class="comment"># Usage:                                                                                                                                                                                                                     </span></div><div class="line"><span class="comment">#   security dump-keychain -d login.keychain &gt; keychain_logins.txt                                                                                                                                                           </span></div><div class="line"><span class="comment">#   # Lots of clicking 'Always Allow', or just 'Allow', until it's done...                                                                                                                                                   </span></div><div class="line"><span class="comment">#   curl -O curl -O https://raw.github.com/gist/1224792/06fff24412311714ad6534ab700a7d603c0a56c9/keychain.rb</span></div><div class="line"><span class="comment">#   chmod a+x ./keychain.rb                                                                                                                                                                                                  </span></div><div class="line"><span class="comment">#   ./keychain.rb keychain_logins.txt | sort &gt; logins.csv                                                                                                                                                                    </span></div><div class="line"><span class="comment">#                                                                                                                                                                                                                            </span></div><div class="line"><span class="comment"># Then import logins.csv in 1Password using the format:                                                                                                                                                                      </span></div><div class="line"><span class="comment"># Title, URL/Location, Username, Password                                                                                                                                                                                    </span></div><div class="line"><span class="comment"># Remember to check 'Fields are quoted', and the Delimiter character of 'Comma'.                                                                                                                                             </span></div><div class="line"><span class="keyword">require</span> <span class="string">'date'</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">KeychainEntry</span></span></div><div class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:fields</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(keychain)</span></span></div><div class="line">    last_key = <span class="literal">nil</span></div><div class="line">    @fields = &#123;&#125;</div><div class="line">    data = <span class="literal">nil</span></div><div class="line">    aggregate = <span class="literal">nil</span></div><div class="line">    lines = keychain.split(<span class="string">"\n"</span>)</div><div class="line">    lines.each <span class="keyword">do</span> <span class="params">|line|</span></div><div class="line">      <span class="comment"># Everything after the 'data:' statement is data.</span></div><div class="line"></div><div class="line">      <span class="keyword">if</span> data != <span class="literal">nil</span></div><div class="line">        data &lt;&lt; line</div><div class="line">      <span class="keyword">elsif</span> aggregate != <span class="literal">nil</span></div><div class="line">        <span class="keyword">if</span> ( line[<span class="number">0</span>] == <span class="number">32</span> <span class="params">||</span> line[<span class="number">0</span>] == <span class="string">" "</span> )</div><div class="line">          keyvalue = line.split(<span class="string">'='</span>, <span class="number">2</span>).collect &#123; <span class="params">|kv|</span> kv.strip &#125;</div><div class="line">          aggregate[keyvalue.first] = keyvalue.last</div><div class="line">        <span class="keyword">else</span></div><div class="line">          @fields[last_key] = aggregate</div><div class="line">          aggregate = <span class="literal">nil</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">      <span class="keyword">end</span></div><div class="line"></div><div class="line">      <span class="keyword">if</span> aggregate == <span class="literal">nil</span></div><div class="line">        parts = line.split(<span class="string">':'</span>).collect &#123; <span class="params">|piece|</span> piece.strip &#125;</div><div class="line">        <span class="keyword">if</span> parts.length &gt; <span class="number">1</span></div><div class="line">          @fields[parts.first] = parts.last</div><div class="line">        <span class="keyword">else</span></div><div class="line">          last_key = parts.first</div><div class="line">          data = [] <span class="keyword">if</span> parts.first == <span class="string">"data"</span></div><div class="line">          aggregate = &#123;&#125;</div><div class="line">        <span class="keyword">end</span></div><div class="line">      <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    @fields[<span class="string">"data"</span>] = data.join(<span class="string">" "</span>) <span class="keyword">if</span> data</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">q</span><span class="params">(string)</span></span></div><div class="line">  <span class="string">"\"<span class="subst">#&#123;string&#125;</span>\""</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">process_entry</span><span class="params">(entry_string)</span></span></div><div class="line">  entry = KeychainEntry.new(entry_string)</div><div class="line"></div><div class="line"></div><div class="line">  <span class="keyword">if</span> entry.fields[<span class="string">'class'</span>] == <span class="string">'"inet"'</span> &amp;&amp; [<span class="string">'"form"'</span>, <span class="string">'"dflt"'</span>].<span class="keyword">include</span>?(entry.fields[<span class="string">'attributes'</span>][<span class="string">'"atyp"&lt;blob&gt;'</span>])</div><div class="line">    site = entry.fields[<span class="string">'attributes'</span>][<span class="string">'"srvr"&lt;blob&gt;'</span>].to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</div><div class="line">    path = entry.fields[<span class="string">'attributes'</span>][<span class="string">'"path"&lt;blob&gt;'</span>].to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</div><div class="line">    proto= entry.fields[<span class="string">'attributes'</span>][<span class="string">'"ptcl"&lt;uint32&gt;'</span>].to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</div><div class="line">    proto.to_s.gsub!(<span class="string">'htps'</span>, <span class="string">'https'</span>);</div><div class="line">    user = entry.fields[<span class="string">'attributes'</span>][<span class="string">'"acct"&lt;blob&gt;'</span>].to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</div><div class="line">    <span class="comment">#user = entry.fields['attributes']['0x00000007 &lt;blob&gt;'].gsub!('"', '')</span></div><div class="line">    date_string = entry.fields[<span class="string">'attributes'</span>][<span class="string">'"mdat"&lt;timedate&gt;'</span>].to_s.gsub(<span class="regexp">/0x[^ ]+[ ]+/</span>, <span class="string">''</span>).to_s.gsub!(<span class="string">'"'</span>, <span class="string">''</span>)</div><div class="line">    date = DateTime.parse(date_string)</div><div class="line">    pass = entry.fields[<span class="string">'data'</span>][<span class="number">1</span>..-<span class="number">2</span>]</div><div class="line">    path = <span class="string">''</span> <span class="keyword">if</span> path == <span class="string">'&lt;NULL&gt;'</span></div><div class="line">    url = <span class="string">"<span class="subst">#&#123;proto&#125;</span>://<span class="subst">#&#123;site&#125;</span><span class="subst">#&#123;path&#125;</span>"</span></div><div class="line"></div><div class="line">    <span class="comment">#puts "\"#&#123;site&#125;\",\"#&#123;url&#125;\",\"#&#123;user&#125;\",\"#&#123;pass&#125;\",\"#&#123;date&#125;\""</span></div><div class="line">    puts <span class="string">"<span class="subst">#&#123;site&#125;</span>,<span class="subst">#&#123;url&#125;</span>,<span class="subst">#&#123;user&#125;</span>,<span class="subst">#&#123;pass&#125;</span>,<span class="subst">#&#123;date&#125;</span>"</span></div><div class="line">    <span class="comment">#puts "#&#123;user&#125;, #&#123;pass&#125;, #&#123;date&#125;"</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">accum = <span class="string">''</span></div><div class="line">ARGF.each_line <span class="keyword">do</span> <span class="params">|line|</span></div><div class="line">  <span class="keyword">if</span> line =~ <span class="regexp">/^keychain: /</span></div><div class="line">    <span class="keyword">unless</span> accum.empty?</div><div class="line">      process_entry(accum)</div><div class="line">      accum = <span class="string">''</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">  <span class="keyword">end</span></div><div class="line">  accum += line</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>This beautiful thing goes through the keychain items exported from the security dump command and converts that to a new file in csv format. I ran it something like<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby keychain.rb keychain.txt | sort &gt; keychain.csv</div></pre></td></tr></table></figure></p>
+<h2 id="Importing-items-into-pass"><a href="#Importing-items-into-pass" class="headerlink" title="Importing items into pass"></a>Importing items into pass</h2><p>Finally the moment of truth where we get to import things into pass and shutdown keychain for good. So far I haven’t invested much time into this and thats good because I don’t have time to write a whole library to export/import this stuff. Assuming that the last script was successful in converting these items its time to import them with a simple bash script to parse the csv.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">INPUT=keychain.csv</div><div class="line">OLDIFS=<span class="variable">$IFS</span></div><div class="line">IFS=,</div><div class="line">[ ! <span class="_">-f</span> <span class="variable">$INPUT</span> ] &amp;&amp; &#123; <span class="built_in">echo</span> <span class="string">"<span class="variable">$INPUT</span> file not found"</span>; <span class="built_in">exit</span> 99; &#125;</div><div class="line"><span class="keyword">while</span> <span class="built_in">read</span> flname url uname pass time</div><div class="line"><span class="keyword">do</span></div><div class="line">	<span class="built_in">printf</span> <span class="string">"<span class="variable">$pass</span>\n<span class="variable">$username</span>\n<span class="variable">$url</span>"</span> | pass insert -m Imported-final/<span class="variable">$flname</span>-<span class="variable">$uname</span></div><div class="line"><span class="keyword">done</span> &lt; <span class="variable">$INPUT</span></div><div class="line">IFS=<span class="variable">$OLDIFS</span></div></pre></td></tr></table></figure></p>
 <p>Everything worked out fine even with hacking together a few scripts and I had all of my items in pass in less than a half hour. As a note the conversion didn’t get me anything from keychain except for internet passwords which is all I cared about.</p>
 
           
@@ -383,17 +380,17 @@
           
             <p>The vagrant share command is totally underused and working in a remote company it’s also totally necessary. Nearly everyday I’m asked to troubleshoot a piece of code or help figure out a bug. Usually I need some context in order to help so I say “can you share your screen” or “would you mind pushing that up to staging and I’ll have a look at it later”. That’s just no good because it creates a time gap where I can’t help them. And oftentimes by the times I get around to taking a look they’ve already given up or went another route. That just sucks and there has to be a better way right? Well, there is and it’s called <code>vagrant share</code>. But there is one issue and that is by default it shares the default configuration for the VM which working in VVV is the default screen which isn’t very useful in debugging a site. But there is hope yet.</p>
 <p>Luckily with the vagrant share command you can specify a port as one of the flags. So this got me thinking I wonder if… You setup a site with it’s own port you could theoretically access each site like it was it’s own box right? I just blew my own mind in the process. Oh the possibilities.</p>
-<p>So I added this to my Vagrantfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">VAGRANTFILE_API_VERSION = &quot;2&quot;</span><br><span class="line">    Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|</span><br><span class="line">    config.vm.network &quot;forwarded_port&quot;, guest: 85, host: 8085</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+<p>So I added this to my Vagrantfile<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">VAGRANTFILE_API_VERSION = &quot;2&quot;</div><div class="line">    Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|</div><div class="line">    config.vm.network &quot;forwarded_port&quot;, guest: 85, host: 8085</div><div class="line">end</div></pre></td></tr></table></figure></p>
 <p>And then I changed my nginx port to listen on port 85 like so</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">listen 85;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">listen 85;</div></pre></td></tr></table></figure>
 <p>So now I’m thinking cool let’s fire this up and see if it works so I type</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant share --http 85</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vagrant share --http 85</div></pre></td></tr></table></figure>
 <p>And that works just fine if you take WordPress out of the situation but that defeats the purpose here since I work with primarily with WordPress. So, what do I do now? We’re getting passed all of the checkpoints on this except for WordPress and the reason is it’s determining the home and site url either by the DB or the wp-config file. What we need to do here is make the install URL agnostic so that it will work with any domain.</p>
 <p>We we need to either change tht in the DB or update the config. Updating the config is much easier so let’s just do that.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">'WP_HOME'</span>,    <span class="string">"http://&#123;$_SERVER['HTTP_HOST']&#125;/"</span>);</span><br><span class="line">define(<span class="string">'WP_SITEURL'</span>, <span class="string">"http://&#123;$_SERVER['HTTP_HOST']&#125;/"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">define(<span class="string">'WP_HOME'</span>,    <span class="string">"http://&#123;$_SERVER['HTTP_HOST']&#125;/"</span>);</div><div class="line">define(<span class="string">'WP_SITEURL'</span>, <span class="string">"http://&#123;$_SERVER['HTTP_HOST']&#125;/"</span>);</div></pre></td></tr></table></figure>
 <p>Bam! we are in business you type up <code>vagrant share --http 85</code> and everything runs cool as ice.</p>
 <p>But what about images? And other things? Just throw in a proxy pass like in the example below and everything works wonderfully.</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">listen</span>       <span class="number">85</span>;</span><br><span class="line">    <span class="attribute">listen</span>       <span class="number">443</span> ssl;</span><br><span class="line">    <span class="attribute">server_name</span>  site.dev <span class="regexp">*.site.dev</span>;</span><br><span class="line">    <span class="attribute">root</span>         /srv/www/site;</span><br><span class="line">    <span class="attribute">include</span>      /etc/nginx/nginx-wp-common.conf;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> <span class="regexp">~* \.(js|css|png|jpg|jpeg|gif|ico|mp3|mov|tif|tiff|swf|txt|html)$</span> &#123;</span><br><span class="line">        <span class="attribute">expires</span> <span class="number">24h</span>;</span><br><span class="line">        <span class="attribute">log_not_found</span> <span class="literal">off</span>;</span><br><span class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ <span class="variable">@production</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">location</span> <span class="variable">@production</span> &#123;</span><br><span class="line">        <span class="attribute">resolver</span> <span class="number">8.8.8.8</span>;</span><br><span class="line">        <span class="attribute">proxy_pass</span> http://www.site.com/<span class="variable">$uri</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="section">server</span> &#123;</div><div class="line">    <span class="attribute">listen</span>       <span class="number">85</span>;</div><div class="line">    <span class="attribute">listen</span>       <span class="number">443</span> ssl;</div><div class="line">    <span class="attribute">server_name</span>  site.dev <span class="regexp">*.site.dev</span>;</div><div class="line">    <span class="attribute">root</span>         /srv/www/site;</div><div class="line">    <span class="attribute">include</span>      /etc/nginx/nginx-wp-common.conf;</div><div class="line"></div><div class="line">    <span class="attribute">location</span> <span class="regexp">~* \.(js|css|png|jpg|jpeg|gif|ico|mp3|mov|tif|tiff|swf|txt|html)$</span> &#123;</div><div class="line">        <span class="attribute">expires</span> <span class="number">24h</span>;</div><div class="line">        <span class="attribute">log_not_found</span> <span class="literal">off</span>;</div><div class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ <span class="variable">@production</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="attribute">location</span> <span class="variable">@production</span> &#123;</div><div class="line">        <span class="attribute">resolver</span> <span class="number">8.8.8.8</span>;</div><div class="line">        <span class="attribute">proxy_pass</span> http://www.site.com/<span class="variable">$uri</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Now anyone you share that with will be able to help checkout your local machine without any trouble they can even login and poke around the admin.</p>
 
           
@@ -743,24 +740,264 @@
 <p>A git hook is a bash script that is ran at certain periods in the execution process when you are working with git. For instance if you are about to push there is the hook <code>pre-push</code> which can be used to execute a script before a push occurs. The script can do anything you want really. You can check your codebase for certain flaws, send out a tweet, or anything to your liking really.</p>
 <h2 id="Configure-your-first-hook"><a href="#Configure-your-first-hook" class="headerlink" title="Configure your first hook"></a>Configure your first hook</h2><p>By default git has it’s own hooks and init dir which is dependent on your system. These hooks are included in every repo that you create on your system by default and you can check them out by having a look at your <code>.git</code> dir in one of your projects. There are also sample hooks in the <code>.git/hooks</code> dir by default so you can have a look at those for more insight.</p>
 <p>To start we’ll need to create a custom directory where we want to store our git templates. I keep any custom code on my machine in my home directory under <code>~/.code/</code> so I have mine configured like so.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init.templatedir &apos;~/.code/.git_template&apos;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global init.templatedir &apos;~/.code/.git_template&apos;</div></pre></td></tr></table></figure>
 <p>If we check our globals for git we should see something like</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init.templatedir=~/.code/.git_template</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config -l</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">init.templatedir=~/.code/.git_template</div></pre></td></tr></table></figure>
 <p>The directory can be named anything you want really and doesn’t have to be named the same as mine. After you set your global template directory you will need to add a <strong>hooks</strong> directory under that.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.code/.git_template &amp;&amp; mkdir hooks</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/.code/.git_template &amp;&amp; mkdir hooks</div></pre></td></tr></table></figure>
 <p>Now you should see a hooks directory and we will need to set the proper permissions to make the scripts executable.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod ug+x ~/.code/.git_template/hooks/*</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod ug+x ~/.code/.git_template/hooks/*</div></pre></td></tr></table></figure>
 <p>Next we will want to create a hook inside that hooks dir and we are going to keep is simple. What we are going to do is write a simple bash script that will prepend the current branch name to our commit message. This is useful if your working with multiple branches and want to have a hard reference to that branch name after it has been merged into other branches. I use if for feature branch on occasion and it has proven useful.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~/.code/.git_template/hooks/prepare-commit-msg</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch ~/.code/.git_template/hooks/prepare-commit-msg</div></pre></td></tr></table></figure>
 <p>If you like here is a sample of that code. What it does is simply get the branch name and checks if we are on master or develop. If we aren’t on either of those branches then it will prepend the current branch wrapped in square brackets to our commit message.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># This way you can customize which branches should be skipped when prepending the commit message.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$BRANCHES_TO_SKIP</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line"> <span class="comment"># Define the branches to skip if your on an of these branches</span></span><br><span class="line"> BRANCHES_TO_SKIP=(master develop)</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">BRANCH_NAME=$(git symbolic-ref --short HEAD)</span><br><span class="line">BRANCH_NAME=<span class="string">"<span class="variable">$&#123;BRANCH_NAME##*/&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">BRANCH_EXCLUDED=$(<span class="built_in">printf</span> <span class="string">"%s\n"</span> <span class="string">"<span class="variable">$&#123;BRANCHES_TO_SKIP[@]&#125;</span>"</span> | grep -c <span class="string">"^<span class="variable">$BRANCH_NAME</span>$"</span>)</span><br><span class="line">BRANCH_IN_COMMIT=$(grep -c <span class="string">"\[<span class="variable">$BRANCH_NAME</span>\]"</span> <span class="variable">$1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BRANCH_NAME</span>"</span> ] &amp;&amp; ! [[ <span class="variable">$BRANCH_EXCLUDED</span> <span class="_">-eq</span> 1 ]] &amp;&amp; ! [[ <span class="variable">$BRANCH_IN_COMMIT</span> -ge 1 ]]; <span class="keyword">then</span></span><br><span class="line"> sed -i.bak <span class="_">-e</span> <span class="string">"1s/^/[<span class="variable">$BRANCH_NAME</span>] /"</span> <span class="variable">$1</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment"># This way you can customize which branches should be skipped when prepending the commit message.</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$BRANCHES_TO_SKIP</span>"</span> ]; <span class="keyword">then</span></div><div class="line"> <span class="comment"># Define the branches to skip if your on an of these branches</span></div><div class="line"> BRANCHES_TO_SKIP=(master develop)</div><div class="line"><span class="keyword">fi</span></div><div class="line"></div><div class="line">BRANCH_NAME=$(git symbolic-ref --short HEAD)</div><div class="line">BRANCH_NAME=<span class="string">"<span class="variable">$&#123;BRANCH_NAME##*/&#125;</span>"</span></div><div class="line"></div><div class="line">BRANCH_EXCLUDED=$(<span class="built_in">printf</span> <span class="string">"%s\n"</span> <span class="string">"<span class="variable">$&#123;BRANCHES_TO_SKIP[@]&#125;</span>"</span> | grep -c <span class="string">"^<span class="variable">$BRANCH_NAME</span>$"</span>)</div><div class="line">BRANCH_IN_COMMIT=$(grep -c <span class="string">"\[<span class="variable">$BRANCH_NAME</span>\]"</span> <span class="variable">$1</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BRANCH_NAME</span>"</span> ] &amp;&amp; ! [[ <span class="variable">$BRANCH_EXCLUDED</span> <span class="_">-eq</span> 1 ]] &amp;&amp; ! [[ <span class="variable">$BRANCH_IN_COMMIT</span> -ge 1 ]]; <span class="keyword">then</span></div><div class="line"> sed -i.bak <span class="_">-e</span> <span class="string">"1s/^/[<span class="variable">$BRANCH_NAME</span>] /"</span> <span class="variable">$1</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
 <h2 id="Adding-your-hooks-to-your-project"><a href="#Adding-your-hooks-to-your-project" class="headerlink" title="Adding your hooks to your project"></a>Adding your hooks to your project</h2><p>After you’ve created your git hook navigate to a project that you don’t mind testing out this nifty new script on and type.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
 <p>This should pull in your new hooks configuration into that repo for you to use. If you want to verify that they are there you can navigate to the <code>.git/hooks</code> directory in your project and check if the files are there and current. Sometimes it doesn’t initialize properly so just be weary of that. Create a new branch and name it anything you like as long as it’s not in that list of <code>BRANCHES_TO_SKIP</code>. Once you complete your changes write up your commit message as usual and you should see the branch name appended to the commit message the you just typed up.</p>
 <p>Really that’s it! You can get as creative as you like with these scripts. For instance you can check for debugging chunks of code or keywords such as <code>console.log</code> or  <code>var_dump</code> that should probably be excluded from your production code.</p>
 <p><strong>Go forth and work smarter not harder!</strong></p>
 <p><a href="http://git-scm.com/book/fr/v2/Customizing-Git-Git-Hooks" target="_blank" rel="external">More information on git hooks</a></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/22/update-kali-linux/" itemprop="url">
+                  Update Kali Linux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
+              2015-07-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Kali Linux is by far one of the most awesome and battle tested penetration testing OS’s out there. But sometimes it needs a little love to keep things operating smoothly and just like any OS when you update your getting new features as well as security updates that will keep your system safe from recent security breaches. <code>apt-get update &amp;&amp; apt-get upgrade</code></p>
+<p>Alternatively you can add the following flag to that command and it will fix any packages that are broken or partially installed on the system. <code>apt-get update &amp;&amp; apt-get upgrade --fix-missing</code></p>
+<p>Kali will ping the Kali web server checking for new packages listed on their servers now check it’s webservers for updates. If it finds any that need updated then it should ask if you want to install them.</p>
+<p>Patiently wait for all of the packages to update, go make a coffee or whatever floats your boat.</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/22/vvv-php-code-sniffer-with-wordpress/" itemprop="url">
+                  VVV PHP Code Sniffer with WordPress
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
+              2015-07-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Work/" itemprop="url" rel="index">
+                    <span itemprop="name">Work</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Unbekownst to a lot of people that use VVV even on a daily basis is that there is a built in code sniffer or <strong>CS</strong> integrated into the machine that can be really useful if your committing code and want to maintain a higher standard. If you’ve provisioned the box then sitting inside your <strong>www</strong> directory there should be another directory called <strong>phpcs</strong> which stands for “PHP Code Sniffer”.</p>
+<h2 id="Sniffing-Code-from-the-console"><a href="#Sniffing-Code-from-the-console" class="headerlink" title="Sniffing Code from the console"></a>Sniffing Code from the console</h2><p>After you’ve booted up the vm you’ll want to <code>vagrant ssh</code> into the box and check if phpcs is installed by typing <code>which phpcs</code> which should return the its executable path which is something like <code>/srv/www/phpcs/scripts/phpcs</code>. If nothing is returned then you need to add the executable to your path but it should be there by default when you provision the machine.</p>
+<p>Using the built in php code sniffer with WordPress is easy. Once we’ve verified that phpcs is on the box and it’s executable then we need to test out a file to see if it’s up to coding standard. Let’s check out our <strong>wp-config.php</strong> file by running <code>phpcs /srv/www/wordpress-default/wp-config.php</code> . This should return results similar to those below.</p>
+<p>Keep in mind that this sniffed using the default PEAR standard for the file and since we are working with WordPress we want a standard that is more our ballgame but to see which ones are installed type <code>phpcs -i</code> After that pick a standard listed, I’m going to use WordPress </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpcs /srv/www/wordpress-default/wp-config.php --standard=WordPress`</div></pre></td></tr></table></figure>
+<p>Notice now that the results are slightly different since we are using the WordPress standard to sniff our code. That’s a lot of errors though and I don’t want to manually go through and find them all fixing them on by one. That would be so boring and take way too long so let’s fix them in one go. Notice the message at the bottom of that command output.</p>
+<p><strong>PHPCBF CAN FIX THE MARKED SNIFF VIOLATIONS AUTOMATICALLY</strong></p>
+<h2 id="Fixing-Code"><a href="#Fixing-Code" class="headerlink" title="Fixing Code"></a>Fixing Code</h2><p>Is totally something you don’t want to miss and is just as easy to use as phpcs. If you don’t already have a patch or diff application setup for phpcbf then you’ll probably want to pass the flag <strong>–no-patch</strong> along with this next command otherwise you will most likely get an error. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">phpcbf --standard=WordPress --no-patch /srv/www/wordpress-default/wp-config.php`</div></pre></td></tr></table></figure>
+<p>Now those errors should be all fixes to that coding standard. If you were to run the <strong>phpcs </strong>command again then the errors in question should no longer show up in the sniff results.</p>
+<p>You can also fix entire directories using these tools but just be warned that though it works pretty well sometimes you just don’t get all of the perfect code that you expected.</p>
+<p>As a note for those that work with <strong>VIP QuickStart</strong> the same packages are installed on the Vagrant box as well and can be used in the same fashion. If your a vim user I’ve found that this <a href="http://vimawesome.com/plugin/phpcs-vim&quot;" target="_blank" rel="external">plugin</a> works well.</p>
 
           
         
@@ -1002,246 +1239,6 @@
           
             <h2 id="What-is-Kali-Linux"><a href="#What-is-Kali-Linux" class="headerlink" title="What is Kali Linux?"></a>What is Kali Linux?</h2><p>Kali Linux previously known as Backtrack is a custom Linux distro maintained by Offensive Security Ltd. It’s main purpose is for digital forensics and penetration testing. It comes with all the tools you need to start hacking and takes some getting to know before you can actually do anything with it. It’s designed as out of the box OS solution that will quickly get you up and hacking from nearly any type of device quickly.</p>
 <h2 id="What-Kali-Linux-is-not"><a href="#What-Kali-Linux-is-not" class="headerlink" title="What Kali Linux is not."></a>What Kali Linux is not.</h2><p>It is not a push button solution that will hack anything at the push of a button. It is not for beginners that don’t understand how computers work. You should have a decent understanding of computers and the internet before you can even dream of doing anything with Kali. It’s not for what you might call a “Script Kiddy”. It’s also not for people that don’t understand the basic fundamentals of computer programming, Linux, once again the internet and how it works. If you don’t have those skills locked down then move along until you do because the truth is there isn’t much you can do besides play around with the OS until you do understand those things. However playing is how you learn so why not try it? Just don’t get frustrated when you can’t push the “Hack Google” button because there isn’t one.</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/22/update-kali-linux/" itemprop="url">
-                  Update Kali Linux
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
-              2015-07-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Work/" itemprop="url" rel="index">
-                    <span itemprop="name">Work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Kali Linux is by far one of the most awesome and battle tested penetration testing OS’s out there. But sometimes it needs a little love to keep things operating smoothly and just like any OS when you update your getting new features as well as security updates that will keep your system safe from recent security breaches. <code>apt-get update &amp;&amp; apt-get upgrade</code></p>
-<p>Alternatively you can add the following flag to that command and it will fix any packages that are broken or partially installed on the system. <code>apt-get update &amp;&amp; apt-get upgrade --fix-missing</code></p>
-<p>Kali will ping the Kali web server checking for new packages listed on their servers now check it’s webservers for updates. If it finds any that need updated then it should ask if you want to install them.</p>
-<p>Patiently wait for all of the packages to update, go make a coffee or whatever floats your boat.</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/22/vvv-php-code-sniffer-with-wordpress/" itemprop="url">
-                  VVV PHP Code Sniffer with WordPress
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2015-07-22T10:07:04-06:00" content="2015-07-22">
-              2015-07-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Work/" itemprop="url" rel="index">
-                    <span itemprop="name">Work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Unbekownst to a lot of people that use VVV even on a daily basis is that there is a built in code sniffer or <strong>CS</strong> integrated into the machine that can be really useful if your committing code and want to maintain a higher standard. If you’ve provisioned the box then sitting inside your <strong>www</strong> directory there should be another directory called <strong>phpcs</strong> which stands for “PHP Code Sniffer”.</p>
-<h2 id="Sniffing-Code-from-the-console"><a href="#Sniffing-Code-from-the-console" class="headerlink" title="Sniffing Code from the console"></a>Sniffing Code from the console</h2><p>After you’ve booted up the vm you’ll want to <code>vagrant ssh</code> into the box and check if phpcs is installed by typing <code>which phpcs</code> which should return the its executable path which is something like <code>/srv/www/phpcs/scripts/phpcs</code>. If nothing is returned then you need to add the executable to your path but it should be there by default when you provision the machine.</p>
-<p>Using the built in php code sniffer with WordPress is easy. Once we’ve verified that phpcs is on the box and it’s executable then we need to test out a file to see if it’s up to coding standard. Let’s check out our <strong>wp-config.php</strong> file by running <code>phpcs /srv/www/wordpress-default/wp-config.php</code> . This should return results similar to those below.</p>
-<p>Keep in mind that this sniffed using the default PEAR standard for the file and since we are working with WordPress we want a standard that is more our ballgame but to see which ones are installed type <code>phpcs -i</code> After that pick a standard listed, I’m going to use WordPress </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">phpcs /srv/www/wordpress-default/wp-config.php --standard=WordPress`</span><br></pre></td></tr></table></figure>
-<p>Notice now that the results are slightly different since we are using the WordPress standard to sniff our code. That’s a lot of errors though and I don’t want to manually go through and find them all fixing them on by one. That would be so boring and take way too long so let’s fix them in one go. Notice the message at the bottom of that command output.</p>
-<p><strong>PHPCBF CAN FIX THE MARKED SNIFF VIOLATIONS AUTOMATICALLY</strong></p>
-<h2 id="Fixing-Code"><a href="#Fixing-Code" class="headerlink" title="Fixing Code"></a>Fixing Code</h2><p>Is totally something you don’t want to miss and is just as easy to use as phpcs. If you don’t already have a patch or diff application setup for phpcbf then you’ll probably want to pass the flag <strong>–no-patch</strong> along with this next command otherwise you will most likely get an error. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">phpcbf --standard=WordPress --no-patch /srv/www/wordpress-default/wp-config.php`</span><br></pre></td></tr></table></figure>
-<p>Now those errors should be all fixes to that coding standard. If you were to run the <strong>phpcs </strong>command again then the errors in question should no longer show up in the sniff results.</p>
-<p>You can also fix entire directories using these tools but just be warned that though it works pretty well sometimes you just don’t get all of the perfect code that you expected.</p>
-<p>As a note for those that work with <strong>VIP QuickStart</strong> the same packages are installed on the Vagrant box as well and can be used in the same fashion. If your a vim user I’ve found that this <a href="http://vimawesome.com/plugin/phpcs-vim&quot;" target="_blank" rel="external">plugin</a> works well.</p>
 
           
         
