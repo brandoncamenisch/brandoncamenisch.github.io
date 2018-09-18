@@ -1,0 +1,200 @@
+{
+	"basics": {
+		"name": "Brandon Camenisch",
+		"label": "Senior Software Engineer",
+		"picture": "https://www.dropbox.com/s/hz9556kjhkkg0hq/bio.png?raw=1",
+		"location": {
+			"city": "Boulder",
+			"countryCode": "US",
+			"region": "Colorado"
+		},
+		"website": "http://brandoncamenisch.com",
+		"summary": "My affinity for programming started in 1997 when I wanted to make my own game mods as a kid. Shortly after, I began my programming career when I started building websites and getting involved in network security. Since then I've had a diverse background in many different technologies that make the web work. With a taste for challenge and a dislike for stagnation, I've learned and grown with each project I've undertaken. This has provided me the opportunity to gather a varied range of skills and expertise. I've conceived successful large scale asynchronous data migrations for e-commerce and financial datastores. Scaled out high visibility SaaS products and websites where traffic levels were mind blowing. Conducted audits on codebases for security and performance. Led and mentored engineering teams on projects as both a consultant and as an engineering manager. However, having had my own follies over the years I am a confident but humble and cautious engineer. I look forward to learning new technologies and working with smart people that enjoy what they do and appreciate the impact it can have.",
+		"profiles": [
+			{
+				"network": "Github",
+				"username": "brandoncamenisch",
+				"url": "https://github.com/brandoncamenisch"
+			}
+		]
+	},
+	"work": [
+		{
+			"company": "PMC ( Penske Media Corporation )",
+			"position": "Senior Software Engineer",
+			"website": "http://pmc.com",
+			"startDate": "2016-03-07",
+			"summary": "",
+			"highlights": [
+				"Built out existing application frameworks and tools that maintained company wide infrastructure",
+				"Worked extensively on WordPress VIP projects"
+			]
+		},
+		{
+			"company": "10up",
+			"position": "Engineering Manager",
+			"website": "https://10up.com",
+			"startDate": "2014-03-10",
+			"endDate": "2016-02-23",
+			"summary": "",
+			"highlights": [
+				"Provided 1:1 training and mentorship to a team of 6-12 engineers with constantly shifting ranks.",
+				"Accurately estimated out large complex projects for big name clients.",
+				"Spearheaded engineering solutions for complex integrations and migrations.",
+				"Managed a successful team of engineers to deliver high visibility websites for fortune 100 companies.",
+				"Improved overall team efficiency by implementing tools, programming conventions, workflow improvements, and training."
+			]
+		},
+		{
+			"position": "Infrastructure & Engineering Consultant",
+			"company": "Independent consultant",
+			"startDate": "2012-01-01",
+			"endDate": "2014-03-10",
+			"summary": "",
+			"highlights": [
+				"Provided strategic engineering consulting to startups.",
+				"Demonstrated how to predict growth and scale a product without hitting a wall in the process.",
+				"Conducted in-depth security audits for clients identifying weaknesses in their corporate IT structure.",
+				"Collaborated with team of engineers to architect and reconstruct their SaaS product from the ground up.",
+				"Mentored teams in software life cycle processes using TDD, CI, code reviews, security conventions, and engineering best practices."
+			]
+		},
+		{
+			"position": "Freelance Engineering",
+			"company": "Nerdatory",
+			"startDate": "2000-06-19",
+			"endDate": "2012-01-01",
+			"summary": "",
+			"highlights": [
+				"Engineered custom REST based APIs.",
+				"Built a WP framework from the ground up using DRY & semantic approach.",
+				"Concepted and built a SVG generation/editing tool using HTML5 canvas and RaphaëlJS.",
+				"Embraced mobile marketing microsites trend by building a SaaS product site building tool on Rails.",
+				"Integrated with various payment gateway systems for e-comm using Stripe, PayPal, Authorize.net and others."
+			]
+		}
+	],
+	"skills": [
+		{
+			"name": "Languages",
+			"keywords": [
+				"Bash",
+				"CSS",
+				"HTML5",
+				"Javascript",
+				"PHP",
+				"Ruby",
+				"SCSS",
+				"SQL"
+			]
+		},
+		{
+			"name": "Frameworks / Libs",
+			"keywords": [
+				"Backbone",
+				"Laravel",
+				"Meteor",
+				"Node",
+				"Rails",
+				"Underscore",
+				"WordPress"
+			]
+		},
+		{
+			"name": "Datastores",
+			"keywords": [
+				"CouchDB",
+				"MariaDB",
+				"MongoDB",
+				"MySQL",
+				"PostgreSQL"
+			]
+		},
+		{
+			"name": "Build & Package Managers",
+			"keywords": [
+				"Bundler",
+				"Composer",
+				"Grunt",
+				"Gulp",
+				"NPM",
+				"WebPack",
+				"Yeoman"
+			]
+		},
+		{
+			"name": "Server",
+			"keywords": [
+				"*nix",
+				"Apache",
+				"AWS",
+				"HHVM",
+				"Nginx",
+				"Vagrant",
+				"Docker",
+				"Memcached"
+			]
+		},
+		{
+			"name": "Favorite Tools",
+			"keywords": [
+				"Linux",
+				"Termite",
+				"Tmux",
+				"VIM",
+				"oh-my-zsh"
+			]
+		},
+		{ "name": "Testing suites",
+			"keywords": [
+				"CasperJS",
+				"Codception",
+				"PHPUnit",
+				"PhantomJS",
+				"QUnit"
+			]
+		},
+		{
+			"name": "SCM",
+			"keywords": [
+				"Git",
+				"SVN"
+			]
+		},
+		{
+			"name": "Processes & Concepts",
+			"keywords": [
+				"Agile",
+				"DRY",
+				"CI",
+				"Jira",
+				"OOP",
+				"Polymorhism",
+				"TDD"
+			]
+		},
+		{
+			"name": "Fun assorted Skills",
+			"keywords": [
+				"Kali Linux",
+				"SQL Injection",
+				"Web Security",
+				"XSS"
+			]
+		}
+	],
+	"interests": [
+		{
+			"keywords": [
+				"Biking",
+				"Hacking",
+				"Hiking",
+				"PC Gaming",
+				"Snowboarding",
+				"Swimming",
+				"Traveling",
+				"Weightlifting"
+			]
+		}
+	]
+}
