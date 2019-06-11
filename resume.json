@@ -1,19 +1,24 @@
 {
 	"basics": {
 		"name": "Brandon Camenisch",
-		"label": "Senior Software Engineer",
+		"label": "DevOps",
 		"picture": "https://www.dropbox.com/s/hz9556kjhkkg0hq/bio.png?raw=1",
 		"location": {
-			"city": "Boulder",
+			"city": "Coeur d'Alene",
 			"countryCode": "US",
-			"region": "Colorado"
+			"region": "Idaho"
 		},
-		"website": "http://brandoncamenisch.com",
+		"website": "https://brandoncamenisch.com",
 		"summary": "My affinity for programming started in 1997 when I wanted to make my own game mods as a kid. Shortly after, I began my programming career when I started building websites and getting involved in network security. Since then I've had a diverse background in many different technologies that make the web work. With a taste for challenge and a dislike for stagnation, I've learned and grown with each project I've undertaken. This has provided me the opportunity to gather a varied range of skills and expertise. I've conceived successful large scale asynchronous data migrations for e-commerce and financial datastores. Scaled out high visibility SaaS products and websites where traffic levels were mind blowing. Conducted audits on codebases for security and performance. Led and mentored engineering teams on projects as both a consultant and as an engineering manager. However, having had my own follies over the years I am a confident but humble and cautious engineer. I look forward to learning new technologies and working with smart people that enjoy what they do and appreciate the impact it can have.",
 		"profiles": [
 			{
 				"network": "Github",
 				"username": "brandoncamenisch",
+				"url": "https://github.com/brandoncamenisch"
+			},
+			{
+				"network": "twitter",
+				"username": "brandoncamenisc",
 				"url": "https://github.com/brandoncamenisch"
 			}
 		]
@@ -21,9 +26,21 @@
 	"work": [
 		{
 			"company": "PMC ( Penske Media Corporation )",
+			"position": "DevOps",
+			"website": "https://pmc.com",
+			"startDate": "2018-01-01",
+			"summary": "",
+			"highlights": [
+				"",
+				""
+			]
+		},
+		{
+			"company": "PMC ( Penske Media Corporation )",
 			"position": "Senior Software Engineer",
 			"website": "http://pmc.com",
 			"startDate": "2016-03-07",
+			"endDate": "2018-01-01",
 			"summary": "",
 			"highlights": [
 				"Built out existing application frameworks and tools that maintained company wide infrastructure",
@@ -172,23 +189,17 @@
 				"Polymorhism",
 				"TDD"
 			]
-		},
-		{
-			"name": "Fun assorted Skills",
-			"keywords": [
-				"Kali Linux",
-				"SQL Injection",
-				"Web Security",
-				"XSS"
-			]
 		}
 	],
 	"interests": [
 		{
 			"keywords": [
+				"Battlestations",
 				"Biking",
+				"Cryptography",
 				"Hacking",
 				"Hiking",
+				"Linux",
 				"PC Gaming",
 				"Snowboarding",
 				"Swimming",
