@@ -1,15 +1,13 @@
 {
 	"basics": {
-		"name": "Brandon Camenisch",
+		"name": "Brandon M. Camenisch",
 		"label": "DevOps",
-		"picture": "https://www.dropbox.com/s/hz9556kjhkkg0hq/bio.png?raw=1",
+		"picture": "./public/bio.jpg",
 		"location": {
-			"city": "Coeur d'Alene",
-			"countryCode": "US",
-			"region": "Idaho"
+			"countryCode": "Earth"
 		},
 		"website": "https://brandoncamenisch.com",
-		"summary": "My affinity for programming started in 1997 when I wanted to make my own game mods as a kid. Shortly after, I began my programming career when I started building websites and getting involved in network security. Since then I've had a diverse background in many different technologies that make the web work. With a taste for challenge and a dislike for stagnation, I've learned and grown with each project I've undertaken. This has provided me the opportunity to gather a varied range of skills and expertise. I've conceived successful large scale asynchronous data migrations for e-commerce and financial datastores. Scaled out high visibility SaaS products and websites where traffic levels were mind blowing. Conducted audits on codebases for security and performance. Led and mentored engineering teams on projects as both a consultant and as an engineering manager. However, having had my own follies over the years I am a confident but humble and cautious engineer. I look forward to learning new technologies and working with smart people that enjoy what they do and appreciate the impact it can have.",
+		"summary": "My affinity for programming started around ~1995 when I wanted to make my own game mods as a kid using C. Shortly after, I began my programming career when I started building websites and getting involved in network security. Since then I've had a diverse background in many different technologies that make the web work. I've had the opportunity to gather a varied range of skills and expertise through the roles that I've had such as. Conceiving successful large scale (petabytes) asynchronous data migrations for e-commerce as well as financial datastores. Scaled out high visibility SaaS products and websites where traffic levels were in the 10x Mil's. Conducted numerous audits on codebases for security and performance. Led and mentored engineering teams on projects as both a consultant and as an engineering manager. However, having had my own follies over the years I'm a confident but humble and cautious engineer. I always look forward to learning new technologies and working with smart people that enjoy what they do and appreciate the positive impact it can have.",
 		"profiles": [
 			{
 				"network": "Github",
@@ -17,9 +15,23 @@
 				"url": "https://github.com/brandoncamenisch"
 			},
 			{
+				"network": "hackernews",
+				"username": "LatexNinja", "url": "https://news.ycombinator.com/user?id=LatexNinja"
+			},
+			{
+				"network": "reddit",
+				"username": "mountaininja",
+				"url": "https://www.reddit.com/user/mountaininja"
+			},
+			{
+				"network": "stackoverflow",
+				"username": "brandon-camenisch",
+				"url": "https://stackoverflow.com/users/11642734/brandon-camenisch"
+			},
+			{
 				"network": "twitter",
 				"username": "brandoncamenisc",
-				"url": "https://github.com/brandoncamenisch"
+				"url": "https://twitter.com/brandoncamenisc"
 			}
 		]
 	},
@@ -29,10 +41,9 @@
 			"position": " DevOps",
 			"website": "https://pmc.com",
 			"startDate": "2018-01-01",
-			"summary": "",
+			"summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis tempus ex, non lobortis ex rhoncus vitae. Cras accumsan sit amet tellus in ultrices. In vel ornare nisl. Etiam placerat odio metus. Morbi eu mi fermentum, porttitor elit sit amet, bibendum massa. Fusce egestas velit quis orci consectetur, lobortis faucibus nunc eleifend. Vestibulum interdum et nibh eu laoreet. Phasellus volutpat justo lacus, ut consectetur mauris pulvinar eu. Integer sed nisl quis metus malesuada rhoncus sed luctus ex. Proin imperdiet arcu interdum vulputate mattis. Integer eget odio sagittis, facilisis enim quis, porttitor mi. Aenean facilisis ante leo, non hendrerit urna porttitor nec. Fusce eu tellus nec risus vulputate volutpat. In ut tincidunt ante. Maecenas magna nibh, bibendum at rutrum sed, maximus vel mi. Praesent vitae efficitur purus, eget efficitur velit. ",
 			"highlights": [
-				"",
-				""
+				"Unified dated magic legacy systems into a cohesive gitops workflow from old VM's and monolithic format to a lightweight docker on k8s"
 			]
 		},
 		{
@@ -41,19 +52,21 @@
 			"website": "http://pmc.com",
 			"startDate": "2016-03-07",
 			"endDate": "2018-01-01",
-			"summary": "",
+			"summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis tempus ex, non lobortis ex rhoncus vitae. Cras accumsan sit amet tellus in ultrices. In vel ornare nisl. Etiam placerat odio metus. Morbi eu mi fermentum, porttitor elit sit amet, bibendum massa. Fusce egestas velit quis orci consectetur, lobortis faucibus nunc eleifend. Vestibulum interdum et nibh eu laoreet. Phasellus volutpat justo lacus, ut consectetur mauris pulvinar eu. Integer sed nisl quis metus malesuada rhoncus sed luctus ex. Proin imperdiet arcu interdum vulputate mattis. Integer eget odio sagittis, facilisis enim quis, porttitor mi. Aenean facilisis ante leo, non hendrerit urna porttitor nec. Fusce eu tellus nec risus vulputate volutpat. In ut tincidunt ante. Maecenas magna nibh, bibendum at rutrum sed, maximus vel mi. Praesent vitae efficitur purus, eget efficitur velit. ",
 			"highlights": [
 				"Built out existing application frameworks and tools that maintained company wide infrastructure",
-				"Worked extensively on WordPress VIP projects"
+				"Worked extensively on WordPress VIP projects",
+				"Data migrations",
+				"Ad integrations"
 			]
 		},
 		{
 			"company": "10up",
-			"position": "Engineering Manager",
+			"position": "Senior Engineering Manager",
 			"website": "https://10up.com",
 			"startDate": "2014-03-10",
 			"endDate": "2016-02-23",
-			"summary": "",
+			"summary": "sLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis tempus ex, non lobortis ex rhoncus vitae. Cras accumsan sit amet tellus in ultrices. In vel ornare nisl. Etiam placerat odio metus. Morbi eu mi fermentum, porttitor elit sit amet, bibendum massa. Fusce egestas velit quis orci consectetur, lobortis faucibus nunc eleifend. Vestibulum interdum et nibh eu laoreet. Phasellus volutpat justo lacus, ut consectetur mauris pulvinar eu. Integer sed nisl quis metus malesuada rhoncus sed luctus ex. Proin imperdiet arcu interdum vulputate mattis. Integer eget odio sagittis, facilisis enim quis, porttitor mi. Aenean facilisis ante leo, non hendrerit urna porttitor nec. Fusce eu tellus nec risus vulputate volutpat. In ut tincidunt ante. Maecenas magna nibh, bibendum at rutrum sed, maximus vel mi. Praesent vitae efficitur purus, eget efficitur velit. omething",
 			"highlights": [
 				"Provided 1:1 training and mentorship to a team of 6-12 engineers with constantly shifting ranks.",
 				"Accurately estimated out large complex projects for big name clients.",
@@ -67,7 +80,7 @@
 			"company": "Independent consultant",
 			"startDate": "2012-01-01",
 			"endDate": "2014-03-10",
-			"summary": "",
+			"summary": "sLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis tempus ex, non lobortis ex rhoncus vitae. Cras accumsan sit amet tellus in ultrices. In vel ornare nisl. Etiam placerat odio metus. Morbi eu mi fermentum, porttitor elit sit amet, bibendum massa. Fusce egestas velit quis orci consectetur, lobortis faucibus nunc eleifend. Vestibulum interdum et nibh eu laoreet. Phasellus volutpat justo lacus, ut consectetur mauris pulvinar eu. Integer sed nisl quis metus malesuada rhoncus sed luctus ex. Proin imperdiet arcu interdum vulputate mattis. Integer eget odio sagittis, facilisis enim quis, porttitor mi. Aenean facilisis ante leo, non hendrerit urna porttitor nec. Fusce eu tellus nec risus vulputate volutpat. In ut tincidunt ante. Maecenas magna nibh, bibendum at rutrum sed, maximus vel mi. Praesent vitae efficitur purus, eget efficitur velit. omething",
 			"highlights": [
 				"Provided strategic engineering consulting to startups.",
 				"Demonstrated how to predict growth and scale a product without hitting a wall in the process.",
@@ -81,113 +94,109 @@
 			"company": "Nerdatory",
 			"startDate": "2000-06-19",
 			"endDate": "2012-01-01",
-			"summary": "",
+			"summary": "sLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis tempus ex, non lobortis ex rhoncus vitae. Cras accumsan sit amet tellus in ultrices. In vel ornare nisl. Etiam placerat odio metus. Morbi eu mi fermentum, porttitor elit sit amet, bibendum massa. Fusce egestas velit quis orci consectetur, lobortis faucibus nunc eleifend. Vestibulum interdum et nibh eu laoreet. Phasellus volutpat justo lacus, ut consectetur mauris pulvinar eu. Integer sed nisl quis metus malesuada rhoncus sed luctus ex. Proin imperdiet arcu interdum vulputate mattis. Integer eget odio sagittis, facilisis enim quis, porttitor mi. Aenean facilisis ante leo, non hendrerit urna porttitor nec. Fusce eu tellus nec risus vulputate volutpat. In ut tincidunt ante. Maecenas magna nibh, bibendum at rutrum sed, maximus vel mi. Praesent vitae efficitur purus, eget efficitur velit. omething",
 			"highlights": [
 				"Engineered custom REST based APIs.",
 				"Built a WP framework from the ground up using DRY & semantic approach.",
 				"Concepted and built a SVG generation/editing tool using HTML5 canvas and RaphaëlJS.",
 				"Embraced mobile marketing microsites trend by building a SaaS product site building tool on Rails.",
-				"Integrated with various payment gateway systems for e-comm using Stripe, PayPal, Authorize.net and others."
+				"Integrated with various payment gateway systems for e-comm using Stripe,  PayPal, Authorize.net and others."
 			]
 		}
 	],
 	"skills": [
 		{
-			"name": "Languages",
+			"name": "🧰 Personal Favorite Tools",
 			"keywords": [
-				"Bash",
-				"CSS",
-				"HTML5",
-				"Javascript",
-				"PHP",
-				"Ruby",
-				"SCSS",
-				"SQL"
-			]
-		},
-		{
-			"name": "Frameworks / Libs",
-			"keywords": [
-				"Backbone",
-				"Laravel",
-				"Meteor",
-				"Node",
-				"Rails",
-				"Underscore",
-				"WordPress"
-			]
-		},
-		{
-			"name": "Datastores",
-			"keywords": [
-				"CouchDB",
-				"MariaDB",
-				"MongoDB",
-				"MySQL",
-				"PostgreSQL"
-			]
-		},
-		{
-			"name": "Build & Package Managers",
-			"keywords": [
-				"Bundler",
-				"Composer",
-				"Grunt",
-				"Gulp",
-				"NPM",
-				"WebPack",
-				"Yeoman"
-			]
-		},
-		{
-			"name": "Server",
-			"keywords": [
-				"*nix",
-				"Apache",
-				"AWS",
-				"HHVM",
-				"Nginx",
-				"Vagrant",
-				"Docker",
-				"Memcached"
-			]
-		},
-		{
-			"name": "Favorite Tools",
-			"keywords": [
-				"Linux",
+				"Arch Linux",
+				"Keybase",
+				"Pass",
 				"Termite",
 				"Tmux",
 				"VIM",
-				"oh-my-zsh"
-			]
-		},
-		{ "name": "Testing suites",
-			"keywords": [
-				"CasperJS",
-				"Codception",
-				"PHPUnit",
-				"PhantomJS",
-				"QUnit"
+				"Zsh"
 			]
 		},
 		{
-			"name": "SCM",
+			"name": "📟 Alerting",
 			"keywords": [
-				"Git",
-				"SVN"
+				"opsgenie",
+				"pagerduty",
+				"pingdom"
 			]
 		},
 		{
-			"name": "Processes & Concepts",
+			"name": "♾️ CI/CD",
 			"keywords": [
+				"services"
+			]
+		},
+		{
+			"name": "☁️ Cloud providers",
+			"keywords": [
+				"AWS",
+				"GKE"
+			]
+		},
+		{
+			"name": "💾 Code",
+			"keywords": [
+				"c",
+				"go",
+				"js",
+				"node",
+				"php",
+				"python",
+				"ruby",
+				"sh"
+			]
+		},
+		{
+			"name": "📜 Logging",
+			"keywords": [
+				"datadog",
+				"new relic"
+			]
+		},
+		{
+			"name": "🗠 Monitoring",
+			"keywords": [
+				"services"
+			]
+		},
+		{
+			"name": "🤔 Processes & Concepts",
+			"keywords": [
+				"12 factor",
 				"Agile",
+				"Automation",
+				"BDD",
+				"CI/CD",
+				"Cattle",
 				"DRY",
-				"CI",
-				"Jira",
+				"GitOps",
+				"IAC",
+				"Immutability",
+				"KanBan",
 				"OOP",
 				"Polymorhism",
 				"TDD"
+			]
+		},
+		{
+			"name": "🛡️ Security",
+			"keywords": [
+				"services"
+			]
+		},
+		{
+			"name": "🖥️ Systems",
+			"keywords": [
+				"*nix",
+				"Apache",
+				"Caddy",
+				"Nginx",
+				"Docker"
 			]
 		}
 	],
@@ -196,15 +205,17 @@
 			"keywords": [
 				"Battlestations",
 				"Biking",
+				"Calisthenics",
 				"Cryptography",
 				"Hacking",
 				"Hiking",
 				"Linux",
 				"PC Gaming",
+				"Paddle Boarding",
 				"Snowboarding",
 				"Swimming",
-				"Traveling",
-				"Weightlifting"
+				"Woodworking",
+				"Yoga"
 			]
 		}
 	]
