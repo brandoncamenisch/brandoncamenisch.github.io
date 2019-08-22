@@ -4,10 +4,10 @@
 		"label": "DevOps",
 		"picture": "./public/bio.jpg",
 		"location": {
-			"countryCode": "Earth"
+			"countryCode": "🌎 Earth"
 		},
 		"website": "https://brandoncamenisch.com",
-		"summary": "My affinity for programming started around ~1995 when I wanted to make my own game mods as a kid using C. Shortly after, I began my programming career when I started building websites and getting involved in network security. Since then I've had a diverse background in many different technologies that make the web work. I've had the opportunity to gather a varied range of skills and expertise through the roles that I've had such as. Conceiving successful large scale (petabytes) asynchronous data migrations for e-commerce as well as financial datastores. Scaled out high visibility SaaS products and websites where traffic levels were in the 10x Mil's. Conducted numerous audits on codebases for security and performance. Led and mentored engineering teams on projects as both a consultant and as an engineering manager. However, having had my own follies over the years I'm a confident but humble and cautious engineer. I always look forward to learning new technologies and working with smart people that enjoy what they do and appreciate the positive impact it can have.",
+		"summary": "My affinity for programming started around ~1995 when I wanted to make my own game mods as a kid using C. Shortly after, I began my journey with computers when I started getting involved with Linux, hacking hardware, writing code, and having fun. From then until now I've had the opportunity to gather a varied range of skills and expertise through my experience. With that I've had my own share of unfortunate follies over the years transforming me into a confident, opinionated, but humble (hopefully) and cautious engineer. I always look forward to learning new technologies and working with smart people that enjoy what they do and appreciate the positive impact it can have.",
 		"profiles": [
 			{
 				"network": "Github",
@@ -41,9 +41,13 @@
 			"position": "DevOps",
 			"website": "https://pmc.com",
 			"startDate": "2018-01-01",
-			"summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis tempus ex, non lobortis ex rhoncus vitae. Cras accumsan sit amet tellus in ultrices. In vel ornare nisl. Etiam placerat odio metus. Morbi eu mi fermentum, porttitor elit sit amet, bibendum massa. Fusce egestas velit quis orci consectetur, lobortis faucibus nunc eleifend. Vestibulum interdum et nibh eu laoreet. Phasellus volutpat justo lacus, ut consectetur mauris pulvinar eu. Integer sed nisl quis metus malesuada rhoncus sed luctus ex. Proin imperdiet arcu interdum vulputate mattis. Integer eget odio sagittis, facilisis enim quis, porttitor mi. Aenean facilisis ante leo, non hendrerit urna porttitor nec. Fusce eu tellus nec risus vulputate volutpat. In ut tincidunt ante. Maecenas magna nibh, bibendum at rutrum sed, maximus vel mi. Praesent vitae efficitur purus, eget efficitur velit. ",
+			"summary": "PMC is a digital media company with an impressive portfolio of sites hosted on WP. They also have a multitude of micro-services which support company data, infrastructure, logging, ad-tech, etc.",
 			"highlights": [
-				"Unified dated magic legacy systems into a cohesive gitops workflow from old VM's and monolithic format to a lightweight docker on k8s"
+				"Automated workflows into visible layers of simple abstractions",
+				"Iterated our Logging, Monitoring, & Alerting with services like ELK, datadog, and new relic",
+				"Managed entire infrastructure using terraform across clouds automated",
+				"Modularized monolithic legacy magic spaghetti systems into simple lightweight cohesive gitops workflow",
+				"Re-defined CI/CD at the company adding end-to-end automated testing support"
 			]
 		},
 		{
@@ -76,8 +80,8 @@
 			]
 		},
 		{
-			"position": "Infrastructure & Engineering Consultant",
-			"company": "Independent consultant",
+			"position": "Consultant",
+			"company": "Independent engineering consultant",
 			"startDate": "2012-01-01",
 			"endDate": "2014-03-10",
 			"summary": "sLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis tempus ex, non lobortis ex rhoncus vitae. Cras accumsan sit amet tellus in ultrices. In vel ornare nisl. Etiam placerat odio metus. Morbi eu mi fermentum, porttitor elit sit amet, bibendum massa. Fusce egestas velit quis orci consectetur, lobortis faucibus nunc eleifend. Vestibulum interdum et nibh eu laoreet. Phasellus volutpat justo lacus, ut consectetur mauris pulvinar eu. Integer sed nisl quis metus malesuada rhoncus sed luctus ex. Proin imperdiet arcu interdum vulputate mattis. Integer eget odio sagittis, facilisis enim quis, porttitor mi. Aenean facilisis ante leo, non hendrerit urna porttitor nec. Fusce eu tellus nec risus vulputate volutpat. In ut tincidunt ante. Maecenas magna nibh, bibendum at rutrum sed, maximus vel mi. Praesent vitae efficitur purus, eget efficitur velit. omething",
@@ -167,12 +171,11 @@
 		{
 			"name": "🤔 Processes & Concepts",
 			"keywords": [
-				"12 factor",
+				"12Factor",
 				"Agile",
 				"Automation",
 				"BDD",
 				"CI/CD",
-				"Cattle",
 				"DRY",
 				"GitOps",
 				"IAC",
@@ -203,19 +206,15 @@
 	"interests": [
 		{
 			"keywords": [
-				"Battlestations",
-				"Biking",
-				"Calisthenics",
-				"Cryptography",
-				"Hacking",
-				"Hiking",
-				"Linux",
-				"PC Gaming",
-				"Paddle Boarding",
-				"Snowboarding",
-				"Swimming",
-				"Woodworking",
-				"Yoga"
+				"r/cryptography",
+				"r/hacking",
+				"r/hiking",
+				"r/linux",
+				"r/pcmasterrace",
+				"r/snowboarding",
+				"r/woodworking",
+				"r/yoga",
+				"r/battlestations"
 			]
 		}
 	]
