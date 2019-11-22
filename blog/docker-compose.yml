@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    jekyll:
+        volumes:
+            - $PWD:/srv/jekyll
+        ports:
+            - '4000:4000'
+        image: jekyll/jekyll:3.8
