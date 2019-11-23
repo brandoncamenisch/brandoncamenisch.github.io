@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "whatever"
+date:   2019-06-06 20:26:46 -0800
+categories: whatever
+---
+
+Write about manjaro linux
