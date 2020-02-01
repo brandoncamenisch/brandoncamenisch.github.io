@@ -8,7 +8,7 @@ As consumers of open source it's our obligation of sorts to contribute back upst
 
 With that in mind I thought it clever to start contributing by first downloading all starred repositories on GitHub that I use or intend to at least. But I couldn't find a decent script which would do the thing. Below is a snippet for `zsh` which works beautifully for doing just that. This will clone repos into a subdir of their `GitHubName/Reponame`
 
-{% highlight zsh %}
+{% highlight sh %}
 #$1 username
 download_all_starred_repos() {
   user=$1
