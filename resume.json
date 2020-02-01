@@ -42,6 +42,7 @@
 			"position": "Senior DevOps engineer",
 			"website": "https://pmc.com",
 			"startDate": "2018",
+			"endDate": "2020",
 			"summary": "PMC is a digital media company with an impressive portfolio of publishing sites and a heavy usage of microservices to support those sites and company infrastructure.",
 			"highlights": [
         "Advocated for and implemented 12 factor app methodology & immutability with automation and abstraction of workflows into our microservices architecture",
@@ -145,10 +146,10 @@
 		},
 		{
       "company": "Nerdatory",
-			"position": "Owner",
+			"position": "Consultant",
 			"startDate": "2006",
 			"endDate": "2012",
-			"summary": "",
+			"summary": "Consulting firm specializing in architecture, security and best practices of software development",
 			"highlights": [
         "Provided strategic engineering consulting to startups",
         "Demonstrated how to predict growth and scale a product without hitting a wall in the process",
@@ -176,7 +177,7 @@
 			"position": "Owner",
 			"startDate": "2006",
 			"endDate": "2008",
-			"summary": "",
+			"summary": "Intensive live in martial arts training camp in the Colorado Rockies",
 			"highlights": [
 				"Concepted curriculum for intensive full immersion martial arts camp",
 				"Developed website and unique branding content ( text, photo, video, seo, marketing, etc. ) for entire organization",
@@ -204,7 +205,7 @@
       "position": "Self Storage Assistant Manager",
 			"startDate": "1995",
 			"endDate": "2002",
-			"summary": "",
+			"summary": "Storage unit facility",
 			"highlights": [
 				"Drove large truck/trailer loads of stuff to auctions",
 				"Inventoried and managed large lists of items to be sold at auctions",
@@ -218,7 +219,7 @@
 			"position": "Gutter Installer",
 			"startDate": "1999",
 			"endDate": "2002",
-			"summary": "",
+			"summary": "Seamless raingutter compay that served the front range of Colorado",
 			"highlights": [
 				"Estimated jobs from small houses to large residential or industrial properties and assessing risk",
 				"Placed inventory cost replenishment orders for crew",
@@ -232,7 +233,7 @@
 			"position": "Clerk",
 			"startDate": "2000",
 			"endDate": "2001",
-			"summary": "",
+			"summary": "Convenience store in recreational area of the Colorado Rocky Mountains",
 			"highlights": [
 				"Attended trade shows to promote business and develop relationships with vendors",
 				"Identified and explored potential areas of profit and monitored cost margins",
@@ -246,7 +247,7 @@
 			"position": "Assisstant Manager",
 			"startDate": "2000",
 			"endDate": "2002",
-			"summary": "",
+			"summary": "Rustic recreational resort in the Poudre Canyon of the Colorado Rocky Mountains",
 			"highlights": [
 				"Cleaned and maintained a cluster of recreational cabins for camping tourists",
 				"Customized booking software to save company time and money",
