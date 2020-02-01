@@ -1,0 +1,58 @@
+---
+layout: post
+title: "How I Linux in 2020"
+date: 2000-01-01 00:00:00 -0800
+categories: Linux
+---
+How I Linux in 2020! Everybody has their own way of doing things but this one is mine. With every passing year my ways of computing usually change dramatically. I've found what works for me but it's constantly evolving. It may not work nor for everyone but It's how I like to do things in this fine year.
+
+# Machine
+[Manjaro](https://manjaro.org/) on a [2019 17" razer blade pro](https://www.razer.com/gaming-laptops/razer-blade-pro/) ( and it's beautiful 😹 )
+{% highlight zsh %}
+ ██████████████████  ████████     bc@bmc
+ ██████████████████  ████████     OS: Manjaro 18.1.3 Juhraya
+ ██████████████████  ████████     Kernel: x86_64 Linux 5.3.11-1-MANJARO
+ ██████████████████  ████████     Uptime: 50d 11h 36m
+ ████████            ████████     Packages: 1598
+ ████████  ████████  ████████     Shell: zsh 5.7.1
+ ████████  ████████  ████████     Resolution: 3840x2160
+ ████████  ████████  ████████     WM: Awesome
+ ████████  ████████  ████████     WM Theme: %s
+ ████████  ████████  ████████     GTK Theme: Adwaita-dark [GTK3]
+ ████████  ████████  ████████     Disk: 973G / 1.9T (55%)
+ ████████  ████████  ████████     CPU: Intel Core i7-9750H @ 12x 4.5GHz [48.0°C]
+ ████████  ████████  ████████     GPU: GeForce RTX 2080 with Max-Q Design
+ ████████  ████████  ████████     RAM: 18125MiB / 64224MiB
+{% endhighlight %}
+
+The performance is really great on this with proprietary nvidia drivers. I tried other variations of gpu drivers available like the open source ones i.e. I played around with optimius, bumblebee, noveau, etc. but they honestly all sucked in comparison and cause issues like freezing the system or causing some really really annoying stuff to occur. So, I finally settled on using the proprietary drivers and all is well. I can get 60 fps @4k for most application I've ran with no issues. The touchscreen works out of the box but sadly no gestures so hopefully I can resolve that sometime down the road.
+
+# Distro
+I've been rocking Arch Linux as my primary for a litte over 5 years now and my last machine had an uptime of 3 of those. That is until in a series of tragic events I had to emergency provision a new machine with little time and no recovery usb. I know... Sad but true. I really wanted to install Arch again but didn't have time to fiddle with drivers for my hardware. So, intending to use it temorarily just to recover my primary machine and provision a new one I hopped on my phone and downloaded Manjaro since I knew it was a breeze to install. I then flashed it to disk from my phone so I could finally salvage my desktop install. I'll be honest I felt like a traitor to Arch installing Manjaro. But I proceeded to install it anyways and to my delight it was actually a very nice experience. Usually I would sneer at an installer that's so well put together. I know it's dumb but the Arch way of doing it yourself and keeping things simple somehow feels superior most of the time. But in the case of Manjaro (Architect) I found that it let me do most of the things I would normally do in a not too intrusive way.
+
+
+I'm not complaining but For now I'm sorta stuck with Manjaro because I don't want to do it all over again but I like it. It's still all the things I love about Arch but with a little polish. That's not to say that the next time I provision a machine it won't be vanilla arch again but for now I'm ok with it.
+
+# Backups
+My backup needs are fairly standard and un-complicated. I just backup the home folder encrypted all the time to multiple locations. I've tried shuffling files around in various ways such as good ol' rsync, unison, git-annex, etc. But most solutions just end up being too complicated or messy by altering the filesystem in some unwanted way. I finally decided that just having a giant home folder and syncing that everywhere as an encrypted backup to strategic locations is good enough for me. I figure if I have to move to a new machine not much outside of the home folder is useful to me anyhow.
+
+For this I use a combination of [pass](https://www.passwordstore.org/), [tomb](https://www.dyne.org/software/tomb/) and [rclone](https://rclone.org/) which is similar to rsync with some must have features baked in such as encryption. It's a good simple combo that I've found can get me up and running in minutes with all of the things I neeed on nearly any machine so long as it's linux based.
+
+# WM/DE
+I don't like the modern desktop environment of what I call "clicky scrolly draggy droppy hell". I've tried every mainstream WM/DE for linux and can't seem to find anything I like better than [awesome](https://awesomewm.org/). It's simple customizable and overall looks amazing. I think it follows the primary directive of Arch ( K.I.S.S. ) and is just so hard to beat. My primary workspace is tmux with zsh so I boot into shell as the default and fire up awesome if I need it with Xinit. I like to keep things as native as I can and keep my dependencies down. This helps mitigate the risk of system failures keeping things reliably running.
+
+I'm all in on a WM/DE like awesome because it keeps me in the home row, saves time and screen real estate while giving me full programmatic control of what's used and how it's used via Lua. For theming I really thought that these [themes](https://github.com/serialoverflow/awesome-themes.git) for awesome were really reliable with sane defaults so I went with those.
+
+# Browser
+firefox developer edition with containerization bookmarks
+
+# editor
+- spacevim
+is fucking amazing
+
+# shell
+- zsh
+- tmux
+  - zplug
+
+

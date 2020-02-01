@@ -2,53 +2,53 @@
 https://keybase.io/brandoncamenisch
 --------------------------------------------------------------------
 
-I hereby claim:                                                                  
+I hereby claim:
 
-* I am an admin of https://brandoncamenisch.com              
-* I am brandoncamenisch (https://keybase.io/brandoncamenisch) on keybase.      
+* I am an admin of https://brandoncamenisch.com
+* I am brandoncamenisch (https://keybase.io/brandoncamenisch) on keybase.
 * I have a public key ASBRpZQIhJbLxu-ZmyxP0cc8YIg0fclDYH1lB1rvwzbsCgo
 
-To do so, I am signing this object:                                              
+To do so, I am signing this object:
 
-{                                                                                
-	"body": {                             
-		"key": {                            
+{
+	"body": { 
+		"key": {
 			"eldest_kid": "012051a594088496cbc6ef999b2c4fd1c73c6088347dc943607d65075aef
-				c336ec0a0a",                                                                     
-				"host": "keybase.io",                                                      
+				c336ec0a0a", 
+				"host": "keybase.io",
 			"kid": "012051a594088496cbc6ef999b2c4fd1c73c6088347dc943607d65075aefc336ec0
-				a0a",                               
-				"uid": "f763985afaa78a6d6733d570733b7a19",                                 
-			"username": "brandoncamenisch"                                             
-		},                                                                           
-		"merkle_root": {                                                             
-			"ctime": 1560257543,                                                       
+				a0a", 
+				"uid": "f763985afaa78a6d6733d570733b7a19", 
+			"username": "brandoncamenisch" 
+		}, 
+		"merkle_root": { 
+			"ctime": 1560257543, 
 			"hash": "d43e6af837ca39ed1de6b6dbd80b1dbb6d0b5d1feaa9185c8b3f135f0d8a387b2e
-				bfd06658150ec3bf605b0953a05711e68a7a86ed9e2ea07b7a716a607f8118",                
-				"hash_meta": "6434dfe63763576350c845f2b78f975628bb33fe3deca42659a03e84660db
-				f31",                                                                            
-				"seqno": 5548851                                                           
-		},                                                                           
-		"service": {    
+				bfd06658150ec3bf605b0953a05711e68a7a86ed9e2ea07b7a716a607f8118",
+			"hash_meta": "6434dfe63763576350c845f2b78f975628bb33fe3deca42659a03e84660db
+				f31",
+			"seqno": 5548851 
+		}, 
+		"service": {
 			"entropy": "NZ+xHKXJw7SaWVp/SVsFFb/L",
-			"hostname": "brandoncamenisch.com",                                        
-			"protocol": "https:"                                                       
-		},                                  
-		"type": "web_service_binding",                                               
-		"version": 2                    
-	},                                                                             
-	"client": {                                                                    
-		"name": "keybase.io go client",                                              
-		"version": "4.0.0"                                                           
-	},                                
-	"ctime": 1560257567,              
-	"expire_in": 504576000,               
+			"hostname": "brandoncamenisch.com",
+			"protocol": "https:" 
+		},
+		"type": "web_service_binding", 
+		"version": 2
+	}, 
+	"client": {
+		"name": "keybase.io go client",
+		"version": "4.0.0" 
+	},
+	"ctime": 1560257567,
+	"expire_in": 504576000, 
 	"prev": "0fe2c85456b46c9d40e6a85d53474988c6da7c34555d9c1d527bef9b675b6ff8",
-	"seqno": 26,                      
-	"tag": "signature"                                                             
-}                         
+	"seqno": 26,
+	"tag": "signature" 
+} 
 
-which yields the signature:         
+which yields the signature:
 
 hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgUaWUCISWy8bvmZssT9HHPGCINH3JQ2B9Z
 Qda78M27AoKp3BheWxvYWTESpcCGsQgD+LIVFa0bJ1A5qhdU0dJiMbafDRVXZwdUnvvm2dbb/jEIA5UL9
