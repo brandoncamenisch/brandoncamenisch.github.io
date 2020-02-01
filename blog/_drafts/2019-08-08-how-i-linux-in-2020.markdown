@@ -41,7 +41,7 @@ For this I use a combination of [pass](https://www.passwordstore.org/), [tomb](h
 # WM/DE
 I don't like the modern desktop environment of what I call "clicky scrolly draggy droppy hell". I've tried every mainstream WM/DE for linux and can't seem to find anything I like better than [awesome](https://awesomewm.org/). It's simple customizable and overall looks amazing. I think it follows the primary directive of Arch ( K.I.S.S. ) and is just so hard to beat. My primary workspace is tmux with zsh so I boot into shell as the default and fire up awesome if I need it with Xinit. I like to keep things as native as I can and keep my dependencies down. This helps mitigate the risk of system failures keeping things reliably running.
 
-I'm all in on a WM/DE like awesome because it keeps me in the home row, saves time and screen real estate while giving me full programmatic control of what's used and how it's used. For theming I really thought that these [themes](https://github.com/serialoverflow/awesome-themes.git) for awesome were really reliable with sane defaults so I went with those.
+I'm all in on a WM/DE like awesome because it keeps me in the home row, saves time and screen real estate while giving me full programmatic control of what's used and how it's used via Lua. For theming I really thought that these [themes](https://github.com/serialoverflow/awesome-themes.git) for awesome were really reliable with sane defaults so I went with those.
 
 # Browser
 firefox developer edition with containerization bookmarks
