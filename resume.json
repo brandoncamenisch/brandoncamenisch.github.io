@@ -41,8 +41,8 @@
 			"company": "PMC (Penske Media Corporation)",
 			"position": "Senior DevOps engineer",
 			"website": "https://pmc.com",
-			"startDate": "2018",
-			"endDate": "2020",
+			"startDate": "2018-01-01",
+			"endDate": "2020-01-01",
 			"summary": "PMC is a digital media company with an impressive portfolio of publishing sites and a heavy usage of microservices to support those sites and company infrastructure.",
 			"highlights": [
         "Advocated for and implemented 12 factor app methodology & immutability with automation and abstraction of workflows into our microservices architecture",
@@ -61,8 +61,8 @@
 			"company": "PMC ( Penske Media Corporation )",
 			"position": "Senior Software Engineer",
 			"website": "http://pmc.com",
-			"startDate": "2016",
-			"endDate": "2018",
+			"startDate": "2016-01-01",
+			"endDate": "2018-01-01",
 			"summary": "PMC is a digital media company with an impressive portfolio of publishing sites and a heavy usage of microservices to support those sites and company infrastructure.",
 			"highlights": [
 				"Audited and executed automation of security best practices into our codebase",
@@ -76,8 +76,8 @@
 			"company": "10up",
 			"position": "Senior Engineering Manager",
 			"website": "https://10up.com",
-			"startDate": "2015",
-			"endDate": "2016",
+			"startDate": "2015-01-01",
+			"endDate": "2016-01-01",
 			"summary": "Managed agency engineering team for fortune 100 company projects. 10up is a high energy fast paced digital agency which caters solutions for big name brands.",
 			"highlights": [
 				"Accurately estimated out large complex projects for big name fortune 100 companies/clients",
@@ -93,8 +93,8 @@
 			"company": "10up",
 			"position": "Senior software engineer",
 			"website": "https://10up.com",
-			"startDate": "2015",
-			"endDate": "2016",
+			"startDate": "2015-01-01",
+			"endDate": "2016-01-01",
 			"summary": "Finely crafting websites & tools for content creators.",
 			"highlights": [
 				"Contributed to WordPress core and other open source projects used throughout the WordPress community",
@@ -108,8 +108,8 @@
 			"company": "Volume Nine",
 			"position": "Senior software engineer",
 			"website": "https://www.v9digital.com/",
-			"startDate": "2014",
-			"endDate": "2015",
+			"startDate": "2014-01-01",
+			"endDate": "2015-01-01",
 			"summary": "Volume Nine is Denver's top digital marketing agency, specializing in content, SEO, and social media. Build Brand. Drive Traffic. Grow Sales.",
 			"highlights": [
 				"Developed against large dataset of marketing data with heavy usage of MySQL database and google analytics platform",
@@ -120,8 +120,8 @@
 		{
 			"company": "QRlicious",
 			"position": "Senior software engineer",
-			"startDate": "2013",
-			"endDate": "2014",
+			"startDate": "2013-01-01",
+			"endDate": "2014-01-01",
 			"summary": "QRlicious is a mobile marketing company offering a platform for users to manage and build QR codes, mobile websites, coupons, and more.",
 			"highlights": [
 				"Hand built a WordPress framework from the ground up using DRY & semantic approach",
@@ -134,8 +134,8 @@
 		{
 			"company": "Concept Bakery",
 			"position": "Senior software engineer & Graphic design",
-			"startDate": "2012",
-			"endDate": "2013",
+			"startDate": "2012-01-01",
+			"endDate": "2013-01-01",
 			"summary": "Social media story development and telling: guerrilla & cross-media marketing. WOM on Facebook, Youtube, microsites, etc. You name it - been there done that :)",
 			"highlights": [
 				"Solely developed RoR custom CMS application to create SaaS product based on microsites and Facebook pages",
@@ -147,8 +147,8 @@
 		{
       "company": "Nerdatory",
 			"position": "Consultant",
-			"startDate": "2006",
-			"endDate": "2012",
+			"startDate": "2006-01-01",
+			"endDate": "2012-01-01",
 			"summary": "Consulting firm specializing in architecture, security and best practices of software development",
 			"highlights": [
         "Provided strategic engineering consulting to startups",
@@ -161,8 +161,8 @@
 		{
       "company": "Silvereve Interactive",
 			"position": "Owner",
-			"startDate": "2002",
-			"endDate": "2000",
+			"startDate": "2002-01-01",
+			"endDate": "2000-01-01",
 			"summary": "Full service multimedia/interactive web content production company. Hand made interactive content solutions for education, games, entertainment and business training",
 			"highlights": [
 				"Consulted customers on business strategy of their content to encourage end user engagement",
@@ -175,8 +175,8 @@
 		{
 			"company": "S.W.A.N.",
 			"position": "Owner",
-			"startDate": "2006",
-			"endDate": "2008",
+			"startDate": "2006-01-01",
+			"endDate": "2008-01-01",
 			"summary": "Intensive live in martial arts training camp in the Colorado Rockies",
 			"highlights": [
 				"Concepted curriculum for intensive full immersion martial arts camp",
@@ -189,8 +189,8 @@
 		{
       "company": "U.S. Navy",
 			"position": "Quartermaster",
-			"startDate": "2002",
-			"endDate": "2006",
+			"startDate": "2002-01-01",
+			"endDate": "2006-01-01",
 			"summary": "The United States Navy is the naval warfare service branch of the United States Armed Forces and one of the eight uniformed services of the United States.",
 			"highlights": [
 				"Awarded commendation by captain of U.S.S Nimitz for excellent performance and honorable service to division",
@@ -203,8 +203,8 @@
 		{
 			"company": "Stuff-it Storage",
       "position": "Self Storage Assistant Manager",
-			"startDate": "1995",
-			"endDate": "2002",
+			"startDate": "1995-01-01",
+			"endDate": "2002-01-01",
 			"summary": "Storage unit facility",
 			"highlights": [
 				"Drove large truck/trailer loads of stuff to auctions",
@@ -217,8 +217,8 @@
 		{
 			"company": "Best seamless raingutters",
 			"position": "Gutter Installer",
-			"startDate": "1999",
-			"endDate": "2002",
+			"startDate": "1999-01-01",
+			"endDate": "2002-01-01",
 			"summary": "Seamless raingutter compay that served the front range of Colorado",
 			"highlights": [
 				"Estimated jobs from small houses to large residential or industrial properties and assessing risk",
@@ -231,8 +231,8 @@
 		{
 			"company": "Brandons Pantry",
 			"position": "Clerk",
-			"startDate": "2000",
-			"endDate": "2001",
+			"startDate": "2000-01-01",
+			"endDate": "2001-01-01",
 			"summary": "Convenience store in recreational area of the Colorado Rocky Mountains",
 			"highlights": [
 				"Attended trade shows to promote business and develop relationships with vendors",
@@ -245,8 +245,8 @@
 		{
 			"company": "Indian Meadows",
 			"position": "Assisstant Manager",
-			"startDate": "2000",
-			"endDate": "2002",
+			"startDate": "2000-01-01",
+			"endDate": "2002-01-01",
 			"summary": "Rustic recreational resort in the Poudre Canyon of the Colorado Rocky Mountains",
 			"highlights": [
 				"Cleaned and maintained a cluster of recreational cabins for camping tourists",
@@ -259,8 +259,8 @@
 		{
 			"company": "Motor vessel ENDEAVOUR",
 			"position": "Deckhand",
-			"startDate": "1997",
-			"endDate": "2000",
+			"startDate": "1997-01-01",
+			"endDate": "2000-01-01",
 			"summary": "Ocean adventure trawling vessel",
 			"highlights": [
         "Repaired and maintained engines, generators, desalination, auxillary solar power systems, & other marine equipment.",
