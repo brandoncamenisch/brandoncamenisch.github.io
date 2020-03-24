@@ -44,13 +44,13 @@
 			"website": "https://pmc.com",
 			"startDate": "2018-01-01",
 			"endDate": "2020-01-01",
-			"summary": "PMC is a digital media company with an impressive portfolio of publishing sites and a heavy usage of microservices to support those sites and company infrastructure.",
+			"summary": "PMC is a digital media company with an impressive portfolio of publishing sites with a heavy usage of microservices to support those sites and company infrastructure",
 			"highlights": [
-        "Advocated for and implemented 12 factor app methodology & immutability with automation and abstraction of workflows into our microservices architecture",
-				"Architected, iterated and managed company with IaC across multiple cloud providers using Terraform in automation via GitOps",
-        "Autonomously identified weaknesses in our engineering methodology and improved upon them",
-        "Dominated integrations with external services ( Terraform ) like cloudflare, fastly, Datadog, OpsGenie, GitHub, etc.",
-        "Enabled team by advocating a self service approach with our CI/CD by incorporating modularity into our pipelines",
+        "Advocated for and implemented 12 factor app methodology, immutability, automation/abstraction of workflows into our microservices architecture",
+				"Architected, iterated and managed company IaC across multiple cloud providers using Terraform in automation via GitOps",
+        "Autonomously identified weaknesses in our workflows and improved upon them",
+        "Dominated integrations using Terraform with external services ike cloudflare, fastly, Datadog, OpsGenie, GitHub, etc.",
+        "Enabled team by advocating a self service approach in our CI/CD by incorporating modularity into our pipelines",
 				"Established baseline CI/CD at the company defining end-to-end automated testing to the microservice application stacks",
         "Maintained self-hosted LMA & ELK stacks",
         "Management of microservice(s) automation and their internal networking via Terraform utilizing Rancher 1.0 on AWS",
@@ -62,7 +62,7 @@
 			"company": "PMC ( Penske Media Corporation )",
 			"position": "Senior Software Engineer",
 			"website": "http://pmc.com",
-			"startDate": "2016-01-01",
+			"startDate": "2017-01-01",
 			"endDate": "2018-01-01",
 			"summary": "PMC is a digital media company with an impressive portfolio of publishing sites and a heavy usage of microservices to support those sites and company infrastructure.",
 			"highlights": [
@@ -77,8 +77,8 @@
 			"company": "10up",
 			"position": "Senior Engineering Manager",
 			"website": "https://10up.com",
-			"startDate": "2015-01-01",
-			"endDate": "2016-01-01",
+			"startDate": "2016-01-01",
+			"endDate": "2017-01-01",
 			"summary": "Managed agency engineering team for fortune 100 company projects. 10up is a high energy fast paced digital agency which caters solutions for big name brands.",
 			"highlights": [
 				"Accurately estimated out large complex projects for big name fortune 100 companies/clients",
@@ -94,7 +94,7 @@
 			"company": "10up",
 			"position": "Senior software engineer",
 			"website": "https://10up.com",
-			"startDate": "2015-01-01",
+			"startDate": "2014-01-01",
 			"endDate": "2016-01-01",
 			"summary": "Finely crafting websites & tools for content creators.",
 			"highlights": [
@@ -175,7 +175,7 @@
 		},
 		{
 			"company": "S.W.A.N.",
-			"position": "Owner",
+			"position": "Owner/Trainer",
 			"startDate": "2006-01-01",
 			"endDate": "2008-01-01",
 			"summary": "Intensive live in martial arts training camp in the Colorado Rockies",
@@ -197,18 +197,18 @@
 				"Awarded commendation by captain of U.S.S Nimitz for excellent performance and honorable service to division",
 				"Entrusted with top secret security intelligence information critical to operational success while underway hostile zones", 
 				"Personally corrected over 5k navigational charts covering the globe and used for navigation in westpac operations",
-				"Piloted aircraft carrier U.S.S Nimitz through operation iraqi freedom in  two westpac operations",
+				"Piloted aircraft carrier U.S.S Nimitz through operation Iraqi Freedom during two westpac operations",
 				"Spent over 1000 hours providing navigational expertise by both traditional ( celestial ) and modern methods to bridge officers and crew"
 			]
 		},
 		{
-			"company": "Stuff-it Storage",
+			"company": "Stuff-It Storage",
       "position": "Self Storage Assistant",
 			"startDate": "1995-01-01",
 			"endDate": "2002-01-01",
 			"summary": "Storage unit facility",
 			"highlights": [
-				"Drove large truck/trailer loads of stuff to auctions",
+				"Drove large truck/trailer loads of 'stuff' to auctions",
 				"Inventoried and managed large lists of items to be sold at auctions",
 				"Investigated cost research/analysis of items",
 				"Maintained customer relations involving billing, theft, or property damage",
@@ -231,7 +231,7 @@
 		},
 		{
 			"company": "Brandons Pantry",
-			"position": "Clerk",
+			"position": "Clerk/Manager",
 			"startDate": "2000-01-01",
 			"endDate": "2001-01-01",
 			"summary": "Convenience store in recreational area of the Colorado Rocky Mountains",
@@ -264,9 +264,9 @@
 			"endDate": "2000-01-01",
 			"summary": "Ocean adventure trawling vessel U.S.S. Endeavour.",
 			"highlights": [
-        "Repaired and maintained engines, generators, desalination, auxillary solar power systems, & other marine equipment.",
+        "Repaired and maintained engines, generators, desalination systems, auxillary solar power systems, & other marine equipment.",
 				"Chipped, grinded, painted & other laborous tasks to keep the vessel in working order",
-				"Commandeered the 69ton Naval engineered trawling motor vessel through the open seas of the Western hemisphere ( including surviving a hurricane in the Gulf of Mexico ) and the international waterways of the southern United States",
+				"Commandeered the 69ton Naval engineered trawling motor vessel through the open seas of the Western hemisphere and the international waterways of the southern United States",
 				"Diligently held the comm while underway to ensure safe passage on voyages",
 				"Maintained & calibrated sea faring equipment critical to the safe navigation of the vessel"
 			]
@@ -376,6 +376,8 @@
 			"name":"🛡️  Security",
 			"keywords": [
         "Applied Cryptography",
+        "Black Arch",
+        "Intrusion detection",
 				"Kali Linux",
         "Metasploit",
         "Security Onion"
@@ -396,16 +398,13 @@
 	"interests": [
 		{
 			"keywords": [
-				"r/battlestations",
-				"r/cryptography",
-				"r/hacking",
-				"r/hiking",
-				"r/linux",
-				"r/pcmasterrace",
-				"r/snowboarding",
-				"r/travel",
-				"r/woodworking",
-				"r/yoga"
+				"cryptography",
+				"hacking",
+				"hiking",
+				"linux",
+				"snowboarding",
+				"travel",
+				"yoga"
 			]
 		}
 	]
