@@ -2,11 +2,3 @@ prepare-commit-msg:
   commands:
     build-resume:
       run: resume export -t elegant index.html
-post-update:
-  commands:
-    build-resume:
-      run: cd blog && docker-compose up -d
-pre-push:
-  commands:
-    build-resume:
-      run: cd blog && docker-compose down
