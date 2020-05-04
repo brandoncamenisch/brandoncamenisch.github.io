@@ -2,7 +2,6 @@
   "meta": { "theme": "elegant" },
 	"basics": {
 		"name": "Brandon M. Camenisch",
-		"label": "DevOps",
 		"picture": "bio.jpg",
 		"location": {
 			"countryCode": "🌎 Earth"
@@ -374,11 +373,13 @@
 		{
 			"name":"🛡️  Security",
 			"keywords": [
+				"Kali Linux",
         "Applied Cryptography",
         "Black Arch",
         "Intrusion detection",
-				"Kali Linux",
         "Metasploit",
+        "Nessus",
+        "Nikto",
         "Security Onion"
 			]
 		},
@@ -397,13 +398,15 @@
 	"interests": [
 		{
 			"keywords": [
-				"cryptography",
-				"hacking",
-				"hiking",
-				"linux",
-				"snowboarding",
-				"travel",
-				"yoga"
+        "cryptography",
+        "freeskating",
+        "hacking",
+        "hiking",
+        "linux",
+        "longboarding",
+        "snowboarding",
+        "travel",
+        "yoga"
 			]
 		}
 	]
