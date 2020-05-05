@@ -42,7 +42,6 @@
 			"position": "Senior DevOps engineer",
 			"website": "https://pmc.com",
 			"startDate": "2018-01-01",
-			"endDate": "2020-01-01",
 			"summary": "PMC is a digital media company with an impressive portfolio of publishing sites with a heavy usage of microservices to support those sites and company infrastructure",
 			"highlights": [
         "Advocated for and implemented 12 factor app methodology, immutability, automation/abstraction of workflows into our microservices architecture",
