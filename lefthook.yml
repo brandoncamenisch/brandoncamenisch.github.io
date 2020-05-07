@@ -1,4 +1,7 @@
 prepare-commit-msg:
+  parallel: true
   commands:
-    build-resume:
+    build-resume-html:
       run: resume export -t elegant index.html
+    build-resume-pdf:
+      run: resume export -t elegant resume.pdf --format pdf
