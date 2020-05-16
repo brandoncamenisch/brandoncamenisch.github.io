@@ -62,7 +62,7 @@
       "website": "http://pmc.com",
       "startDate": "2017-01-01",
       "endDate": "2018-01-01",
-      "summary": "PMC is a digital media company with an impressive portfolio of publishing sites and a heavy usage of microservices to support those sites and company infrastructure.",
+      "summary": "PMC is a digital media company with an impressive portfolio of publishing sites and a heavy usage of microservices to support those sites and company infrastructure",
       "highlights": [
         "Audited and executed automation of security best practices into our codebase",
         "Conducted numerous large scale data & content migrations making heavy usage of realtime database replication via datastreams",
@@ -111,8 +111,8 @@
       "endDate": "2015-01-01",
       "summary": "Volume Nine is Denver's top digital marketing agency, specializing in content, SEO, and social media. Build Brand. Drive Traffic. Grow Sales.",
       "highlights": [
-        "Developed against large dataset of marketing data with heavy usage of MySQL database and google analytics platform",
-        "Strategized marketing/seo campaigns for client sites",
+        "Developed against large dataset(s) of marketing data with heavy usage of MySQL database and google analytics platform",
+        "Strategized marketing/seo campaigns for client sites from a techinnal perspective",
         "Worked on early stage development/testing of SkyWord solution for WordPress"
       ]
     },
@@ -162,7 +162,7 @@
       "position": "Founder",
       "startDate": "2002-01-01",
       "endDate": "2000-01-01",
-      "summary": "Full service multimedia/interactive web content production company. Hand made interactive content solutions for education, games, entertainment and business training",
+      "summary": "Full service multimedia/interactive web content production company. Hand made interactive content solutions for education, games, entertainment and business training.",
       "highlights": [
         "Consulted customers on business strategy of their content to encourage end user engagement",
         "Developed and marketed plug n' play javascript modules for mass consumers to sell online",
@@ -176,7 +176,7 @@
       "position": "Founder/Trainer",
       "startDate": "2006-01-01",
       "endDate": "2008-01-01",
-      "summary": "Intensive live in martial arts training camp in the Colorado Rockies",
+      "summary": "Intensive live in martial arts training camp in the Colorado Rockies.",
       "highlights": [
         "Concepted curriculum for intensive full immersion martial arts & security training camp",
         "Developed website and unique branding content ( text, photo, video, seo, marketing, etc. ) for entire organization",
@@ -263,7 +263,7 @@
       "endDate": "2000-01-01",
       "summary": "Ocean adventure trawling vessel U.S.S. Endeavour.",
       "highlights": [
-        "Repaired and maintained engines, generators, desalination systems, auxillary solar power systems, & other marine equipment.",
+        "Repaired and maintained engines, generators, desalination systems, auxillary solar power systems, & other marine equipment",
         "Chipped, grinded, painted & other laborous tasks to keep the vessel in working order",
         "Commandeered the 69ton Naval engineered trawling motor vessel through the open seas of the Western hemisphere and the international waterways of the southern United States",
         "Diligently held the comm while underway to ensure safe passage on voyages",
