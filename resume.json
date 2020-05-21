@@ -17,7 +17,7 @@
       {
         "network": "hackernews",
         "username": "LatexNinja",
-        "url": "https://news.ycombinator.com/user?id=LatexNinja"
+        "url": "https://news.ycombinator.com/user?id=LaTeXNinja"
       },
       {
         "network": "reddit",
@@ -65,7 +65,8 @@
       "summary": "PMC is a digital media company with an impressive portfolio of publishing sites and a heavy usage of microservices to support those sites and company infrastructure",
       "highlights": [
         "Audited and executed automation of security best practices into our codebase",
-        "Conducted numerous large scale data & content migrations making heavy usage of realtime database replication via datastreams",
+        "Conducted numerous large scale data & content migrations making heavy usage of realtime database replication via data streams",
+        "Implemented caching layers to increase overall performance",
         "Created tooling for abstracting customer data solutions using a/b testing, ad tech & analytics",
         "Integrated scalable modular codebase solutions into our existing infrastructure",
         "Orchestrated foundation for modularized automated testing workflows using Docker"
@@ -80,10 +81,10 @@
       "summary": "Managed agency engineering team for fortune 100 company projects. 10up is a high energy fast paced digital agency which caters solutions for big name brands.",
       "highlights": [
         "Accurately estimated out large complex projects for big name fortune 100 companies/clients",
-        "Developed internal tooling for developer support using Virtualbox & docker",
+        "Developed internal tooling for developer support using VirtualBox & docker",
         "Improved overall team efficiency and attitude(s) by empowering them with implementing tools, programming conventions, workflow improvements, and training",
         "Led engineering teams creating solutions for complex integrations and migrations",
-        "Managed a successful team of engineers to deliver highly visibile websites for fortune 100 companies",
+        "Managed a successful team of engineers to deliver highly visible websites for fortune 100 companies",
         "Met with customers and vendors to ensure project(s) met technical and budget constraints",
         "Provided weekly 1:1 training and mentorship to a large team of engineers"
       ]
@@ -98,7 +99,7 @@
       "highlights": [
         "Contributed to WordPress core and other open source projects used throughout the WordPress community",
         "Developed custom content syncing software for managing content across many sites",
-        "Horizonally scaled WordPress on AWS by offloading media and task execution on high traffic sites",
+        "Horizontally scaled WordPress on AWS by offloading media and task execution on high traffic sites",
         "Regularly audited codebase(s) for security and best practices",
         "Triaged data sources from various services using REST api and GraphQL to supplement content creation driven by data"
       ]
@@ -124,7 +125,7 @@
       "summary": "QRlicious is a mobile marketing company offering a platform for users to manage and build QR codes, mobile websites, coupons, and more.",
       "highlights": [
         "Hand built a WordPress framework from the ground up using DRY & semantic approach",
-        "Programmatically generated QRcodes with custom built SVG tool(s) HTML5 canvas and RaphaëlJS",
+        "Programmatically generated QR codes with custom built SVG tool(s) HTML5 canvas and RaphaëlJS",
         "Embraced mobile marketing microsites trend by building a SaaS product site building tool on Rails",
         "Engineered custom REST based APIs",
         "Integrated with various payment gateway systems for e-comm using Stripe, PayPal, Authorize.net and others"
@@ -135,7 +136,7 @@
       "position": "Senior software engineer & Graphic design",
       "startDate": "2012-01-01",
       "endDate": "2013-01-01",
-      "summary": "Social media story development and telling: guerrilla & cross-media marketing. WOM on Facebook, Youtube, microsites, etc. You name it - been there done that :)",
+      "summary": "Social media story development and telling: guerrilla & cross-media marketing. WOM on Facebook, YouTube, microsites, etc. You name it - been there done that :)",
       "highlights": [
         "Solely developed ruby on rails custom CMS application to create SaaS product based on microsites and Facebook pages",
         "e-commerce sales pipeline with integration of social media data of consumers",
@@ -215,17 +216,17 @@
       ]
     },
     {
-      "company": "Best seamless raingutters",
+      "company": "Best seamless rain gutters",
       "position": "Gutter Installer",
       "startDate": "1999-01-01",
       "endDate": "2002-01-01",
-      "summary": "Seamless raingutter compay that served the front range of Colorado",
+      "summary": "Seamless rain gutters company that served the front range of Colorado",
       "highlights": [
         "Estimated jobs from small houses to large residential or industrial properties and assessing risk",
-        "Placed inventory cost replenishment orders for crew",
+        "Placed inventory cost replenishment orders for materials and crew",
         "Repaired leaking or damaged product",
-        "Serviced seamless gutter tools & equipment critical to operation",
-        "Year round service to contracting and private customers"
+        "Serviced seamless gutter tools & equipment critical to operation such as downspout machines, trucks, saws, and other tools",
+        "Year round service to contracting and private builders"
       ]
     },
     {
@@ -236,7 +237,7 @@
       "summary": "Convenience store in recreational area of the Colorado Rocky Mountains",
       "highlights": [
         "Attended trade shows to promote business and develop relationships with vendors",
-        "Identified and explored potential areas of profit and monitored cost margins",
+        "Identified and explored potential areas of profit by monitoring daily operations",
         "Inventoried product and kept track of finances",
         "Provided customer information in regards to travel and tourism in the area",
         "Self branded and started convenience store in recreational area"
@@ -244,16 +245,16 @@
     },
     {
       "company": "Indian Meadows",
-      "position": "Assisstant Manager",
+      "position": "Assistant Manager",
       "startDate": "2000-01-01",
       "endDate": "2002-01-01",
       "summary": "Rustic recreational resort in the Poudre Canyon of the Colorado Rocky Mountains",
       "highlights": [
         "Cleaned and maintained a cluster of recreational cabins for camping tourists",
-        "Customized booking software to save company time and money",
-        "Kept inventory and kept vendor relationships with wholesalers",
+        "Developed customized hotel booking software to manage reservations, events, billing and other daily business",
+        "Kept inventory and vendor relationships with wholesalers",
         "Maintained property grounds i.e. landscaping, repairs, and other maintenance type work",
-        "Planned and catered events such as weddings, family reunions, business summits, etc."
+        "Planned and catered events such as weddings, family reunions, business summits and other group events"
       ]
     },
     {
@@ -261,13 +262,13 @@
       "position": "Navigation, Engineering, Deckhand",
       "startDate": "1997-01-01",
       "endDate": "2000-01-01",
-      "summary": "Ocean adventure trawling vessel U.S.S. Endeavour.",
+      "summary": "U.S.S. Endeavour was a 70ft. 69 ton Ocean adventure trawling vessel.",
       "highlights": [
-        "Repaired and maintained engines, generators, desalination systems, auxillary solar power systems, & other marine equipment",
-        "Chipped, grinded, painted & other laborous tasks to keep the vessel in working order",
+        "Chipped, grinded, painted & other laborious tasks to keep the vessel in working order",
         "Commandeered the 69ton Naval engineered trawling motor vessel through the open seas of the Western hemisphere and the international waterways of the southern United States",
         "Diligently held the comm while underway to ensure safe passage on voyages",
-        "Maintained & calibrated sea faring equipment critical to the safe navigation of the vessel"
+        "Maintained & calibrated sea faring equipment critical to the safe navigation of the vessel",
+        "Repaired and maintained engines, generators, desalination systems, auxillary solar power systems, & other marine equipment"
       ]
     }
   ],
