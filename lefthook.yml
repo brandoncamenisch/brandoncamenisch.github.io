@@ -5,7 +5,7 @@ prepare-commit-msg:
       run: resume export -t elegant index.html
     build-resume-pdf:
       run: resume export resume.pdf --format pdf
-# pre-push:
-#   commands:
-#     upload-resume-pdf-gdrive:
-#       run: rclone sync resume.pdf bc-google-drive:Public/
+pre-push:
+  commands:
+    upload-resume-pdf-gdrive:
+      run: rclone sync resume.pdf bc-google-drive:Public/
