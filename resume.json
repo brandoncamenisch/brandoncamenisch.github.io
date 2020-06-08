@@ -352,6 +352,7 @@
         "Automation",
         "BDD",
         "CI/CD",
+        "DAST",
         "DRY",
         "GitOps",
         "IaC",
@@ -362,8 +363,9 @@
         "OOP",
         "Polymorphism",
         "REST",
-        "Scalability",
+        "SAST",
         "SCRUM",
+        "Scalability",
         "TDD",
         "K.I.S.S"
       ]
