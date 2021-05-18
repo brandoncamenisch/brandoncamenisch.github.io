@@ -4,15 +4,26 @@
     "name": "Brandon M. Camenisch",
     "picture": "bio.jpg",
     "location": {
-      "countryCode": "Coeur d'Alene, Idaho"
+      "city": "Coeur d'Alene",
+      "region": "ID",
+      "countryCode": "USA"
     },
     "website": "https://brandoncamenisch.com",
-    "summary": "With over 20 years of experience in development, leadership, and project management, I get the job done with top quality results every time. From being a key player in the DevOps team of Penske Media Corporation to ample experience with open-source technologies, I live and breathe development and infrastructure. Upper management and peers have found my can-do attitude and willingness to go above and beyond invaluable. I am seeking a position with greater responsibilities, cutting-edge tooling, and new development challenges. I have a proven track record of excellence, including:<ul><li><b>Recognition for Subject Matter Expertise<\/b> in DevOps tooling, cloud infrastructure, and software architecture.<\/li><li><b>Demonstrating Outstanding Leadership<\/b> in engineer mentoring, project management, and incidence response.<\/li><li><b>Making Effective Executive Decisions<\/b> regarding deployment strategy, team building, infrastructure budgets, and operational objectives.<\/li><\/ul>",
+    "summary": "With over 20 years of experience in development, leadership, and project management, I get the job done with top quality results every time. From being a key player in the DevOps team of Penske Media Corporation to ample experience with open-source technologies, I live and breathe development and infrastructure. Upper management and peers have found my can-do attitude and willingness to go above and beyond invaluable. I am seeking a position with greater responsibilities, cutting-edge tooling, and new development challenges. I have a proven track record of excellence, including:",
+    "highlights": [
+      "Recognition for Subject Matter Expertise</b> in DevOps tooling, cloud infrastructure, and software architecture.",
+      "Demonstrating Outstanding Leadership in engineer mentoring, project management, and incidence response.",
+      "Making Effective Executive Decisions regarding deployment strategy, team building, infrastructure budgets, and operational objectives."
+    ],
     "profiles": [
       {
         "network": "Github",
         "username": "brandoncamenisch",
         "url": "https://github.com/brandoncamenisch"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/brandon-camenisch-625288212"
       },
       {
         "network": "URL",
