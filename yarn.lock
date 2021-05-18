@@ -447,6 +447,15 @@ jsonresume-theme-elegant@^1.13.2:
     tarball-extract "0.0.3"
     underscore "^1.6.0"
 
+jsonresume-theme-kendall@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/jsonresume-theme-kendall/-/jsonresume-theme-kendall-0.2.0.tgz#f7336343582b0da2d3eaeffc4fd0e204a6bbf177"
+  integrity sha512-K925MVtKXd2W8XbnR5/MzgO6c7wObyTPdjics9xmMDUW3xK3051IOIIVEyv+lIseEW3lOmm2yun9gLtJwVr1mA==
+  dependencies:
+    gravatar "^1.0.6"
+    lodash "^4.17.20"
+    mustache "^2.2.1"
+
 jsonresume-theme-spartan@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/jsonresume-theme-spartan/-/jsonresume-theme-spartan-0.3.0.tgz#f0780ddb77d8255926c7cef65b0a33658170e21e"
@@ -522,6 +531,11 @@ lodash.isequal@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
   integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
+lodash@^4.17.20:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lodash@^4.17.4:
   version "4.17.15"
@@ -609,6 +623,11 @@ moment@^2.13.0, moment@^2.22.2:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+
+mustache@^2.2.1:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/mustache/-/mustache-2.3.2.tgz#a6d4d9c3f91d13359ab889a812954f9230a3d0c5"
+  integrity sha512-KpMNwdQsYz3O/SBS1qJ/o3sqUJ5wSb8gb0pul8CO0S56b9Y2ALm8zCfsjPXsqGFfoNBkDwZuZIAjhsZI03gYVQ==
 
 neo-async@^2.6.0:
   version "2.6.1"

@@ -1,1085 +1,785 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Brandon M. Camenisch</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/><style>@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?z1lat9');
-  src:  url('fonts/icomoon.eot?z1lat9#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?z1lat9') format('truetype'),
-    url('fonts/icomoon.woff?z1lat9') format('woff'),
-    url('fonts/icomoon.svg?z1lat9#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume of Brandon M. Camenisch</title>
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+@charset "utf-8";
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+body{
+  font-family: 'Open Sans', Arial, Tahoma;
+  font-weight: 400;
+  color: #363636;
+  background: #334960;
+}
+blockquote {
+  font-size: 1em;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container{
+  margin-top: 80px;
+  margin-bottom: 15px;
+  background: #fff;
 }
 
-.icon-gitlab .path1:before {
-  content: "\e906";
-  color: rgb(252, 109, 38);
-}
-.icon-gitlab .path2:before {
-  content: "\e907";
-  margin-left: -1em;
-  color: rgb(226, 67, 41);
-}
-.icon-gitlab .path3:before {
-  content: "\e908";
-  margin-left: -1em;
-  color: rgb(252, 109, 38);
-}
-.icon-gitlab .path4:before {
-  content: "\e909";
-  margin-left: -1em;
-  color: rgb(252, 163, 38);
-}
-.icon-gitlab .path5:before {
-  content: "\e90a";
-  margin-left: -1em;
-  color: rgb(226, 67, 41);
-}
-.icon-gitlab .path6:before {
-  content: "\e90b";
-  margin-left: -1em;
-  color: rgb(252, 109, 38);
-}
-.icon-gitlab .path7:before {
-  content: "\e90c";
-  margin-left: -1em;
-  color: rgb(252, 163, 38);
-}
-.icon-gitlab .path8:before {
-  content: "\e90d";
-  margin-left: -1em;
-  color: rgb(226, 67, 41);
-}
-.icon-meetup .path1:before {
-  content: "\e901";
-  color: rgb(255, 255, 255);
-}
-.icon-meetup .path2:before {
-  content: "\e902";
-  margin-left: -1.5em;
-  color: rgb(240, 1, 1);
-}
-.icon-meetup .path3:before {
-  content: "\e903";
-  margin-left: -1.5em;
-  color: rgb(3, 3, 3);
-}
-.icon-blogger:before {
-  content: "\e900";
-}
-.icon-exercism:before {
-  content: "\e601";
-}
-.icon-telegram:before {
-  content: "\e904";
-}
-.icon-flickr:before {
-  content: "\f16e";
-}
-.icon-medium:before {
-  content: "\f23a";
-}
-.icon-heart:before {
-  content: "\f004";
-}
-.icon-book:before {
-  content: "\f02d";
-}
-.icon-linkedin:before {
-  content: "\f08c";
-}
-.icon-twitter:before {
-  content: "\f099";
-}
-.icon-github:before {
-  content: "\f09b";
-}
-.icon-link:before {
-  content: "\f0c1";
-}
-.icon-bars:before {
-  content: "\f0c9";
-}
-.icon-pinterest:before {
-  content: "\f0d2";
-}
-.icon-googleplus:before {
-  content: "\f0d5";
-}
-.icon-circle:before {
-  content: "\f111";
-}
-.icon-code:before {
-  content: "\f121";
-}
-.icon-youtube:before {
-  content: "\f167";
-}
-.icon-stackoverflow:before {
-  content: "\f16c";
-}
-.icon-bitbucket:before {
-  content: "\f171";
-}
-.icon-tumblr:before {
-  content: "\f173";
-}
-.icon-dribbble:before {
-  content: "\f17d";
-}
-.icon-skype:before {
-  content: "\f17e";
-}
-.icon-foursquare:before {
-  content: "\f180";
-}
-.icon-gittip:before {
-  content: "\f184";
-}
-.icon-gratipay:before {
-  content: "\f184";
-}
-.icon-stackexchange:before {
-  content: "\f18d";
-}
-.icon-vimeo:before {
-  content: "\f194";
-}
-.icon-graduation-cap:before {
-  content: "\f19d";
-}
-.icon-language:before {
-  content: "\f1ab";
-}
-.icon-child:before {
-  content: "\f1ae";
-}
-.icon-behance:before {
-  content: "\f1b5";
-}
-.icon-spotify:before {
-  content: "\f1bc";
-}
-.icon-soundcloud:before {
-  content: "\f1be";
-}
-.icon-codepen:before {
-  content: "\f1cb";
-}
-.icon-hackernews:before {
-  content: "\f1d4";
-}
-.icon-lastfm:before {
-  content: "\f202";
-}
-.icon-angellist:before {
-  content: "\f209";
-}
-.icon-facebook:before {
-  content: "\f230";
-}
-.icon-instagram:before {
-  content: "\e905";
-}
-.icon-trophy:before {
-  content: "\e605";
-}
-.icon-office:before {
-  content: "\e606";
-}
-.icon-clock:before {
-  content: "\e60a";
-}
-.icon-reddit:before {
-  content: "\e609";
-}
-.icon-profile:before {
-  content: "\e600";
-}
-.icon-tools:before {
-  content: "\e034";
-}
-.icon-location:before {
-  content: "\e602";
-}
-.icon-mail:before {
-  content: "\e603";
-}
-.icon-phone:before {
-  content: "\e03f";
-}
-.icon-newspaper:before {
-  content: "\e607";
-}
-.icon-chevron-down:before {
-  content: "\e60c";
-}
-.icon-chevron-up:before {
-  content: "\e60d";
-}
-.icon-dots-three-horizontal:before {
-  content: "\e60b";
-}
-.icon-thumbs-up:before {
-  content: "\e604";
-}
-.icon-board:before {
-  content: "\e608";
-}
-
-.relative {
-  position: relative;
-}
-.clear-margin {
-  margin: 0;
-}
-.space-top {
-  margin-top: 10px;
-}
-.space-right {
-  margin-right: 10px;
-}
-.space-bottom {
-  margin-bottom: 10px;
-}
-.mr-5 {
-  margin-right: 5px;
-}
-.mr-10 {
-  margin-right: 10px;
-}
-.ml-5 {
-  margin-left: 5px;
-}
-.labels {
-  line-height: 2;
-}
-.label-keyword {
-  display: inline-block;
-  background: #7eb0db;
-  color: white;
-  font-size: 0.9em;
-  padding: 5px;
-  border: 1px solid #357ebd;
-  margin-right: 5px;
-}
-.label-keyword:last-child {
-  margin-right: 0;
-}
-.link-disguise {
-  color: inherit;
-}
-.link-disguise:hover {
-  color: inherit;
-}
-.clear-margin {
-  margin: 0;
-}
-@media (max-width: 992px) {
-  .clear-margin-sm {
-    margin-bottom: 0;
-  }
-}
-.fs-lg {
-  font-size: 1.33333333em;
-  line-height: 0.75em;
-  vertical-align: -15%;
-}
-.fs-2x {
-  font-size: 2em;
-}
-.fs-3x {
-  font-size: 3em;
-}
-.fs-4x {
-  font-size: 4em;
-}
-.btn-circle-sm {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
+#photo-header{
+  margin-top: -75px;
+}
+#photo{
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  text-align: center;
-  padding: 0;
-  outline: none !important;
-}
-/* the version when the icon file is last updated */
-@font-face {
-  font-family: 'jst-elegant';
-  src: url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.eot?f218wo");
-  src: url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.eot?f218wo#iefix") format('embedded-opentype'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.ttf?f218wo") format('truetype'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.woff?f218wo") format('woff'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.svg?f218wo#icomoon") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'jst-elegant' !important;
-}
-body {
-  font-family: 'Lato';
-  background: #f0f0f0;
-  color: #333;
-}
-.main {
-  padding: 5px;
-}
-.card {
-  background: white;
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-  min-height: 300px;
-  padding: 10px 0;
-}
-.card-nested {
-  min-height: 0;
-  border-width: 1px 0 0 0;
-}
-.card-nested:before,
-.card-nested:after {
-  content: " ";
-  display: table;
-}
-.card-nested:after {
-  clear: both;
-}
-@media (max-width: 480px) {
-  .card-nested {
-    padding: 5px 0;
-  }
-}
-.background-card {
-  padding: 10px 20px;
-}
-.card-wrapper {
-  padding: 5px;
-}
-@media (max-width: 992px) {
-  .card-wrapper {
-    float: none !important;
-  }
-}
-.background-details .detail {
-  display: table;
-}
-.background-details .detail .icon {
-  min-width: 45px;
-  max-width: 45px;
-  text-align: center;
-}
-.background-details .detail .info {
-  width: 100%;
-}
-.background-details .detail .title,
-.background-details .detail .icon {
-  color: #707070;
-}
-.background-details .detail .mobile-title {
-  display: none;
-}
-@media (max-width: 480px) {
-  .background-details .detail .mobile-title {
-    display: inline-block;
-    margin-left: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    vertical-align: middle;
-  }
-}
-.background-details .detail .icon,
-.background-details .detail .info {
-  display: table-cell;
-  padding: 0 10px;
-}
-@media (max-width: 480px) {
-  .background-details .detail {
-    display: block;
-  }
-  .background-details .detail .icon {
-    max-width: inherit;
-    min-width: inherit;
-    text-align: left;
-  }
-  .background-details .detail .icon,
-  .background-details .detail .info {
-    display: block;
-    padding: 10px 0;
-  }
-  .background-details .detail .title {
-    display: none;
-  }
-}
-.info .content.has-sidebar {
-  width: 80%;
-  box-sizing: border-box;
-  float: left;
-  padding: 0 10px;
-  border-right: 1px solid #cdcdcd;
-}
-@media (max-width: 992px) {
-  .info .content.has-sidebar {
-    width: 100%;
-    border-right: 0;
-  }
-}
-@media (max-width: 480px) {
-  .info .content.has-sidebar {
-    padding: 0 2px;
-  }
-}
-.info .sidebar {
-  margin-left: 80%;
-  box-sizing: border-box;
-  padding: 10px;
-}
-@media (max-width: 480px) {
-  ul {
-    padding-left: 25px;
-  }
-}
-.current-event {
-  font-size: 8px;
-  color: #5ACE24;
-  position: absolute;
-  right: 100%;
-  top: 4px;
-  left: -10px;
-}
-.mop-wrapper > p:last-child {
-  margin: 0;
-}
-/*
-    Credits: http://codyhouse.co/demo/smart-fixed-navigation/index.html
-*/
-.floating-nav-trigger {
-  width: 50px;
-  height: 50px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  -webkit-transition: background-color 0.5s ease;
-  -o-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-  display: block;
-  border-radius: 50%;
-  text-align: center;
-  background-color: white;
-  font-size: 1.5em;
-  color: #357ebd;
-  z-index: 100;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  text-decoration: none !important;
-}
-.floating-nav-trigger > [class^="icon-"],
-.floating-nav-trigger [class*=" icon-"],
-.floating-nav-trigger > .close-icon {
-  line-height: 50px;
-}
-.floating-nav-trigger .close-icon {
-  display: none;
-}
-.floating-nav-trigger:hover {
-  color: #1f496e;
-  background-color: #e6e6e6;
-}
-.floating-nav-trigger.is-open {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.floating-nav-trigger.is-open .close-icon {
-  display: inherit;
-}
-.floating-nav-trigger.is-open .icon-bars {
-  display: none;
-}
-.floating-nav-trigger.is-open:hover {
-  background-color: white;
-}
-.floating-nav {
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  -webkit-transition: transform 0.3s, visibility 0s 0.3s;
-  -o-transition: transform 0.3s, visibility 0s 0.3s;
-  transition: transform 0.3s, visibility 0s 0.3s;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  position: fixed;
-  z-index: 50;
-  right: 10px;
-  bottom: 10px;
-  background-color: white;
-  width: 90%;
-  max-width: 400px;
-  visibility: hidden;
   overflow: hidden;
+  padding: 5px;
+  background: #334960;
+  display: inline-block;
 }
-.floating-nav ul {
+#photo img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#text-header h1{
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+#text-header h1::first-line{
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.5em;
+}
+#text-header h1 span{
+  color: #334960;
+  opacity: 0.7;
+}
+#text-header h1 sup{
+  opacity: 0.5;
+}
+#text-header:after{
+  width: 100%;
+  height: 3px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 15px;
+  content: '';
+  display: block;
+}
+
+.box{
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+.box h2{
+  color: #227c74;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#awards,
+#education{
+  margin-top: 20px;
+  margin-bottom: 0;
+  position: relative;
+  padding: 1em 0;
+  list-style: none;
+}
+#awards:before,
+#education:before {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 35px;
+  top: 0;
+  content: ' ';
+  display: block;
+  background: #32475c;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #32475c 7%, #32475c 89%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#32475c), color-stop(89%,#32475c), color-stop(100%,#ffffff));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: -o-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+#awards li,
+#education li{
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  float: left;
+}
+#awards .year,
+#education .year{
+  width: 14%;
+  background: #fff;
+  padding: 10px;
+  font-weight: 700;
+  display: inline-block;
+}
+#awards .description,
+#education .description{
+  width: 83%;
+  display: inline-block;
+  background: #eee;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#awards .description:after,
+#education .description:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: -16px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #eee;
+  border-width: 8px;
+  pointer-events: none;
+}
+#awards .description h3,
+#education .description h3{
   font-size: 1.2em;
   margin: 0;
+  padding: 0;
+  font-weight: 700;
 }
-.floating-nav ul li {
-  border-bottom: 1px solid #eff2f6;
+#awards .description p,
+#education .description p{
+  margin-top: 5px;
+  padding: 0;
 }
-.floating-nav ul li a {
-  padding: 20px;
-  text-decoration: none;
-  color: #357ebd;
-  display: block;
+
+.job{
+  margin-bottom: 15px;
 }
-.floating-nav ul li a:hover {
-  color: #1f496e;
-}
-.floating-nav ul li:last-child {
-  border-bottom: 0;
-}
-.floating-nav.is-visible {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: transform 0.3s, visibility 0s 0s;
-  -o-transition: transform 0.3s, visibility 0s 0s;
-  transition: transform 0.3s, visibility 0s 0s;
-  visibility: visible;
-}
-@media (max-width: 992px) {
-  .profile-card-wrapper {
-    position: relative;
-  }
-}
-.profile-card-wrapper .profile-card {
+.job .details {
+  margin-left: 3%;
+  width: 95%;
   padding: 10px;
+  margin-bottom: 10px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
-.profile-pic {
-  padding: 20px 0;
+.job .where{
+  font-size: 1.2em;
+  font-weight: bold;
 }
-@media (max-width: 992px) {
-  .profile-pic {
-    padding: 10px 0;
-  }
+.job .year{
+  opacity: 0.7;
 }
-.profile-pic img {
-  width: 100px;
-  height: 100px;
+.job .profession{
+  font-size: 1.2em;
+  font-weight: bold;
 }
-@media (max-width: 992px) {
-  .name {
-    margin-top: 10px;
-  }
+.job .description{
+  line-height: 1.5em;
 }
-@media (max-width: 768px) {
-  .contact-details {
-    text-align: center;
-  }
+.job .highlights{
+  padding: 5px 0;
+  font-weight: bold;
 }
-.contact-details .detail {
-  display: table;
-  padding: 10px 0;
+.job .job-details {
+  padding-left: 5%;
+  width: 100%;
 }
-.contact-details .detail .icon {
-  padding: 0 10px;
-  color: #707070;
+.publication {
+  margin-bottom: 0;
 }
-@media (max-width: 992px) {
-  .contact-details .detail .icon {
-    padding: 0 5px 0 0;
-  }
+.publication .name{
+  font-size: 1em;
+  font-weight: bold;
 }
-.contact-details .detail .info {
-  font-size: 0.8em;
+.publication .year{
+    opacity: 0.7;
 }
-.contact-details .detail .icon,
-.contact-details .detail .info {
-  display: table-cell;
-  vertical-align: middle;
+.publication p{
+  margin: 0;
+  padding-top: 10px;
 }
-@media (max-width: 768px) {
-  .contact-details .detail {
-    position: relative;
-    float: left;
-    width: 100%;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+
+.contact-item{
+  width: 100%;
+  float: left;
 }
-@media (max-width: 992px) {
-  .contact-details .detail {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding: 10px;
-  }
-  .contact-details .detail .icon,
-  .contact-details .detail .info {
-    display: inline-block;
-  }
+.contact-item .icon{
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #32475c;
+  background: #eee;
 }
-@media (max-width: 992px) and (min-width: 768px) {
-  .contact-details .detail {
-    float: left;
-    width: 25%;
-  }
+.contact-item:last-child .icon{
+  border-bottom: none;
 }
-.social-links {
-  line-height: 2.5;
+.contact-item .title{
+  width: 80%;
+  width: calc(100% - 55px);
+  font-weight: 700;
+  opacity: 0.9;
 }
-.social-link {
-  margin-left: 5px;
-  min-width: 35px;
+.contact-item .title.only{
+  margin-top: 10px;
+}
+.contact-item .description{
+  width: 80%;
+  width: calc(100% - 55px);
+  color: #334960;
+}
+
+.item-interests,
+.item-skills{
+  height: 30px;
+  color: #334960;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.interest,
+.skill{
+  color: #fff;
   display: inline-block;
-}
-.social-link:first-child {
-  margin-left: 0;
-}
-.social-link:hover {
-  text-decoration: none;
-}
-.link-github {
-  color: #454545;
-}
-.link-github:hover,
-.link-github:focus {
-  text-decoration: none;
-  color: #2b2b2b;
-}
-.link-twitter {
-  color: #33ccff;
-}
-.link-twitter:hover,
-.link-twitter:focus {
-  text-decoration: none;
-  color: #00bfff;
-}
-.link-blog {
-  color: #f36f24;
-}
-.link-blog:hover,
-.link-blog:focus {
-  text-decoration: none;
-  color: #d8560c;
-}
-.link-linkedin {
-  color: #007bb6;
-}
-.link-linkedin:hover,
-.link-linkedin:focus {
-  text-decoration: none;
-  color: #005983;
-}
-.link-skype {
-  color: #12A5F4;
-}
-.link-skype:hover,
-.link-skype:focus {
-  text-decoration: none;
-  color: #0986ca;
-}
-.link-instagram {
-  color: #e4405f;
-}
-.link-instagram:hover,
-.link-instagram:focus {
-  text-decoration: none;
-  color: #d31e40;
-}
-.link-stackoverflow {
-  color: #8e8e92;
-}
-.link-stackoverflow:hover,
-.link-stackoverflow:focus {
-  text-decoration: none;
-  color: #747479;
-}
-.link-stackexchange {
-  color: #62b0df;
-}
-.link-stackexchange:hover,
-.link-stackexchange:focus {
-  text-decoration: none;
-  color: #389bd6;
-}
-.link-lastfm {
-  color: #d12127;
-}
-.link-lastfm:hover,
-.link-lastfm:focus {
-  text-decoration: none;
-  color: #a51a1f;
-}
-.link-soundcloud {
-  color: #e8822d;
-}
-.link-soundcloud:hover,
-.link-soundcloud:focus {
-  text-decoration: none;
-  color: #cc6916;
-}
-.link-googleplus {
-  color: #dd4b39;
-}
-.link-googleplus:hover,
-.link-googleplus:focus {
-  text-decoration: none;
-  color: #c23321;
-}
-.link-youtube {
-  color: #dd4b39;
-}
-.link-youtube:hover,
-.link-youtube:focus {
-  text-decoration: none;
-  color: #c23321;
-}
-.link-pinterest {
-  color: #bd091f;
-}
-.link-pinterest:hover,
-.link-pinterest:focus {
-  text-decoration: none;
-  color: #8c0717;
-}
-.link-gratipay {
-  color: #630;
-}
-.link-gratipay:hover,
-.link-gratipay:focus {
-  text-decoration: none;
-  color: #331a00;
-}
-.link-vimeo {
-  color: #17b3e8;
-}
-.link-vimeo:hover,
-.link-vimeo:focus {
-  text-decoration: none;
-  color: #128fba;
-}
-.link-behance {
-  color: #2c98cf;
-}
-.link-behance:hover,
-.link-behance:focus {
-  text-decoration: none;
-  color: #2379a5;
-}
-.link-codepen {
-  color: #1c1c1c;
-}
-.link-codepen:hover,
-.link-codepen:focus {
-  text-decoration: none;
-  color: #020202;
-}
-.link-foursquare {
-  color: #fa4778;
-}
-.link-foursquare:hover,
-.link-foursquare:focus {
-  text-decoration: none;
-  color: #f91554;
-}
-.link-reddit {
-  color: #545454;
-}
-.link-reddit:hover,
-.link-reddit:focus {
-  text-decoration: none;
-  color: #3b3b3b;
-}
-.link-spotify {
-  color: #acd200;
-}
-.link-spotify:hover,
-.link-spotify:focus {
-  text-decoration: none;
-  color: #829f00;
-}
-.link-tumblr {
-  color: #2d4661;
-}
-.link-tumblr:hover,
-.link-tumblr:focus {
-  text-decoration: none;
-  color: #1d2d3e;
-}
-.link-dribbble {
-  color: #ce366f;
-}
-.link-dribbble:hover,
-.link-dribbble:focus {
-  text-decoration: none;
-  color: #a82959;
-}
-.link-facebook {
-  color: #4b6daa;
-}
-.link-facebook:hover,
-.link-facebook:focus {
-  text-decoration: none;
-  color: #3b5687;
-}
-.link-angellist {
-  color: black;
-}
-.link-angellist:hover,
-.link-angellist:focus {
-  text-decoration: none;
-  color: #000000;
-}
-.link-bitbucket {
-  color: #205081;
-}
-.link-bitbucket:hover,
-.link-bitbucket:focus {
-  text-decoration: none;
-  color: #163758;
-}
-.link-hackernews {
-  color: #ff6600;
-}
-.link-hackernews:hover,
-.link-hackernews:focus {
-  text-decoration: none;
-  color: #cc5200;
-}
-.link-exercism {
-  color: #d81d4e;
-}
-.link-exercism:hover,
-.link-exercism:focus {
-  text-decoration: none;
-  color: #ab173e;
-}
-.link-blogger {
-  color: #FF9234;
-}
-.link-blogger:hover,
-.link-blogger:focus {
-  text-decoration: none;
-  color: #ff7701;
-}
-.link-medium {
-  color: #00AB6C;
-}
-.link-medium:hover,
-.link-medium:focus {
-  text-decoration: none;
-  color: #00784c;
-}
-.link-flickr {
-  color: black;
-}
-.link-flickr:hover,
-.link-flickr:focus {
-  text-decoration: none;
-  color: #000000;
-}
-.link-telegram {
-  color: #3BABDD;
-}
-.link-telegram:hover,
-.link-telegram:focus {
-  text-decoration: none;
-  color: #2291c3;
-}
-.card-skills {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background: #32475c;
   position: relative;
+  font-size: .85em;
 }
 .skill-level {
-  border-radius: 3px;
+  background-color: #227c74;
+  border-radius: 4px;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: .75em;
   position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 0;
-  width: 10px;
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+  margin: 1px 10px;
 }
-.skill-level .skill-progress {
+
+#language-skills .skill{
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+    </style>
+    <style type="text/css" media="print">
+    body {
+  font-size: .95em;
+  -webkit-print-color-adjust: exact;
+}
+
+a[href]:after {
+  content: none !important;
+}
+
+#photo{
+  display: none;
+}
+
+.box {
+  margin-bottom: -10px;
+}
+
+blockquote,
+#education,
+#awards,
+.contact-item,
+.publication,
+.skills,
+.interests {
+  page-break-inside: avoid;
+}
+
+.col-sm-5{
+  width: 40%;
+  padding: 0 15px;
+}
+
+.col-sm-7{
+  width: 60%;
+  padding: 0 15px;
+}
+
+.skills .col-sm-offset-1,
+.interests .col-sm-offset-1{
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+#education {
+  margin: 0;
+  margin-bottom: -20px;
+}
+#awards:before,
+#education:before {
+  background: none;
+}
+
+#awards .description,
+#education .description,
+.job .details {
+  border: 1px solid #eee;
+}
+.publication,
+.publication .panel-heading,
+.publication .name{
+  margin: 0;
+  padding: 0 5px;
+  border: none;
+}
+.publication .panel-body {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.badge {
+  margin: 0;
+}
+
+.list-group-item{
+  border: none;
+  margin: 0;
+  padding: 5px 15px;
+}
+.list-group-item:after{
+  content: '';
   position: absolute;
-  border-radius: 3px;
-  bottom: 0;
-  width: 100%;
-  -webkit-transition: height 1s ease;
-}
-.skill-level .skill-progress.beginner {
-  height: 50%;
-  background: #e74c3c;
-}
-.skill-level .skill-progress.intermediate {
-  height: 70%;
-  background: #f1c40f;
-}
-.skill-level .skill-progress.advanced {
-  height: 80%;
-  background: #428bca;
-}
-.skill-level .skill-progress.master {
-  height: 95%;
-  background: #5cb85c;
-}
-.skill-info {
-  margin-left: 15px;
-}
-@media (max-width: 480px) {
-  .skill-info {
-    margin-left: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .quote {
-    font-size: inherit;
-  }
-}
-.icon-meetup .path2:before {
-  margin-left: 0;
-}
-@media print {
-  a[href]:after {
-    content: none !important;
-  }
-  .profile-card {
-    text-align: center;
-  }
-  .profile-pic {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .profile-pic img {
-    border-radius: 0;
-  }
-  .name-and-profession {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 15px;
-  }
-  .contact-details .detail {
-    position: relative;
-    float: left;
-    width: 25%;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding: 0;
-  }
-  .floating-nav,
-  .floating-nav-trigger {
-    display: none;
-  }
-  .pagebreak {
-    page-break-before: always;
-  }
-}
-</style></head><body itemscope="itemscope" itemtype="http://schema.org/Person"><div class="container-fluid"><div class="row main clearfix"><a class="js-floating-nav-trigger floating-nav-trigger" href="#"><i class="icon-bars"></i><span class="close-icon">&times;</span></a><nav class="floating-nav js-floating-nav"><ul class="list-unstyled"><li><a href="#about"><i class="mr-10 icon-board"></i>About</a></li><li><a href="#work-experience"><i class="mr-10 icon-office"></i>Work Experience</a></li><li><a href="#skills"><i class="mr-10 icon-tools"></i>Skills</a></li><li><a href="#interests"><i class="mr-10 icon-heart"></i>Interests</a></li></ul></nav><section class="col-md-3 card-wrapper profile-card-wrapper affix"><div class="card profile-card"><span class="profile-pic-container"><div class="profile-pic"><img class="media-object img-circle center-block" data-src="holder.js/100x100" alt="Brandon M. Camenisch" src="bio.jpg" itemprop="image"/></div><div class="name-and-profession text-center"><h3 itemprop="name"><b>Brandon M. Camenisch</b></h3><h5 class="text-muted" itemprop="jobTitle">DevOps &amp; Cloud Automation Engineer</h5></div></span><hr/><div class="contact-details clearfix"><div class="detail"><span class="icon"><i class="icon fs-lg icon-location"></i></span><span class="info">Coeur d'Alene, ID, USA</span></div><div class="detail"><span class="icon"><i class="icon fs-lg icon-link"></i></span><span class="info"><a href="https://brandoncamenisch.com" target="_blank">https://brandoncamenisch.com</a></span></div></div><hr/><div class="social-links text-center"><div><a class="fs-2x social-link link-github icon-github" href="https://github.com/brandoncamenisch" target="_blank" data-toggle="tooltip" title="Brandon M. Camenisch on Github"></a><a class="fs-2x social-link link-linkedin icon-linkedin" href="https://www.linkedin.com/in/brandon-camenisch-625288212" target="_blank" data-toggle="tooltip" title="Brandon M. Camenisch on LinkedIn"></a><a class="fs-2x social-link link-twitter icon-twitter" href="https://twitter.com/brandoncamenisc" target="_blank" data-toggle="tooltip" title="Brandon M. Camenisch on Twitter"></a></div></div></div></section><section class="col-md-9 card-wrapper pull-right"><div class="card background-card"><h4 class="text-uppercase">Background</h4><hr/><div class="background-details"><div class="detail" id="about"><div class="icon"><i class="fs-lg icon-board"></i><span class="mobile-title">About</span></div><div class="info"><h4 class="title text-uppercase">About</h4><div class="card card-nested"><div class="content mop-wrapper" itemprop="description"><p>With over 20 years of experience in development, leadership, and project management, I get the job done with top quality results every time. From being a key player in the DevOps team of Penske Media Corporation to ample experience with open-source technologies, I live and breathe development and infrastructure. Upper management and peers have found my can-do attitude and willingness to go above and beyond invaluable. I am seeking a position with greater responsibilities, cutting-edge tooling, and new development challenges. I have a proven track record of excellence, including:</p>
-<ul>
-<li>Recognition for Subject Matter Expertise in DevOps tooling, cloud infrastructure, and software architecture.</li>
-<li>Demonstrating Outstanding Leadership in engineer mentoring, project management, and incidence response.</li>
-<li>Making Effective Executive Decisions regarding deployment strategy, team building, infrastructure budgets, and operational objectives.</li>
-</ul>
-</div></div></div></div><div class="detail" id="work-experience"><div class="icon"><i class="fs-lg icon-office"></i><span class="mobile-title">Work Experience</span></div><div class="info"><h4 class="title text-uppercase">Work Experience</h4><ul class="list-unstyled clear-margin"><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Senior DevOps/CloudOps Engineer</strong>,&nbsp;<a href="https://pmc.com" target="_blank">PMC (Penske Media Corporation)</a></p><p class="text-muted"><small><span class="space-right">Jan, 2016 - Jun, 2021</span><span><i class="icon-clock mr-5"></i>5 years 5 months</span></small></p><div class="mop-wrapper space-bottom"><p>Chief engineer designated as the primary architect and developer of cloud infrastructure solutions. Credited with consistently delivering secure automation during acquisitions and upholding immaculate cyber-security and site reliability standards throughout the entire company. Responsible for training new engineers, creating a blameless DevOps culture, and acting as primary point of contact in ensuring deliverables and standards are met between the engineering team, customers, and C-Suite.</p>
-</div><ul><li class="mop-wrapper"><p>Automated resource provisioning across hybrid and cloud agnostic environments including AWS, GCP, and Azure, by utilizing Terraform to streamline scaling with stable and reproduceable infrastructure as code and adapting to changes in resource demands by utilizing GitOps methodologies.</p>
-</li><li class="mop-wrapper"><p>Expert in Terraform ecosystem and experienced in selecting and implementing additional automation tools into the HashiCorp ecosystem.</p>
-</li><li class="mop-wrapper"><p>Grew IaC codebase and scaled up infrastructure by staying up to date with new solutions, determining business pain-points, and managing growth with strategically chosen 3rd party solutions including: Cloudflare, Fastly, Datadog, New Relic, GitHub, Bitbucket, OpsGenie, PagerDuty, and many others.</p>
-</li><li class="mop-wrapper"><p>Proactively managed issue tracking, disaster recovery, and identification of emergent security weaknesses in workflows by implementing DevSecOps practices and ChatOps response methodologies for autonomously solving issues by leveraging data monitoring tools like New Relic, DataDog, and Grafana in conjunction with incidence response and ticket management tools such as OpsGenie, PagerDuty, and Jira.</p>
-</li><li class="mop-wrapper"><p>Created an engineering culture of self-service, personal responsibility, and minimal redundancy by enforcing strict control of design patterns and improving upon workflow standardization.</p>
-</li><li class="mop-wrapper"><p>Leveraged serverless technologies to cut costs, speed up delivery, and scale effectively.</p>
-</li><li class="mop-wrapper"><p>Managed multiple complicated legacy server and cloud migrations by ingesting business critical processes and software from multi-tenancy environments, applying 12 factor app design methodologies, creating infrastructure as code to supplant previous resources, and adding these new assets to the self-scaling, autonomous GitOps pipeline</p>
-</li><li class="mop-wrapper"><p>Enhanced company cyber-security by educating engineers and general staff on security best practices and preemptively mitigated risks by training and enforcing standards such as securing data at rest, applying cryptography, networking monitoring and firewalling, and security focused review of systems and codebases.</p>
-</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Senior Engineering Manager</strong>,&nbsp;<a href="https://10up.com" target="_blank">10up</a></p><p class="text-muted"><small><span class="space-right">Jan, 2014 - Jan, 2016</span><span><i class="icon-clock mr-5"></i>2 years</span></small></p><div class="mop-wrapper space-bottom"><p>In charge of WordPress app development for high-profile clientele, including Fortune 100 companies. Tech Crunch, 9 to 5 Mac, Google, Universal Studios, and Microsoft being the most prominent. Responsible party providing leadership to a team of fifteen engineers, held accountable for consistently delivering products on time and with outstanding quality.</p>
-</div><ul><li class="mop-wrapper"><p>Represented team of software engineers to engage and complete large scale data migrations, application development, unexpected engineering tasks and ensure customer satisfaction. Implemented culture change towards a blameless self-service DevOps model among engineering teams.</p>
-</li><li class="mop-wrapper"><p>Conducted large scale lift and shift projects migrating content and data for Fortune 500 companies with no downtime or impact to the business by utilizing real-time database replication via data streams.</p>
-</li><li class="mop-wrapper"><p>Implemented caching layers into applications to increase overall performance, end user retention, and save costs.</p>
-</li><li class="mop-wrapper"><p>Accurately determined the resources and strategic needs of large and complex projects; oversaw and ensured the product quality produced from engineering teams.</p>
-</li><li class="mop-wrapper"><p>Managed customer and vendor expectations while providing solutions that met their business objectives, technical needs, and budget constraints.</p>
-</li><li class="mop-wrapper"><p>Wrote tooling that abstracted testing workflows pertinent to engineering teams including a/b testing, unit testing, behavior-driven development, test-driven development, and testing operations that formerly had to be completed manually before I drafted and implemented automation solutions</p>
-</li><li class="mop-wrapper"><p>Provided extensive business value by abstracting customer tooling needs, developing reusable software as a solution, and utilizing these new tools as drop-in services for clients with similar requirements and needs.</p>
-</li><li class="mop-wrapper"><p>Orchestrated unique Docker deployments with Kubernetes clusters and implemented automated testing through the entire CI/CD process</p>
-</li><li class="mop-wrapper"><p>Created a reproducible development environment utilizing Vagrant and Virtual Box for engineers that speed up development time, reduced code collisions, and increased collaboration.</p>
-</li><li class="mop-wrapper"><p>Provided remote training on ongoing professional development to engineering teams, as well as 1 to 1 employee mentoring, training, and coaching.</p>
-</li><li class="mop-wrapper"><p>Embodied extreme ownership, taking control of not only leadership objectives, but also positively creating and influencing company culture, working face to face with clients and stakeholders, and interfacing directly with top-level management.</p>
-</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Senior software engineer</strong>,&nbsp;<a href="https://www.v9digital.com/" target="_blank">Volume Nine</a></p><p class="text-muted"><small><span class="space-right">Jan, 2014 - Jan, 2015</span><span><i class="icon-clock mr-5"></i>1 year</span></small></p><div class="mop-wrapper space-bottom"><p>Volume Nine is Denver's top digital marketing agency, specializing in content, SEO, and social media. Build Brand. Drive Traffic. Grow Sales.</p>
-</div><ul><li class="mop-wrapper"><p>Developed against large dataset(s) of marketing data with heavy usage of MySQL database and google analytics platform</p>
-</li><li class="mop-wrapper"><p>Strategized marketing/seo campaigns for client sites from a techinnal perspective</p>
-</li><li class="mop-wrapper"><p>Worked on early stage development/testing of SkyWord solution for WordPress</p>
-</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Senior software engineer</strong>,&nbsp;QRlicious</p><p class="text-muted"><small><span class="space-right">Jan, 2013 - Jan, 2014</span><span><i class="icon-clock mr-5"></i>1 year</span></small></p><div class="mop-wrapper space-bottom"><p>QRlicious is a mobile marketing company offering a platform for users to manage and build QR codes, mobile websites, coupons, and more.</p>
-</div><ul><li class="mop-wrapper"><p>Hand built a WordPress framework from the ground up using DRY &amp; semantic approach</p>
-</li><li class="mop-wrapper"><p>Programmatically generated QR codes with custom built SVG tool(s) HTML5 canvas and RaphaëlJS</p>
-</li><li class="mop-wrapper"><p>Embraced mobile marketing microsites trend by building a SaaS product site building tool on Rails</p>
-</li><li class="mop-wrapper"><p>Engineered custom REST based APIs</p>
-</li><li class="mop-wrapper"><p>Integrated with various payment gateway systems for e-comm using Stripe, PayPal, Authorize.net and others</p>
-</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Senior software engineer &amp; Graphic design</strong>,&nbsp;Concept Bakery</p><p class="text-muted"><small><span class="space-right">Jan, 2012 - Jan, 2013</span><span><i class="icon-clock mr-5"></i>1 year</span></small></p><div class="mop-wrapper space-bottom"><p>Social media story development and telling: guerrilla &amp; cross-media marketing. WOM on Facebook, YouTube, microsites, etc. You name it - been there done that :)</p>
-</div><ul><li class="mop-wrapper"><p>Solely developed ruby on rails custom CMS application to create SaaS product based on microsites and Facebook pages</p>
-</li><li class="mop-wrapper"><p>e-commerce sales pipeline with integration of social media data of consumers</p>
-</li><li class="mop-wrapper"><p>Campaigned on social media to market customer products</p>
-</li><li class="mop-wrapper"><p>Frontend and graphic design heavy position creating marketing campaigns</p>
-</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Consultant</strong>,&nbsp;Nerdatory</p><p class="text-muted"><small><span class="space-right">Jan, 2006 - Jan, 2012</span><span><i class="icon-clock mr-5"></i>6 years</span></small></p><div class="mop-wrapper space-bottom"><p>Consulting firm specializing in architecture, security and best practices of software development.</p>
-</div><ul><li class="mop-wrapper"><p>Provided strategic engineering consulting to startups</p>
-</li><li class="mop-wrapper"><p>Demonstrated how to predict growth and scale a product without hitting a wall in the process</p>
-</li><li class="mop-wrapper"><p>Conducted in-depth security audits for clients identifying weaknesses in their corporate IT structure</p>
-</li><li class="mop-wrapper"><p>Collaborated with team of engineers to architect and reconstruct their SaaS product from the ground up</p>
-</li><li class="mop-wrapper"><p>Mentored teams in software life cycle processes using TDD, CI, code reviews, security conventions, and engineering best practices</p>
-</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Founder</strong>,&nbsp;Silvereve Interactive</p><p class="text-muted"><small><span class="space-right">Jan, 2002 - Jan, 2000</span><span><i class="icon-clock mr-5"></i>1 year 11 months</span></small></p><div class="mop-wrapper space-bottom"><p>Full service multimedia/interactive web content production company. Hand made interactive content solutions for education, games, entertainment and business training.</p>
-</div><ul><li class="mop-wrapper"><p>Consulted customers on business strategy of their content to encourage end user engagement</p>
-</li><li class="mop-wrapper"><p>Developed and marketed plug n' play javascript modules for mass consumers to sell online</p>
-</li><li class="mop-wrapper"><p>Heavily coded robust multimedia content in actionscript</p>
-</li><li class="mop-wrapper"><p>Provided unique content including but not limited to text, photographs, and graphic design for customers</p>
-</li><li class="mop-wrapper"><p>Retained customer loyalty through excellent service and ongoing maintenance agreements</p>
-</li></ul></div></li></ul></div></div><div class="detail" id="skills"><div class="icon"><i class="fs-lg icon-tools"></i><span class="mobile-title">Skills</span></div><div class="info"><h4 class="title text-uppercase">Skills</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested card-skills"><div class="skill-info"><strong>♾️  Automation Tools</strong><div class="space-top labels"><span class="label label-keyword">Ansible</span><span class="label label-keyword">Boto</span><span class="label label-keyword">Chef</span><span class="label label-keyword">CircleCI</span><span class="label label-keyword">Drone CI</span><span class="label label-keyword">Gradle</span><span class="label label-keyword">Jenkins</span><span class="label label-keyword">Puppet</span><span class="label label-keyword">Spinnaker</span><span class="label label-keyword">Terraform</span><span class="label label-keyword">Travis</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>☁️  Cloud providers</strong><div class="space-top labels"><span class="label label-keyword">AWS</span><span class="label label-keyword">GKE</span><span class="label label-keyword">Heroku</span><span class="label label-keyword">Azure</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>💾 Code</strong><div class="space-top labels"><span class="label label-keyword">bash</span><span class="label label-keyword">c</span><span class="label label-keyword">elixir</span><span class="label label-keyword">erlang</span><span class="label label-keyword">go</span><span class="label label-keyword">javascript</span><span class="label label-keyword">lua</span><span class="label label-keyword">node</span><span class="label label-keyword">php</span><span class="label label-keyword">python</span><span class="label label-keyword">ruby</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>🗄️  Datastores</strong><div class="space-top labels"><span class="label label-keyword">BigQuery</span><span class="label label-keyword">CouchDB</span><span class="label label-keyword">Kafka</span><span class="label label-keyword">MongoDB</span><span class="label label-keyword">Memcache(d)</span><span class="label label-keyword">MySQL</span><span class="label label-keyword">Postgres</span><span class="label label-keyword">Redis</span><span class="label label-keyword">RDS</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>🗠 LMA ( Logging, Monitoring, &amp; Alerting )</strong><div class="space-top labels"><span class="label label-keyword">AWS</span><span class="label label-keyword">ELK</span><span class="label label-keyword">Grafana</span><span class="label label-keyword">InfluxDB</span><span class="label label-keyword">Loggly</span><span class="label label-keyword">LogRythm</span><span class="label label-keyword">Nagios</span><span class="label label-keyword">Opsgenie</span><span class="label label-keyword">PagerDuty</span><span class="label label-keyword">Pingdom</span><span class="label label-keyword">Prometheus</span><span class="label label-keyword">Sensu</span><span class="label label-keyword">ServiceNow</span><span class="label label-keyword">Slack</span><span class="label label-keyword">Splunk</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>🤔 Methodologies</strong><div class="space-top labels"><span class="label label-keyword">12Factor</span><span class="label label-keyword">Agile</span><span class="label label-keyword">Automation</span><span class="label label-keyword">BDD</span><span class="label label-keyword">CI/CD</span><span class="label label-keyword">DAST</span><span class="label label-keyword">DRY</span><span class="label label-keyword">GitOps</span><span class="label label-keyword">IaC</span><span class="label label-keyword">Immutability</span><span class="label label-keyword">KanBan</span><span class="label label-keyword">Machine learning</span><span class="label label-keyword">Networking</span><span class="label label-keyword">OOP</span><span class="label label-keyword">Polymorphism</span><span class="label label-keyword">REST</span><span class="label label-keyword">SAST</span><span class="label label-keyword">SCRUM</span><span class="label label-keyword">Scalability</span><span class="label label-keyword">TDD</span><span class="label label-keyword">K.I.S.S</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>🛡️  Security</strong><div class="space-top labels"><span class="label label-keyword">Kali Linux</span><span class="label label-keyword">Applied Cryptography</span><span class="label label-keyword">Black Arch</span><span class="label label-keyword">Intrusion detection</span><span class="label label-keyword">Metasploit</span><span class="label label-keyword">Nessus</span><span class="label label-keyword">Nikto</span><span class="label label-keyword">Security Onion</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>🖥️  Systems &amp; Servers</strong><div class="space-top labels"><span class="label label-keyword">*nix</span><span class="label label-keyword">Apache</span><span class="label label-keyword">Caddy</span><span class="label label-keyword">Docker</span><span class="label label-keyword">Nginx</span><span class="label label-keyword">Kubernetes</span></div></div></li></ul></div></div></div><div class="detail" id="interests"><div class="icon"><i class="fs-lg icon-heart"></i><span class="mobile-title">Interests</span></div><div class="info"><h4 class="title text-uppercase">Interests</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested"><p><strong></strong></p><div class="space-top labels"><span class="label label-keyword">blockchain</span><span class="label label-keyword">cryptography</span><span class="label label-keyword">cybersecurity</span><span class="label label-keyword">freeskating</span><span class="label label-keyword">hacking</span><span class="label label-keyword">hiking</span><span class="label label-keyword">linux</span><span class="label label-keyword">longboarding</span><span class="label label-keyword">snowboarding</span><span class="label label-keyword">travel</span><span class="label label-keyword">yoga</span></div></li></ul></div></div></div></div></div></section></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script>$(function () {
-  var toggleFloatingMenu = function() {
-    $( '.js-floating-nav' ).toggleClass( 'is-visible' );
-    $( '.js-floating-nav-trigger' ).toggleClass( 'is-open' );
-  };
+  top: 8px;
+  right: 0;
+  left: -1px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #999;
+  border-width: 4px;
+  pointer-events: none;
+ }
 
-  $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
-  $( "[data-toggle=tooltip]" ).tooltip();
-  $( '.js-floating-nav-trigger' ).on( 'click', function(e) {
-    e.preventDefault();
-    toggleFloatingMenu();
-  });
-  $( '.js-floating-nav a' ).on( 'click', toggleFloatingMenu );
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="photo-header" class="text-center">
+            <!-- PHOTO (AVATAR) -->
+            <div id="text-header" style="margin-top: 90px;">
+              <h1>Brandon M. Camenisch<br><span>DevOps &amp; Cloud Automation Engineer</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <!-- ABOUT ME -->
+          <div class="box">
+            <h2><i class="fas fa-user ico"></i> About</h2>
+            <p>With over 20 years of experience in development, leadership, and project management, I get the job done with top quality results every time. From being a key player in the DevOps team of Penske Media Corporation to ample experience with open-source technologies, I live and breathe development and infrastructure. Upper management and peers have found my can-do attitude and willingness to go above and beyond invaluable. I am seeking a position with greater responsibilities, cutting-edge tooling, and new development challenges. I have a proven track record of excellence, including: 
+ - Recognition for Subject Matter Expertise in DevOps tooling, cloud infrastructure, and software architecture. 
+ - Demonstrating Outstanding Leadership in engineer mentoring, project management, and incidence response.
+ - Making Effective Executive Decisions regarding deployment strategy, team building, infrastructure budgets, and operational objectives.</p>
+          </div>
+          <!-- WORK EXPERIENCE -->
+          <div class="box">
+            <h2><i class= "fas fa-suitcase ico"></i> Work Experience</h2>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      
+                    </div>
+                    <div class="year">January 2016 – June 2021</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior DevOps&#x2F;CloudOps Engineer</div>
+                    <div class="description">
+                      Chief engineer designated as the primary architect and developer of cloud infrastructure solutions. Credited with consistently delivering secure automation during acquisitions and upholding immaculate cyber-security and site reliability standards throughout the entire company. Responsible for training new engineers, creating a blameless DevOps culture, and acting as primary point of contact in ensuring deliverables and standards are met between the engineering team, customers, and C-Suite.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Automated resource provisioning across hybrid and cloud agnostic environments including AWS, GCP, and Azure, by utilizing Terraform to streamline scaling with stable and reproduceable infrastructure as code and adapting to changes in resource demands by utilizing GitOps methodologies.</li>
+                        <li class="list-group-item">Expert in Terraform ecosystem and experienced in selecting and implementing additional automation tools into the HashiCorp ecosystem.</li>
+                        <li class="list-group-item">Grew IaC codebase and scaled up infrastructure by staying up to date with new solutions, determining business pain-points, and managing growth with strategically chosen 3rd party solutions including: Cloudflare, Fastly, Datadog, New Relic, GitHub, Bitbucket, OpsGenie, PagerDuty, and many others.</li>
+                        <li class="list-group-item">Proactively managed issue tracking, disaster recovery, and identification of emergent security weaknesses in workflows by implementing DevSecOps practices and ChatOps response methodologies for autonomously solving issues by leveraging data monitoring tools like New Relic, DataDog, and Grafana in conjunction with incidence response and ticket management tools such as OpsGenie, PagerDuty, and Jira.</li>
+                        <li class="list-group-item">Created an engineering culture of self-service, personal responsibility, and minimal redundancy by enforcing strict control of design patterns and improving upon workflow standardization. </li>
+                        <li class="list-group-item">Leveraged serverless technologies to cut costs, speed up delivery, and scale effectively.</li>
+                        <li class="list-group-item">Managed multiple complicated legacy server and cloud migrations by ingesting business critical processes and software from multi-tenancy environments, applying 12 factor app design methodologies, creating infrastructure as code to supplant previous resources, and adding these new assets to the self-scaling, autonomous GitOps pipeline</li>
+                        <li class="list-group-item">Enhanced company cyber-security by educating engineers and general staff on security best practices and preemptively mitigated risks by training and enforcing standards such as securing data at rest, applying cryptography, networking monitoring and firewalling, and security focused review of systems and codebases.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      
+                    </div>
+                    <div class="year">January 2014 – January 2016</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior Engineering Manager</div>
+                    <div class="description">
+                      In charge of WordPress app development for high-profile clientele, including Fortune 100 companies. Tech Crunch, 9 to 5 Mac, Google, Universal Studios, and Microsoft being the most prominent. Responsible party providing leadership to a team of fifteen engineers, held accountable for consistently delivering products on time and with outstanding quality.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Represented team of software engineers to engage and complete large scale data migrations, application development, unexpected engineering tasks and ensure customer satisfaction. Implemented culture change towards a blameless self-service DevOps model among engineering teams.</li>
+                        <li class="list-group-item">Conducted large scale lift and shift projects migrating content and data for Fortune 500 companies with no downtime or impact to the business by utilizing real-time database replication via data streams.</li>
+                        <li class="list-group-item">Implemented caching layers into applications to increase overall performance, end user retention, and save costs.</li>
+                        <li class="list-group-item">Accurately determined the resources and strategic needs of large and complex projects; oversaw and ensured the product quality produced from engineering teams.</li>
+                        <li class="list-group-item">Managed customer and vendor expectations while providing solutions that met their business objectives, technical needs, and budget constraints.</li>
+                        <li class="list-group-item">Wrote tooling that abstracted testing workflows pertinent to engineering teams including a/b testing, unit testing, behavior-driven development, test-driven development, and testing operations that formerly had to be completed manually before I drafted and implemented automation solutions</li>
+                        <li class="list-group-item">Provided extensive business value by abstracting customer tooling needs, developing reusable software as a solution, and utilizing these new tools as drop-in services for clients with similar requirements and needs.</li>
+                        <li class="list-group-item">Orchestrated unique Docker deployments with Kubernetes clusters and implemented automated testing through the entire CI/CD process</li>
+                        <li class="list-group-item">Created a reproducible development environment utilizing Vagrant and Virtual Box for engineers that speed up development time, reduced code collisions, and increased collaboration. </li>
+                        <li class="list-group-item">Provided remote training on ongoing professional development to engineering teams, as well as 1 to 1 employee mentoring, training, and coaching.</li>
+                        <li class="list-group-item">Embodied extreme ownership, taking control of not only leadership objectives, but also positively creating and influencing company culture, working face to face with clients and stakeholders, and interfacing directly with top-level management.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      
+                    </div>
+                    <div class="year">January 2014 – January 2015</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior software engineer</div>
+                    <div class="description">
+                      Volume Nine is Denver's top digital marketing agency, specializing in content, SEO, and social media. Build Brand. Drive Traffic. Grow Sales.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Developed against large dataset(s) of marketing data with heavy usage of MySQL database and google analytics platform</li>
+                        <li class="list-group-item">Strategized marketing/seo campaigns for client sites from a techinnal perspective</li>
+                        <li class="list-group-item">Worked on early stage development/testing of SkyWord solution for WordPress</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      
+                    </div>
+                    <div class="year">January 2013 – January 2014</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior software engineer</div>
+                    <div class="description">
+                      QRlicious is a mobile marketing company offering a platform for users to manage and build QR codes, mobile websites, coupons, and more.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Hand built a WordPress framework from the ground up using DRY & semantic approach</li>
+                        <li class="list-group-item">Programmatically generated QR codes with custom built SVG tool(s) HTML5 canvas and RaphaëlJS</li>
+                        <li class="list-group-item">Embraced mobile marketing microsites trend by building a SaaS product site building tool on Rails</li>
+                        <li class="list-group-item">Engineered custom REST based APIs</li>
+                        <li class="list-group-item">Integrated with various payment gateway systems for e-comm using Stripe, PayPal, Authorize.net and others</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      
+                    </div>
+                    <div class="year">January 2012 – January 2013</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior software engineer &amp; Graphic design</div>
+                    <div class="description">
+                      Social media story development and telling: guerrilla & cross-media marketing. WOM on Facebook, YouTube, microsites, etc. You name it - been there done that :)
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Solely developed ruby on rails custom CMS application to create SaaS product based on microsites and Facebook pages</li>
+                        <li class="list-group-item">e-commerce sales pipeline with integration of social media data of consumers</li>
+                        <li class="list-group-item">Campaigned on social media to market customer products</li>
+                        <li class="list-group-item">Frontend and graphic design heavy position creating marketing campaigns</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      
+                    </div>
+                    <div class="year">January 2006 – January 2012</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Consultant</div>
+                    <div class="description">
+                      Consulting firm specializing in architecture, security and best practices of software development.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Provided strategic engineering consulting to startups</li>
+                        <li class="list-group-item">Demonstrated how to predict growth and scale a product without hitting a wall in the process</li>
+                        <li class="list-group-item">Conducted in-depth security audits for clients identifying weaknesses in their corporate IT structure</li>
+                        <li class="list-group-item">Collaborated with team of engineers to architect and reconstruct their SaaS product from the ground up</li>
+                        <li class="list-group-item">Mentored teams in software life cycle processes using TDD, CI, code reviews, security conventions, and engineering best practices</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">
+                      
+                    </div>
+                    <div class="year">January 2002 – January 2000</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Founder</div>
+                    <div class="description">
+                      Full service multimedia/interactive web content production company. Hand made interactive content solutions for education, games, entertainment and business training.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Consulted customers on business strategy of their content to encourage end user engagement</li>
+                        <li class="list-group-item">Developed and marketed plug n' play javascript modules for mass consumers to sell online</li>
+                        <li class="list-group-item">Heavily coded robust multimedia content in actionscript</li>
+                        <li class="list-group-item">Provided unique content including but not limited to text, photographs, and graphic design for customers</li>
+                        <li class="list-group-item">Retained customer loyalty through excellent service and ongoing maintenance agreements</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+          <!-- CONTACT -->
+          <div class="box clearfix">
+            <h2><i class="fas fa-bullseye ico"></i> Contact</h2>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fas fa-map-marker fa-fw"></span></div>
+              
+              <div class="title only  pull-right">Coeur d&#39;Alene, ID USA</div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fab fa-github fa-fw"></span></div>
+              <div class="title pull-right">Github</div>
+              <div class="description pull-right"><a href="https:&#x2F;&#x2F;github.com&#x2F;brandoncamenisch" target="_blank">brandoncamenisch</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fab fa-linkedin fa-fw"></span></div>
+              <div class="title pull-right">LinkedIn</div>
+              <div class="description pull-right"><a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;brandon-camenisch-625288212" target="_blank">https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;brandon-camenisch-625288212</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fab fa-twitter fa-fw"></span></div>
+              <div class="title pull-right">Twitter</div>
+              <div class="description pull-right"><a href="https:&#x2F;&#x2F;twitter.com&#x2F;brandoncamenisc" target="_blank">https:&#x2F;&#x2F;twitter.com&#x2F;brandoncamenisc</a></div>
+            </div>
+          </div>
+          <!-- SKILLS -->
+          <div class="box">
+            <h2><i class="fas fa-tasks ico"></i> Skills</h2>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  ♾️  Automation Tools
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Ansible</span>
+                <span class= "skill badge">Boto</span>
+                <span class= "skill badge">Chef</span>
+                <span class= "skill badge">CircleCI</span>
+                <span class= "skill badge">Drone CI</span>
+                <span class= "skill badge">Gradle</span>
+                <span class= "skill badge">Jenkins</span>
+                <span class= "skill badge">Puppet</span>
+                <span class= "skill badge">Spinnaker</span>
+                <span class= "skill badge">Terraform</span>
+                <span class= "skill badge">Travis</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  ☁️  Cloud providers
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">AWS</span>
+                <span class= "skill badge">GKE</span>
+                <span class= "skill badge">Heroku</span>
+                <span class= "skill badge">Azure</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  💾 Code
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">bash</span>
+                <span class= "skill badge">c</span>
+                <span class= "skill badge">elixir</span>
+                <span class= "skill badge">erlang</span>
+                <span class= "skill badge">go</span>
+                <span class= "skill badge">javascript</span>
+                <span class= "skill badge">lua</span>
+                <span class= "skill badge">node</span>
+                <span class= "skill badge">php</span>
+                <span class= "skill badge">python</span>
+                <span class= "skill badge">ruby</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  🗄️  Datastores
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">BigQuery</span>
+                <span class= "skill badge">CouchDB</span>
+                <span class= "skill badge">Kafka</span>
+                <span class= "skill badge">MongoDB</span>
+                <span class= "skill badge">Memcache(d)</span>
+                <span class= "skill badge">MySQL</span>
+                <span class= "skill badge">Postgres</span>
+                <span class= "skill badge">Redis</span>
+                <span class= "skill badge">RDS</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  🗠 LMA ( Logging, Monitoring, &amp; Alerting )
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">AWS</span>
+                <span class= "skill badge">ELK</span>
+                <span class= "skill badge">Grafana</span>
+                <span class= "skill badge">InfluxDB</span>
+                <span class= "skill badge">Loggly</span>
+                <span class= "skill badge">LogRythm</span>
+                <span class= "skill badge">Nagios</span>
+                <span class= "skill badge">Opsgenie</span>
+                <span class= "skill badge">PagerDuty</span>
+                <span class= "skill badge">Pingdom</span>
+                <span class= "skill badge">Prometheus</span>
+                <span class= "skill badge">Sensu</span>
+                <span class= "skill badge">ServiceNow</span>
+                <span class= "skill badge">Slack</span>
+                <span class= "skill badge">Splunk</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  🤔 Methodologies
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">12Factor</span>
+                <span class= "skill badge">Agile</span>
+                <span class= "skill badge">Automation</span>
+                <span class= "skill badge">BDD</span>
+                <span class= "skill badge">CI/CD</span>
+                <span class= "skill badge">DAST</span>
+                <span class= "skill badge">DRY</span>
+                <span class= "skill badge">GitOps</span>
+                <span class= "skill badge">IaC</span>
+                <span class= "skill badge">Immutability</span>
+                <span class= "skill badge">KanBan</span>
+                <span class= "skill badge">Machine learning</span>
+                <span class= "skill badge">Networking</span>
+                <span class= "skill badge">OOP</span>
+                <span class= "skill badge">Polymorphism</span>
+                <span class= "skill badge">REST</span>
+                <span class= "skill badge">SAST</span>
+                <span class= "skill badge">SCRUM</span>
+                <span class= "skill badge">Scalability</span>
+                <span class= "skill badge">TDD</span>
+                <span class= "skill badge">K.I.S.S</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  🛡️  Security
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Kali Linux</span>
+                <span class= "skill badge">Applied Cryptography</span>
+                <span class= "skill badge">Black Arch</span>
+                <span class= "skill badge">Intrusion detection</span>
+                <span class= "skill badge">Metasploit</span>
+                <span class= "skill badge">Nessus</span>
+                <span class= "skill badge">Nikto</span>
+                <span class= "skill badge">Security Onion</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  🖥️  Systems &amp; Servers
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">*nix</span>
+                <span class= "skill badge">Apache</span>
+                <span class= "skill badge">Caddy</span>
+                <span class= "skill badge">Docker</span>
+                <span class= "skill badge">Nginx</span>
+                <span class= "skill badge">Kubernetes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  $("#remaining-profiles").on('show.bs.collapse', function() {
-    $( '.js-profiles-collapse > i' )
-      .removeClass( 'icon-chevron-down' )
-      .addClass( 'icon-chevron-up' );
-  });
-
-  $("#remaining-profiles").on('hidden.bs.collapse', function() {
-    $( '.js-profiles-collapse > i' )
-      .removeClass( 'icon-chevron-up' )
-      .addClass( 'icon-chevron-down' );
-  });
-});
-</script><script>WebFontConfig = {
-  google: { families: [ 'Lato:300,400,700:latin' ] }
-};
-(function() {
-  var wf = document.createElement('script');
-  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-  wf.type = 'text/javascript';
-  wf.async = 'true';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(wf, s);
-})();</script></body></html>
+  </body>
+</html>
