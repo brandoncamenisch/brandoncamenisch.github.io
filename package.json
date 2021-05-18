@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-elegant": "^1.13.2",
+    "jsonresume-theme-kendall": "^0.2.0",
     "jsonresume-theme-spartan": "^0.3.0",
+    "lefthook": "0.0.1",
     "package-json-to-readme": "^2.1.1"
   },
   "devDependencies": {},
