@@ -138,7 +138,7 @@
   ],
   "skills": [
     {
-      "name": "♾️  Automation Tools",
+      "name": "Automation Tools",
       "keywords": [
         "Ansible",
         "Boto",
@@ -154,11 +154,11 @@
       ]
     },
     {
-      "name": "☁️  Cloud providers",
+      "name": "Cloud providers",
       "keywords": ["AWS", "GKE", "Heroku", "Azure"]
     },
     {
-      "name": "💾 Code",
+      "name": "Code",
       "keywords": [
         "bash",
         "c",
@@ -174,7 +174,7 @@
       ]
     },
     {
-      "name": "🗄️  Datastores",
+      "name": "Datastores",
       "keywords": [
         "BigQuery",
         "CouchDB",
@@ -188,7 +188,7 @@
       ]
     },
     {
-      "name": "🗠 LMA ( Logging, Monitoring, & Alerting )",
+      "name": "LMA ( Logging, Monitoring, & Alerting )",
       "keywords": [
         "AWS",
         "ELK",
@@ -208,7 +208,7 @@
       ]
     },
     {
-      "name": "🤔 Methodologies",
+      "name": "Methodologies",
       "keywords": [
         "12Factor",
         "Agile",
@@ -234,7 +234,7 @@
       ]
     },
     {
-      "name": "🛡️  Security",
+      "name": "Security",
       "keywords": [
         "Kali Linux",
         "Applied Cryptography",
@@ -247,7 +247,7 @@
       ]
     },
     {
-      "name": "🖥️  Systems & Servers",
+      "name": "Systems & Servers",
       "keywords": ["*nix", "Apache", "Caddy", "Docker", "Nginx", "Kubernetes"]
     }
   ],
