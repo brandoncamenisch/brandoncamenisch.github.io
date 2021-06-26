@@ -507,6 +507,11 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
+lefthook@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/lefthook/-/lefthook-0.0.1.tgz#0b70628fc3bf610ab5417e1927c75624021ca59e"
+  integrity sha512-2ggyyCuCxZA8xTHSNEo2H8PR1Tz45w1n26uIH3AIPV4ASw4zak1HArrMIwgVedrjcqpBIygCgzr6b0I9TU0wUw==
+
 linkify-it@~1.2.2:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-1.2.4.tgz#0773526c317c8fd13bd534ee1d180ff88abf881a"
@@ -1159,9 +1164,9 @@ wrappy@1:
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
 y18n@^3.2.0, y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 yallist@^4.0.0:
   version "4.0.0"
