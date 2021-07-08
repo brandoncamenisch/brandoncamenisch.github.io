@@ -2,7 +2,7 @@
   "meta": { "theme": "elegant" },
   "basics": {
     "name": "Brandon M. Camenisch",
-    "label": "DevOps & Cloud Automation Engineer",
+    "label": "*Ops (DevOps, DevSecOps, GitOps, AIOps, MLOps, etc.",
     "picture": "bio.jpg",
     "location": {
       "city": "Coeur d'Alene",
@@ -52,7 +52,7 @@
       "website": "https://10up.com",
       "startDate": "2014-01-01",
       "endDate": "2016-01-01",
-      "summary": "In charge of WordPress app development for high-profile clientele, including Fortune 100 companies. Tech Crunch, 9 to 5 Mac, Google, Universal Studios, and Microsoft being the most prominent. Responsible party providing leadership to a team of fifteen engineers, held accountable for consistently delivering products on time and with outstanding quality.",
+      "summary": "In charge of product delivery for high-profile clientele, including Fortune 100 companies. Tech Crunch, 9 to 5 Mac, Google, Universal Studios, and Microsoft being the most prominent. Responsible party providing leadership to a team of fifteen engineers, held accountable for consistently delivering products on time and with outstanding quality.",
       "highlights": [
         "Represented team of software engineers to engage and complete large scale data migrations, application development, unexpected engineering tasks and ensure customer satisfaction. Implemented culture change towards a blameless self-service DevOps model among engineering teams.",
        "Conducted large scale lift and shift projects migrating content and data for Fortune 500 companies with no downtime or impact to the business by utilizing real-time database replication via data streams.",
@@ -69,7 +69,7 @@
     },
     {
       "company": "Volume Nine",
-      "position": "Senior software engineer",
+      "position": "Senior Software Engineer",
       "website": "https://www.v9digital.com/",
       "startDate": "2014-01-01",
       "endDate": "2015-01-01",
@@ -81,8 +81,8 @@
       ]
     },
     {
-      "company": "QRlicious",
-      "position": "Senior software engineer",
+      "company": "QRlicious|Visioniz",
+      "position": "Senior Software Engineer",
       "startDate": "2013-01-01",
       "endDate": "2014-01-01",
       "summary": "QRlicious is a mobile marketing company offering a platform for users to manage and build QR codes, mobile websites, coupons, and more.",
@@ -94,20 +94,7 @@
         "Integrated with various payment gateway systems for e-comm using Stripe, PayPal, Authorize.net and others"
       ]
     },
-    {
-      "company": "Concept Bakery",
-      "position": "Senior software engineer & Graphic design",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Social media story development and telling: guerrilla & cross-media marketing. WOM on Facebook, YouTube, microsites, etc. You name it - been there done that :)",
-      "highlights": [
-        "Solely developed ruby on rails custom CMS application to create SaaS product based on microsites and Facebook pages",
-        "e-commerce sales pipeline with integration of social media data of consumers",
-        "Campaigned on social media to market customer products",
-        "Frontend and graphic design heavy position creating marketing campaigns"
-      ]
-    },
-    {
+      {
       "company": "Nerdatory",
       "position": "Consultant",
       "startDate": "2006-01-01",

@@ -507,6 +507,11 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
+lefthook@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/lefthook/-/lefthook-0.0.1.tgz#0b70628fc3bf610ab5417e1927c75624021ca59e"
+  integrity sha512-2ggyyCuCxZA8xTHSNEo2H8PR1Tz45w1n26uIH3AIPV4ASw4zak1HArrMIwgVedrjcqpBIygCgzr6b0I9TU0wUw==
+
 linkify-it@~1.2.2:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-1.2.4.tgz#0773526c317c8fd13bd534ee1d180ff88abf881a"
